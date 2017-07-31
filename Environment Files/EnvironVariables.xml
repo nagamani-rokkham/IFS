@@ -1,0 +1,62 @@
+<Environment>
+  <Variable>
+    <Name>sTestSuitePath</Name>
+    <Value>Test Suites\TestSuite.xlsm</Value>
+  </Variable>
+  <Variable>
+    <Name>sTestSuiteSheet</Name>
+    <Value>TestSuite</Value>
+  </Variable>  
+  <Variable>
+    <Name>sTestCasesPath</Name>
+    <Value>Test Cases\</Value>
+  </Variable>
+  <Variable>
+    <Name>sTestCaseSheet</Name>
+    <Value>TestCase</Value>
+  </Variable>
+  <Variable>
+    <Name>sComponentsPath</Name>
+    <Value>Components\</Value>
+  </Variable>
+  <Variable>
+    <Name>sComponentSheet</Name>
+    <Value>Component</Value>
+  </Variable>
+  <Variable>
+    <Name>sTestDataPath</Name>
+    <Value>Test Data\</Value>
+  </Variable>
+  <Variable>
+    <Name>sTestDataSheet</Name>
+    <Value>TestData</Value>
+  </Variable>
+  <Variable>
+    <Name>sTestParamSheet</Name>
+    <Value>Parameters</Value>
+  </Variable>
+  <Variable>
+    <Name>sTestResultsPath</Name>
+    <Value>Test Results\</Value>
+  </Variable>
+  <Variable>
+    <Name>sORPath</Name>
+    <Value>Object Repositories\</Value>
+  </Variable>
+  <Variable>
+    <Name>IE</Name>
+    <Value>Yes</Value>
+  </Variable>
+  <Variable>
+    <Name>Chrome</Name>
+    <Value>No</Value>
+  </Variable>
+    <Variable>
+    <Name>FF</Name>
+    <Value>No</Value>
+  </Variable>
+  <Variable>
+    <Name>URL</Name>
+    <Value>http://qa.ifsautomation.com/G2V2Branch/</Value>
+  </Variable>
+</Environment>

@@ -1,0 +1,5270 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED qcserver CDATA #IMPLIED qcproject CDATA #IMPLIED SolManSolutionId CDATA #IMPLIED SolManProjectId CDATA #IMPLIED SolManTestPlanId CDATA #IMPLIED SolManTestPackageId CDATA #IMPLIED SolManUserInfoData CDATA #IMPLIED  >
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,ConfName?,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Doc*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC|BPTWrapperTest|Flow|Group|Action) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT ConfName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step*,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*, Summary,ActionMaintenanceSummary*, NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,DataMapping?, Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED isCountable (False|True) "False" >
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary*) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef*) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" AddedProperty (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,TimeTick* ,(Step|HtmlStep|Doc)*, DataMapping?, NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,TimeTick*,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT TimeTick ( #PCDATA ) >
+
+<!ELEMENT DataMapping ( DataMappedItem* )>
+<!ELEMENT DataMappedItem EMPTY >
+<!ATTLIST DataMappedItem dsName CDATA #REQUIRED >
+<!ATTLIST DataMappedItem rowId CDATA #REQUIRED >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?,ExtendedInfo? )>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED UserNote CDATA #IMPLIED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+<!ATTLIST NodeArgs Source CDATA #IMPLIED SourceLine CDATA #IMPLIED StepFlowItemKey CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT ExtendedInfo ( StepData ) >
+
+<!ATTLIST ExtendedInfo StepType CDATA #REQUIRED>
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="India Standard Time">
+<General productName="HP Unified Functional Testing" productVer="12.01" os="Windows 7" host="HW2314"><DocLocation><![CDATA[C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Drivers\SuiteDriver]]></DocLocation></General>
+<Doc rID="T1"   productName= "HP Unified Functional Testing"  >
+<DName><![CDATA[SuiteDriver]]></DName>
+<Res><![CDATA[Res148]]></Res>
+<DT rID="T2">
+<NodeArgs eType="Table" icon="2" nRep="4" filter="False" >
+<Disp><![CDATA[Run-Time Data Table]]></Disp>
+<BtmPane vType="Table" >
+<Path><![CDATA[Default.xls]]></Path>
+</BtmPane>
+</NodeArgs>
+</DT>
+<Action rID="T3">
+<AName><![CDATA[Action1]]></AName>
+<Step rID="T4">
+<Obj plainTxt="False" ><![CDATA[SystemUtil]]></Obj>
+<Details plainTxt="False" ><![CDATA[SystemUtil]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:00]]></Time>
+<TimeTick>1454592480</TimeTick>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[Run "iexplore.exe",3]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run "iexplore.exe",3]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:00]]></Time>
+<TimeTick>1454592480</TimeTick>
+<NodeArgs eType="Replay" icon="4" nRep="10" status="Passed" >
+<Disp><![CDATA[Run "iexplore.exe",3]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="4" nRep="9" status="Passed" >
+<Disp><![CDATA[SystemUtil]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:01]]></Time>
+<TimeTick>1454592481</TimeTick>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the object "Login" (of class Browser). Verify that this object's properties match an object currently displayed in your application.]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:01]]></Time>
+<TimeTick>1454592481</TimeTick>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>miccommentproperty = <br>Mercury Class = Browser<br>CreationTime = 0<br>|Title = Login - Windows Internet Explorer<br>openurl = http://www.msn.com/en-in/?cobrand=dell13.msn.com&ocid=DELLDHP&pc=MDDCJS<br>opentitle = <br>Opened By Testing Tool = 0<br>number of tabs = 1<br>Name = Login<br>]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:01]]></Time>
+<TimeTick>1454592481</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="22" status="Warning" nType="Description" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="5" nRep="21" status="Failed" nType="Run Error" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="20" status="Failed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the object &quot;Login&quot; (of class Browser). Verify that this object's properties match an object currently displayed in your application.<BR>Function file: C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs<BR>Line (10): &quot;		Browser(&quot;Login&quot;).Page(&quot;Login&quot;).sync&quot;.]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:02]]></Time>
+<TimeTick>1454592482</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="23" status="Failed" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="9" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:02]]></Time>
+<TimeTick>1454592482</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="24" status="Passed" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:06]]></Time>
+<TimeTick>1454592486</TimeTick>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:06]]></Time>
+<TimeTick>1454592486</TimeTick>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[TXT_user_name.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:06]]></Time>
+<TimeTick>1454592486</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="52" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[TXT_user_name.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[TXT_user_name.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["chrisj"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:06]]></Time>
+<TimeTick>1454592486</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="54" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[TXT_user_name.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="51" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="50" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:06]]></Time>
+<TimeTick>1454592486</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="55" status="Passed" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:06]]></Time>
+<TimeTick>1454592486</TimeTick>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:06]]></Time>
+<TimeTick>1454592486</TimeTick>
+<Step rID="T18">
+<Obj plainTxt="False" ><![CDATA[TXT_user_password.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:06]]></Time>
+<TimeTick>1454592486</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="59" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[TXT_user_password.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T19">
+<Obj plainTxt="False" ><![CDATA[TXT_user_password.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["password"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:06]]></Time>
+<TimeTick>1454592486</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="61" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[TXT_user_password.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="58" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="57" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T20">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:06]]></Time>
+<TimeTick>1454592486</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="62" status="Passed" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:06]]></Time>
+<TimeTick>1454592486</TimeTick>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:06]]></Time>
+<TimeTick>1454592486</TimeTick>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[BTN_Log In.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:06]]></Time>
+<TimeTick>1454592486</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="66" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[BTN_Log In.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[BTN_Log In.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:09]]></Time>
+<TimeTick>1454592489</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="68" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[BTN_Log In.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="65" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="64" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:09]]></Time>
+<TimeTick>1454592489</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="69" status="Passed" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:11]]></Time>
+<TimeTick>1454592491</TimeTick>
+<Step rID="T27">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:11]]></Time>
+<TimeTick>1454592491</TimeTick>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[TAB _Home.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:11]]></Time>
+<TimeTick>1454592491</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="73" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[TAB _Home.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[Work Queue.Sync]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:11]]></Time>
+<TimeTick>1454592491</TimeTick>
+<NodeArgs eType="Replay" icon="8" nRep="75" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Work Queue.Sync]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[TAB _Home.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:13]]></Time>
+<TimeTick>1454592493</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="77" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[TAB _Home.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="72" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="71" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T31">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:13]]></Time>
+<TimeTick>1454592493</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="78" status="Passed" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:13]]></Time>
+<TimeTick>1454592493</TimeTick>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:13]]></Time>
+<TimeTick>1454592493</TimeTick>
+<Step rID="T34">
+<Obj plainTxt="False" ><![CDATA[TAB _Home.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:13]]></Time>
+<TimeTick>1454592493</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="82" >
+<Disp><![CDATA[TAB _Home.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="81" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="80" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T35">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:13]]></Time>
+<TimeTick>1454592493</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="83" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T36">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:13]]></Time>
+<TimeTick>1454592493</TimeTick>
+<Step rID="T37">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:13]]></Time>
+<TimeTick>1454592493</TimeTick>
+<Step rID="T38">
+<Obj plainTxt="False" ><![CDATA[TAB_Tests.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:13]]></Time>
+<TimeTick>1454592493</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="87" >
+<Disp><![CDATA[TAB_Tests.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="86" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="85" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T39">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:13]]></Time>
+<TimeTick>1454592493</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="88" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:14]]></Time>
+<TimeTick>1454592494</TimeTick>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:14]]></Time>
+<TimeTick>1454592494</TimeTick>
+<Step rID="T42">
+<Obj plainTxt="False" ><![CDATA[TAB_Tests.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:14]]></Time>
+<TimeTick>1454592494</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="92" >
+<Disp><![CDATA[TAB_Tests.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T43">
+<Obj plainTxt="False" ><![CDATA[TAB_Tests.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:17]]></Time>
+<TimeTick>1454592497</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="94" >
+<Disp><![CDATA[TAB_Tests.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="91" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="90" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T44">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:17]]></Time>
+<TimeTick>1454592497</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="95" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T45">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:20]]></Time>
+<TimeTick>1454592500</TimeTick>
+<Step rID="T46">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:20]]></Time>
+<TimeTick>1454592500</TimeTick>
+<Step rID="T47">
+<Obj plainTxt="False" ><![CDATA[LNK_Draft Mode.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:20]]></Time>
+<TimeTick>1454592500</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="99" >
+<Disp><![CDATA[LNK_Draft Mode.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="98" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="97" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T48">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:20]]></Time>
+<TimeTick>1454592500</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="100" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T49">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:23]]></Time>
+<TimeTick>1454592503</TimeTick>
+<Step rID="T50">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:23]]></Time>
+<TimeTick>1454592503</TimeTick>
+<Step rID="T51">
+<Obj plainTxt="False" ><![CDATA[LNK_Draft Mode.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:23]]></Time>
+<TimeTick>1454592503</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="104" >
+<Disp><![CDATA[LNK_Draft Mode.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T52">
+<Obj plainTxt="False" ><![CDATA[LNK_Draft Mode.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:26]]></Time>
+<TimeTick>1454592506</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="106" >
+<Disp><![CDATA[LNK_Draft Mode.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="103" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="102" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T53">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:26]]></Time>
+<TimeTick>1454592506</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="107" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T54">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:33]]></Time>
+<TimeTick>1454592513</TimeTick>
+<Step rID="T55">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:33]]></Time>
+<TimeTick>1454592513</TimeTick>
+<Step rID="T56">
+<Obj plainTxt="False" ><![CDATA[LBL_Header_DraftModeEntry.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:33]]></Time>
+<TimeTick>1454592513</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="111" >
+<Disp><![CDATA[LBL_Header_DraftModeEntry.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="110" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="109" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T57">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:33]]></Time>
+<TimeTick>1454592513</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="112" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T58">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:37]]></Time>
+<TimeTick>1454592517</TimeTick>
+<Step rID="T59">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:37]]></Time>
+<TimeTick>1454592517</TimeTick>
+<Step rID="T60">
+<Obj plainTxt="False" ><![CDATA[LBL_Header_DraftModeEntry.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:37]]></Time>
+<TimeTick>1454592517</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="116" >
+<Disp><![CDATA[LBL_Header_DraftModeEntry.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="115" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="114" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T61">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:37]]></Time>
+<TimeTick>1454592517</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="117" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T62">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:40]]></Time>
+<TimeTick>1454592520</TimeTick>
+<Step rID="T63">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:40]]></Time>
+<TimeTick>1454592520</TimeTick>
+<Step rID="T64">
+<Obj plainTxt="False" ><![CDATA[LBL_PageMessage_Thispagecontainrequired.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:40]]></Time>
+<TimeTick>1454592520</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="121" >
+<Disp><![CDATA[LBL_PageMessage_Thispagecontainrequired.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="120" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="119" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T65">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:40]]></Time>
+<TimeTick>1454592520</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="122" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T66">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:43]]></Time>
+<TimeTick>1454592523</TimeTick>
+<Step rID="T67">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:43]]></Time>
+<TimeTick>1454592523</TimeTick>
+<Step rID="T68">
+<Obj plainTxt="False" ><![CDATA[LBL_Warning_Answer theDropDownquestion.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:43]]></Time>
+<TimeTick>1454592523</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="126" >
+<Disp><![CDATA[LBL_Warning_Answer theDropDownquestion.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="125" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="124" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T69">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:43]]></Time>
+<TimeTick>1454592523</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="127" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T70">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:46]]></Time>
+<TimeTick>1454592526</TimeTick>
+<Step rID="T71">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:46]]></Time>
+<TimeTick>1454592526</TimeTick>
+<Step rID="T72">
+<Obj plainTxt="False" ><![CDATA[DWL_SelectValue.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:46]]></Time>
+<TimeTick>1454592526</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="131" >
+<Disp><![CDATA[DWL_SelectValue.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="130" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="129" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T73">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:46]]></Time>
+<TimeTick>1454592526</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="132" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T74">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:49]]></Time>
+<TimeTick>1454592529</TimeTick>
+<Step rID="T75">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:49]]></Time>
+<TimeTick>1454592529</TimeTick>
+<Step rID="T76">
+<Obj plainTxt="False" ><![CDATA[DWL_SelectValue.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:49]]></Time>
+<TimeTick>1454592529</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="136" >
+<Disp><![CDATA[DWL_SelectValue.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T77">
+<Obj plainTxt="False" ><![CDATA[[ WebElement ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:51]]></Time>
+<TimeTick>1454592531</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="138" >
+<Disp><![CDATA[[ WebElement ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T78">
+<Obj plainTxt="False" ><![CDATA[[ The new user interface looks great! ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:53]]></Time>
+<TimeTick>1454592533</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="140" >
+<Disp><![CDATA[[ The new user interface looks great! ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="135" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="134" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T79">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:53]]></Time>
+<TimeTick>1454592533</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="141" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T80">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:58:57]]></Time>
+<TimeTick>1454592537</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="143" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T81">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:00]]></Time>
+<TimeTick>1454592540</TimeTick>
+<Step rID="T82">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:00]]></Time>
+<TimeTick>1454592540</TimeTick>
+<Step rID="T83">
+<Obj plainTxt="False" ><![CDATA[NAV_RequiredQuestions.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:00]]></Time>
+<TimeTick>1454592540</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="147" >
+<Disp><![CDATA[NAV_RequiredQuestions.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T84">
+<Obj plainTxt="False" ><![CDATA[NAV_RequiredQuestions.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:03]]></Time>
+<TimeTick>1454592543</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="149" >
+<Disp><![CDATA[NAV_RequiredQuestions.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="146" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="145" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T85">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:03]]></Time>
+<TimeTick>1454592543</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="150" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T86">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:07]]></Time>
+<TimeTick>1454592547</TimeTick>
+<Step rID="T87">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:07]]></Time>
+<TimeTick>1454592547</TimeTick>
+<Step rID="T88">
+<Obj plainTxt="False" ><![CDATA[LBL_Answer * Required Checkbox.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:07]]></Time>
+<TimeTick>1454592547</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="154" >
+<Disp><![CDATA[LBL_Answer * Required Checkbox.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="153" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="152" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T89">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:07]]></Time>
+<TimeTick>1454592547</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="155" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T90">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:10]]></Time>
+<TimeTick>1454592550</TimeTick>
+<Step rID="T91">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:10]]></Time>
+<TimeTick>1454592550</TimeTick>
+<Step rID="T92">
+<Obj plainTxt="False" ><![CDATA[ChkBox_Brian.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:10]]></Time>
+<TimeTick>1454592550</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="159" >
+<Disp><![CDATA[ChkBox_Brian.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="158" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="157" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T93">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:10]]></Time>
+<TimeTick>1454592550</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="160" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T94">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:13]]></Time>
+<TimeTick>1454592553</TimeTick>
+<Step rID="T95">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:13]]></Time>
+<TimeTick>1454592553</TimeTick>
+<Step rID="T96">
+<Obj plainTxt="False" ><![CDATA[ChkBox_Brian.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:13]]></Time>
+<TimeTick>1454592553</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="164" >
+<Disp><![CDATA[ChkBox_Brian.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T97">
+<Obj plainTxt="False" ><![CDATA[ChkBox_Brian.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:16]]></Time>
+<TimeTick>1454592556</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="166" >
+<Disp><![CDATA[ChkBox_Brian.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="163" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="162" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T98">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:16]]></Time>
+<TimeTick>1454592556</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="167" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T99">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:19]]></Time>
+<TimeTick>1454592559</TimeTick>
+<Step rID="T100">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:19]]></Time>
+<TimeTick>1454592559</TimeTick>
+<Step rID="T101">
+<Obj plainTxt="False" ><![CDATA[RDL_RequiredInterview.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:19]]></Time>
+<TimeTick>1454592559</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="171" >
+<Disp><![CDATA[RDL_RequiredInterview.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="170" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="169" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T102">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:19]]></Time>
+<TimeTick>1454592559</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="172" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T103">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:23]]></Time>
+<TimeTick>1454592563</TimeTick>
+<Step rID="T104">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:23]]></Time>
+<TimeTick>1454592563</TimeTick>
+<Step rID="T105">
+<Obj plainTxt="False" ><![CDATA[RDL_RequiredInterview.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:23]]></Time>
+<TimeTick>1454592563</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="176" >
+<Disp><![CDATA[RDL_RequiredInterview.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T106">
+<Obj plainTxt="False" ><![CDATA[[ 1454592545093 ].Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["small value"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:23]]></Time>
+<TimeTick>1454592563</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="178" >
+<Disp><![CDATA[[ 1454592545093 ].Select]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="175" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="174" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T107">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:23]]></Time>
+<TimeTick>1454592563</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="179" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T108">
+<Obj ><![CDATA[VerifyWarningMessageRemoved]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:26]]></Time>
+<TimeTick>1454592566</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="181" status="Passed" >
+<Disp><![CDATA[VerifyWarningMessageRemoved]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T109">
+<Obj plainTxt="False" ><![CDATA[[ WebButton ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:26]]></Time>
+<TimeTick>1454592566</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="183" >
+<Disp><![CDATA[[ WebButton ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T110">
+<Obj plainTxt="False" ><![CDATA[[ Logout ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:26]]></Time>
+<TimeTick>1454592566</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="185" >
+<Disp><![CDATA[[ Logout ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T111">
+<Obj ><![CDATA[Logout]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:27]]></Time>
+<TimeTick>1454592567</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="186" status="Passed" >
+<Disp><![CDATA[Logout]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T112">
+<Obj plainTxt="False" ><![CDATA[SystemUtil]]></Obj>
+<Details plainTxt="False" ><![CDATA[SystemUtil]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:39]]></Time>
+<TimeTick>1454592579</TimeTick>
+<Step rID="T113">
+<Obj plainTxt="False" ><![CDATA[Run "iexplore.exe",3]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run "iexplore.exe",3]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:39]]></Time>
+<TimeTick>1454592579</TimeTick>
+<NodeArgs eType="Replay" icon="4" nRep="190" status="Passed" >
+<Disp><![CDATA[Run "iexplore.exe",3]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="4" nRep="189" status="Passed" >
+<Disp><![CDATA[SystemUtil]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T114">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:41]]></Time>
+<TimeTick>1454592581</TimeTick>
+<Step rID="T115">
+<Obj plainTxt="False" ><![CDATA[Login.Sync]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:41]]></Time>
+<TimeTick>1454592581</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="200" >
+<Disp><![CDATA[Login.Sync]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="199" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T116">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:41]]></Time>
+<TimeTick>1454592581</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="201" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T117">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:44]]></Time>
+<TimeTick>1454592584</TimeTick>
+<Step rID="T118">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:44]]></Time>
+<TimeTick>1454592584</TimeTick>
+<Step rID="T119">
+<Obj plainTxt="False" ><![CDATA[TXT_user_name.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:44]]></Time>
+<TimeTick>1454592584</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="225" >
+<Disp><![CDATA[TXT_user_name.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T120">
+<Obj plainTxt="False" ><![CDATA[TXT_user_name.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["chrisj"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:44]]></Time>
+<TimeTick>1454592584</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="227" >
+<Disp><![CDATA[TXT_user_name.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="224" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="223" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T121">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:44]]></Time>
+<TimeTick>1454592584</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="228" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T122">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:44]]></Time>
+<TimeTick>1454592584</TimeTick>
+<Step rID="T123">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:44]]></Time>
+<TimeTick>1454592584</TimeTick>
+<Step rID="T124">
+<Obj plainTxt="False" ><![CDATA[TXT_user_password.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:44]]></Time>
+<TimeTick>1454592584</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="232" >
+<Disp><![CDATA[TXT_user_password.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T125">
+<Obj plainTxt="False" ><![CDATA[TXT_user_password.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["password"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:44]]></Time>
+<TimeTick>1454592584</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="234" >
+<Disp><![CDATA[TXT_user_password.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="231" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="230" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T126">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:44]]></Time>
+<TimeTick>1454592584</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="235" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T127">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:44]]></Time>
+<TimeTick>1454592584</TimeTick>
+<Step rID="T128">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:44]]></Time>
+<TimeTick>1454592584</TimeTick>
+<Step rID="T129">
+<Obj plainTxt="False" ><![CDATA[BTN_Log In.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:44]]></Time>
+<TimeTick>1454592584</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="239" >
+<Disp><![CDATA[BTN_Log In.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T130">
+<Obj plainTxt="False" ><![CDATA[BTN_Log In.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:47]]></Time>
+<TimeTick>1454592587</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="241" >
+<Disp><![CDATA[BTN_Log In.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="238" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="237" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T131">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:47]]></Time>
+<TimeTick>1454592587</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="242" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T132">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:49]]></Time>
+<TimeTick>1454592589</TimeTick>
+<Step rID="T133">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:49]]></Time>
+<TimeTick>1454592589</TimeTick>
+<Step rID="T134">
+<Obj plainTxt="False" ><![CDATA[TAB _Home.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:49]]></Time>
+<TimeTick>1454592589</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="246" >
+<Disp><![CDATA[TAB _Home.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T135">
+<Obj plainTxt="False" ><![CDATA[Work Queue.Sync]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:49]]></Time>
+<TimeTick>1454592589</TimeTick>
+<NodeArgs eType="Replay" icon="8" nRep="248" >
+<Disp><![CDATA[Work Queue.Sync]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T136">
+<Obj plainTxt="False" ><![CDATA[TAB _Home.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:51]]></Time>
+<TimeTick>1454592591</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="250" >
+<Disp><![CDATA[TAB _Home.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="245" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="244" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T137">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:51]]></Time>
+<TimeTick>1454592591</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="251" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T138">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:51]]></Time>
+<TimeTick>1454592591</TimeTick>
+<Step rID="T139">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:51]]></Time>
+<TimeTick>1454592591</TimeTick>
+<Step rID="T140">
+<Obj plainTxt="False" ><![CDATA[TAB _Home.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:51]]></Time>
+<TimeTick>1454592591</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="255" >
+<Disp><![CDATA[TAB _Home.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="254" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="253" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T141">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:51]]></Time>
+<TimeTick>1454592591</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="256" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T142">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:51]]></Time>
+<TimeTick>1454592591</TimeTick>
+<Step rID="T143">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:51]]></Time>
+<TimeTick>1454592591</TimeTick>
+<Step rID="T144">
+<Obj plainTxt="False" ><![CDATA[TAB_Tests.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:51]]></Time>
+<TimeTick>1454592591</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="260" >
+<Disp><![CDATA[TAB_Tests.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="259" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="258" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T145">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:51]]></Time>
+<TimeTick>1454592591</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="261" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T146">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:51]]></Time>
+<TimeTick>1454592591</TimeTick>
+<Step rID="T147">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:51]]></Time>
+<TimeTick>1454592591</TimeTick>
+<Step rID="T148">
+<Obj plainTxt="False" ><![CDATA[TAB_Tests.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:51]]></Time>
+<TimeTick>1454592591</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="265" >
+<Disp><![CDATA[TAB_Tests.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T149">
+<Obj plainTxt="False" ><![CDATA[TAB_Tests.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:54]]></Time>
+<TimeTick>1454592594</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="267" >
+<Disp><![CDATA[TAB_Tests.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="264" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="263" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T150">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:54]]></Time>
+<TimeTick>1454592594</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="268" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T151">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:54]]></Time>
+<TimeTick>1454592594</TimeTick>
+<Step rID="T152">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:54]]></Time>
+<TimeTick>1454592594</TimeTick>
+<Step rID="T153">
+<Obj plainTxt="False" ><![CDATA[LNK_Draft Mode.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:54]]></Time>
+<TimeTick>1454592594</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="272" >
+<Disp><![CDATA[LNK_Draft Mode.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="271" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="270" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T154">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:54]]></Time>
+<TimeTick>1454592594</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="273" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T155">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:54]]></Time>
+<TimeTick>1454592594</TimeTick>
+<Step rID="T156">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:54]]></Time>
+<TimeTick>1454592594</TimeTick>
+<Step rID="T157">
+<Obj plainTxt="False" ><![CDATA[LNK_Draft Mode.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:54]]></Time>
+<TimeTick>1454592594</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="277" >
+<Disp><![CDATA[LNK_Draft Mode.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T158">
+<Obj plainTxt="False" ><![CDATA[LNK_Draft Mode.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:57]]></Time>
+<TimeTick>1454592597</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="279" >
+<Disp><![CDATA[LNK_Draft Mode.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="276" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="275" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T159">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 18:59:57]]></Time>
+<TimeTick>1454592597</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="280" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T160">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:02]]></Time>
+<TimeTick>1454592602</TimeTick>
+<Step rID="T161">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:02]]></Time>
+<TimeTick>1454592602</TimeTick>
+<Step rID="T162">
+<Obj plainTxt="False" ><![CDATA[NAV_Entry.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:02]]></Time>
+<TimeTick>1454592602</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="284" >
+<Disp><![CDATA[NAV_Entry.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="283" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="282" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T163">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:02]]></Time>
+<TimeTick>1454592602</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="285" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T164">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:05]]></Time>
+<TimeTick>1454592605</TimeTick>
+<Step rID="T165">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:05]]></Time>
+<TimeTick>1454592605</TimeTick>
+<Step rID="T166">
+<Obj plainTxt="False" ><![CDATA[NAV_RequiredQuestions.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:05]]></Time>
+<TimeTick>1454592605</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="289" >
+<Disp><![CDATA[NAV_RequiredQuestions.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="288" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="287" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T167">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:05]]></Time>
+<TimeTick>1454592605</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="290" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T168">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:08]]></Time>
+<TimeTick>1454592608</TimeTick>
+<Step rID="T169">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:08]]></Time>
+<TimeTick>1454592608</TimeTick>
+<Step rID="T170">
+<Obj plainTxt="False" ><![CDATA[NAV_Submit.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:08]]></Time>
+<TimeTick>1454592608</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="294" >
+<Disp><![CDATA[NAV_Submit.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="293" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="292" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T171">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:08]]></Time>
+<TimeTick>1454592608</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="295" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T172">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:11]]></Time>
+<TimeTick>1454592611</TimeTick>
+<Step rID="T173">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:11]]></Time>
+<TimeTick>1454592611</TimeTick>
+<Step rID="T174">
+<Obj plainTxt="False" ><![CDATA[NAV_AdditionalInformation.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:11]]></Time>
+<TimeTick>1454592611</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="299" >
+<Disp><![CDATA[NAV_AdditionalInformation.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="298" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="297" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T175">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:11]]></Time>
+<TimeTick>1454592611</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="300" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T176">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:14]]></Time>
+<TimeTick>1454592614</TimeTick>
+<Step rID="T177">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:14]]></Time>
+<TimeTick>1454592614</TimeTick>
+<Step rID="T178">
+<Obj plainTxt="False" ><![CDATA[NAV_Summary.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:14]]></Time>
+<TimeTick>1454592614</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="304" >
+<Disp><![CDATA[NAV_Summary.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="303" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="302" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T179">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:14]]></Time>
+<TimeTick>1454592614</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="305" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T180">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:17]]></Time>
+<TimeTick>1454592617</TimeTick>
+<Step rID="T181">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:17]]></Time>
+<TimeTick>1454592617</TimeTick>
+<Step rID="T182">
+<Obj plainTxt="False" ><![CDATA[TBL_RepeatingModuleDataTable.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:17]]></Time>
+<TimeTick>1454592617</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="309" >
+<Disp><![CDATA[TBL_RepeatingModuleDataTable.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="308" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="307" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T183">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:17]]></Time>
+<TimeTick>1454592617</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="310" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T184">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:20]]></Time>
+<TimeTick>1454592620</TimeTick>
+<Step rID="T185">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:20]]></Time>
+<TimeTick>1454592620</TimeTick>
+<Step rID="T186">
+<Obj plainTxt="False" ><![CDATA[BTN_NewItem.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:20]]></Time>
+<TimeTick>1454592620</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="314" >
+<Disp><![CDATA[BTN_NewItem.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="313" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="312" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T187">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:20]]></Time>
+<TimeTick>1454592620</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="315" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T188">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:23]]></Time>
+<TimeTick>1454592623</TimeTick>
+<Step rID="T189">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:23]]></Time>
+<TimeTick>1454592623</TimeTick>
+<Step rID="T190">
+<Obj plainTxt="False" ><![CDATA[BTN_NewItem.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:23]]></Time>
+<TimeTick>1454592623</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="319" >
+<Disp><![CDATA[BTN_NewItem.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T191">
+<Obj plainTxt="False" ><![CDATA[BTN_NewItem.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:26]]></Time>
+<TimeTick>1454592626</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="321" >
+<Disp><![CDATA[BTN_NewItem.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="318" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="317" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T192">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:27]]></Time>
+<TimeTick>1454592627</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="322" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T193">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:31]]></Time>
+<TimeTick>1454592631</TimeTick>
+<Step rID="T194">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:31]]></Time>
+<TimeTick>1454592631</TimeTick>
+<Step rID="T195">
+<Obj plainTxt="False" ><![CDATA[NAV_(NEW).Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:31]]></Time>
+<TimeTick>1454592631</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="326" >
+<Disp><![CDATA[NAV_(NEW).Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="325" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="324" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T196">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:31]]></Time>
+<TimeTick>1454592631</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="327" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T197">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:34]]></Time>
+<TimeTick>1454592634</TimeTick>
+<Step rID="T198">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:34]]></Time>
+<TimeTick>1454592634</TimeTick>
+<Step rID="T199">
+<Obj plainTxt="False" ><![CDATA[TXT_FirstName.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:34]]></Time>
+<TimeTick>1454592634</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="331" >
+<Disp><![CDATA[TXT_FirstName.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T200">
+<Obj plainTxt="False" ><![CDATA[TXT_FirstName.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Fred"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:34]]></Time>
+<TimeTick>1454592634</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="333" >
+<Disp><![CDATA[TXT_FirstName.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="330" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="329" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T201">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:34]]></Time>
+<TimeTick>1454592634</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="334" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T202">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:37]]></Time>
+<TimeTick>1454592637</TimeTick>
+<Step rID="T203">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:37]]></Time>
+<TimeTick>1454592637</TimeTick>
+<Step rID="T204">
+<Obj plainTxt="False" ><![CDATA[TXT_LastName.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:37]]></Time>
+<TimeTick>1454592637</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="338" >
+<Disp><![CDATA[TXT_LastName.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T205">
+<Obj plainTxt="False" ><![CDATA[TXT_LastName.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Parsnips"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:37]]></Time>
+<TimeTick>1454592637</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="340" >
+<Disp><![CDATA[TXT_LastName.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="337" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="336" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T206">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:37]]></Time>
+<TimeTick>1454592637</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="341" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T207">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:40]]></Time>
+<TimeTick>1454592640</TimeTick>
+<Step rID="T208">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:40]]></Time>
+<TimeTick>1454592640</TimeTick>
+<Step rID="T209">
+<Obj plainTxt="False" ><![CDATA[TXT_ClientID.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:40]]></Time>
+<TimeTick>1454592640</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="345" >
+<Disp><![CDATA[TXT_ClientID.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T210">
+<Obj plainTxt="False" ><![CDATA[TXT_ClientID.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["1111-1111"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:40]]></Time>
+<TimeTick>1454592640</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="347" >
+<Disp><![CDATA[TXT_ClientID.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="344" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="343" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T211">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:40]]></Time>
+<TimeTick>1454592640</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="348" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T212">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:43]]></Time>
+<TimeTick>1454592643</TimeTick>
+<Step rID="T213">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:43]]></Time>
+<TimeTick>1454592643</TimeTick>
+<Step rID="T214">
+<Obj plainTxt="False" ><![CDATA[BTN_Next_DraftMode.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:43]]></Time>
+<TimeTick>1454592643</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="352" >
+<Disp><![CDATA[BTN_Next_DraftMode.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T215">
+<Obj plainTxt="False" ><![CDATA[BTN_Next_DraftMode.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:46]]></Time>
+<TimeTick>1454592646</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="354" >
+<Disp><![CDATA[BTN_Next_DraftMode.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="351" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="350" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T216">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:46]]></Time>
+<TimeTick>1454592646</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="355" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T217">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:51]]></Time>
+<TimeTick>1454592651</TimeTick>
+<Step rID="T218">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:51]]></Time>
+<TimeTick>1454592651</TimeTick>
+<Step rID="T219">
+<Obj plainTxt="False" ><![CDATA[NAV_TitleDanger.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:51]]></Time>
+<TimeTick>1454592651</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="359" >
+<Disp><![CDATA[NAV_TitleDanger.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="358" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="357" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T220">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:51]]></Time>
+<TimeTick>1454592651</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="360" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T221">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:54]]></Time>
+<TimeTick>1454592654</TimeTick>
+<Step rID="T222">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:54]]></Time>
+<TimeTick>1454592654</TimeTick>
+<Step rID="T223">
+<Obj plainTxt="False" ><![CDATA[NAV_TitleDanger.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:54]]></Time>
+<TimeTick>1454592654</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="364" >
+<Disp><![CDATA[NAV_TitleDanger.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T224">
+<Obj plainTxt="False" ><![CDATA[NAV_TitleDanger.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:57]]></Time>
+<TimeTick>1454592657</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="366" >
+<Disp><![CDATA[NAV_TitleDanger.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="363" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="362" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T225">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:00:57]]></Time>
+<TimeTick>1454592657</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="367" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T226">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:01]]></Time>
+<TimeTick>1454592661</TimeTick>
+<Step rID="T227">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:01]]></Time>
+<TimeTick>1454592661</TimeTick>
+<Step rID="T228">
+<Obj plainTxt="False" ><![CDATA[TXT_ClientID.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:01]]></Time>
+<TimeTick>1454592661</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="371" >
+<Disp><![CDATA[TXT_ClientID.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T229">
+<Obj plainTxt="False" ><![CDATA[TXT_ClientID.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["123"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:01]]></Time>
+<TimeTick>1454592661</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="373" >
+<Disp><![CDATA[TXT_ClientID.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="370" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="369" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T230">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:01]]></Time>
+<TimeTick>1454592661</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="374" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T231">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:04]]></Time>
+<TimeTick>1454592664</TimeTick>
+<Step rID="T232">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:04]]></Time>
+<TimeTick>1454592664</TimeTick>
+<Step rID="T233">
+<Obj plainTxt="False" ><![CDATA[BTN_Next_DraftMode.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:04]]></Time>
+<TimeTick>1454592664</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="378" >
+<Disp><![CDATA[BTN_Next_DraftMode.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T234">
+<Obj plainTxt="False" ><![CDATA[BTN_Next_DraftMode.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:07]]></Time>
+<TimeTick>1454592667</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="380" >
+<Disp><![CDATA[BTN_Next_DraftMode.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="377" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="376" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T235">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:07]]></Time>
+<TimeTick>1454592667</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="381" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T236">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:11]]></Time>
+<TimeTick>1454592671</TimeTick>
+<Step rID="T237">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:11]]></Time>
+<TimeTick>1454592671</TimeTick>
+<Step rID="T238">
+<Obj plainTxt="False" ><![CDATA[NAV_TitleSuccess.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:11]]></Time>
+<TimeTick>1454592671</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="385" >
+<Disp><![CDATA[NAV_TitleSuccess.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="384" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="383" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T239">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:11]]></Time>
+<TimeTick>1454592671</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="386" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T240">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:15]]></Time>
+<TimeTick>1454592675</TimeTick>
+<Step rID="T241">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:15]]></Time>
+<TimeTick>1454592675</TimeTick>
+<Step rID="T242">
+<Obj plainTxt="False" ><![CDATA[Entry.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:15]]></Time>
+<TimeTick>1454592675</TimeTick>
+<NodeArgs eType="Replay" icon="8" nRep="390" >
+<Disp><![CDATA[Entry.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="389" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="388" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T243">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:15]]></Time>
+<TimeTick>1454592675</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="391" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T244">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:18]]></Time>
+<TimeTick>1454592678</TimeTick>
+<Step rID="T245">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:18]]></Time>
+<TimeTick>1454592678</TimeTick>
+<Step rID="T246">
+<Obj plainTxt="False" ><![CDATA[TRKcircle_Button_Entry.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:18]]></Time>
+<TimeTick>1454592678</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="395" >
+<Disp><![CDATA[TRKcircle_Button_Entry.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T247">
+<Obj plainTxt="False" ><![CDATA[TRKcircle_Button_Entry.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:21]]></Time>
+<TimeTick>1454592681</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="397" >
+<Disp><![CDATA[TRKcircle_Button_Entry.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="394" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="393" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T248">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:21]]></Time>
+<TimeTick>1454592681</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="398" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T249">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:24]]></Time>
+<TimeTick>1454592684</TimeTick>
+<Step rID="T250">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:24]]></Time>
+<TimeTick>1454592684</TimeTick>
+<Step rID="T251">
+<Obj plainTxt="False" ><![CDATA[Entry_StepPopUp.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:24]]></Time>
+<TimeTick>1454592684</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="402" >
+<Disp><![CDATA[Entry_StepPopUp.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="401" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="400" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T252">
+<Obj ><![CDATA[VerifiyNavBarStatus]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:24]]></Time>
+<TimeTick>1454592684</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="403" status="Passed" >
+<Disp><![CDATA[VerifiyNavBarStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T253">
+<Obj plainTxt="False" ><![CDATA[[ WebButton ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:24]]></Time>
+<TimeTick>1454592684</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="405" >
+<Disp><![CDATA[[ WebButton ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T254">
+<Obj plainTxt="False" ><![CDATA[[ Logout ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:24]]></Time>
+<TimeTick>1454592684</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="407" >
+<Disp><![CDATA[[ Logout ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T255">
+<Obj ><![CDATA[Logout]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:25]]></Time>
+<TimeTick>1454592685</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="408" status="Passed" >
+<Disp><![CDATA[Logout]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T256">
+<Obj plainTxt="False" ><![CDATA[SystemUtil]]></Obj>
+<Details plainTxt="False" ><![CDATA[SystemUtil]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:37]]></Time>
+<TimeTick>1454592697</TimeTick>
+<Step rID="T257">
+<Obj plainTxt="False" ><![CDATA[Run "iexplore.exe",3]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run "iexplore.exe",3]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:37]]></Time>
+<TimeTick>1454592697</TimeTick>
+<NodeArgs eType="Replay" icon="4" nRep="412" status="Passed" >
+<Disp><![CDATA[Run "iexplore.exe",3]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="4" nRep="411" status="Passed" >
+<Disp><![CDATA[SystemUtil]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T258">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:39]]></Time>
+<TimeTick>1454592699</TimeTick>
+<Step rID="T259">
+<Obj plainTxt="False" ><![CDATA[Login.Sync]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:39]]></Time>
+<TimeTick>1454592699</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="422" >
+<Disp><![CDATA[Login.Sync]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="421" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T260">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:39]]></Time>
+<TimeTick>1454592699</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="423" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T261">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:41]]></Time>
+<TimeTick>1454592701</TimeTick>
+<Step rID="T262">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:41]]></Time>
+<TimeTick>1454592701</TimeTick>
+<Step rID="T263">
+<Obj plainTxt="False" ><![CDATA[TXT_user_name.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:41]]></Time>
+<TimeTick>1454592701</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="446" >
+<Disp><![CDATA[TXT_user_name.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T264">
+<Obj plainTxt="False" ><![CDATA[TXT_user_name.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["chrisj"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:41]]></Time>
+<TimeTick>1454592701</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="448" >
+<Disp><![CDATA[TXT_user_name.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="445" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="444" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T265">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:41]]></Time>
+<TimeTick>1454592701</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="449" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T266">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:42]]></Time>
+<TimeTick>1454592702</TimeTick>
+<Step rID="T267">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:42]]></Time>
+<TimeTick>1454592702</TimeTick>
+<Step rID="T268">
+<Obj plainTxt="False" ><![CDATA[TXT_user_password.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:42]]></Time>
+<TimeTick>1454592702</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="453" >
+<Disp><![CDATA[TXT_user_password.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T269">
+<Obj plainTxt="False" ><![CDATA[TXT_user_password.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["password"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:42]]></Time>
+<TimeTick>1454592702</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="455" >
+<Disp><![CDATA[TXT_user_password.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="452" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="451" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T270">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:42]]></Time>
+<TimeTick>1454592702</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="456" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T271">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:42]]></Time>
+<TimeTick>1454592702</TimeTick>
+<Step rID="T272">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:42]]></Time>
+<TimeTick>1454592702</TimeTick>
+<Step rID="T273">
+<Obj plainTxt="False" ><![CDATA[BTN_Log In.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:42]]></Time>
+<TimeTick>1454592702</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="460" >
+<Disp><![CDATA[BTN_Log In.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T274">
+<Obj plainTxt="False" ><![CDATA[BTN_Log In.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:45]]></Time>
+<TimeTick>1454592705</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="462" >
+<Disp><![CDATA[BTN_Log In.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="459" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="458" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T275">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:45]]></Time>
+<TimeTick>1454592705</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="463" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T276">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:46]]></Time>
+<TimeTick>1454592706</TimeTick>
+<Step rID="T277">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:46]]></Time>
+<TimeTick>1454592706</TimeTick>
+<Step rID="T278">
+<Obj plainTxt="False" ><![CDATA[TAB _Home.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:46]]></Time>
+<TimeTick>1454592706</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="467" >
+<Disp><![CDATA[TAB _Home.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T279">
+<Obj plainTxt="False" ><![CDATA[Work Queue.Sync]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:46]]></Time>
+<TimeTick>1454592706</TimeTick>
+<NodeArgs eType="Replay" icon="8" nRep="469" >
+<Disp><![CDATA[Work Queue.Sync]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T280">
+<Obj plainTxt="False" ><![CDATA[TAB _Home.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:48]]></Time>
+<TimeTick>1454592708</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="471" >
+<Disp><![CDATA[TAB _Home.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="466" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="465" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T281">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:48]]></Time>
+<TimeTick>1454592708</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="472" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T282">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:49]]></Time>
+<TimeTick>1454592709</TimeTick>
+<Step rID="T283">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:49]]></Time>
+<TimeTick>1454592709</TimeTick>
+<Step rID="T284">
+<Obj plainTxt="False" ><![CDATA[TAB _Home.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:49]]></Time>
+<TimeTick>1454592709</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="476" >
+<Disp><![CDATA[TAB _Home.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="475" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="474" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T285">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:49]]></Time>
+<TimeTick>1454592709</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="477" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T286">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:49]]></Time>
+<TimeTick>1454592709</TimeTick>
+<Step rID="T287">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:49]]></Time>
+<TimeTick>1454592709</TimeTick>
+<Step rID="T288">
+<Obj plainTxt="False" ><![CDATA[TAB_Tests.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:49]]></Time>
+<TimeTick>1454592709</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="481" >
+<Disp><![CDATA[TAB_Tests.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="480" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="479" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T289">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:49]]></Time>
+<TimeTick>1454592709</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="482" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T290">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:49]]></Time>
+<TimeTick>1454592709</TimeTick>
+<Step rID="T291">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:49]]></Time>
+<TimeTick>1454592709</TimeTick>
+<Step rID="T292">
+<Obj plainTxt="False" ><![CDATA[TAB_Tests.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:49]]></Time>
+<TimeTick>1454592709</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="486" >
+<Disp><![CDATA[TAB_Tests.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T293">
+<Obj plainTxt="False" ><![CDATA[TAB_Tests.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:52]]></Time>
+<TimeTick>1454592712</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="488" >
+<Disp><![CDATA[TAB_Tests.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="485" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="484" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T294">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:52]]></Time>
+<TimeTick>1454592712</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="489" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T295">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:52]]></Time>
+<TimeTick>1454592712</TimeTick>
+<Step rID="T296">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:52]]></Time>
+<TimeTick>1454592712</TimeTick>
+<Step rID="T297">
+<Obj plainTxt="False" ><![CDATA[LNK_Draft Mode.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:52]]></Time>
+<TimeTick>1454592712</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="493" >
+<Disp><![CDATA[LNK_Draft Mode.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="492" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="491" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T298">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:52]]></Time>
+<TimeTick>1454592712</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="494" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T299">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:52]]></Time>
+<TimeTick>1454592712</TimeTick>
+<Step rID="T300">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:52]]></Time>
+<TimeTick>1454592712</TimeTick>
+<Step rID="T301">
+<Obj plainTxt="False" ><![CDATA[LNK_Draft Mode.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:52]]></Time>
+<TimeTick>1454592712</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="498" >
+<Disp><![CDATA[LNK_Draft Mode.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T302">
+<Obj plainTxt="False" ><![CDATA[LNK_Draft Mode.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:55]]></Time>
+<TimeTick>1454592715</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="500" >
+<Disp><![CDATA[LNK_Draft Mode.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="497" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="496" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T303">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:55]]></Time>
+<TimeTick>1454592715</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="501" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T304">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:59]]></Time>
+<TimeTick>1454592719</TimeTick>
+<Step rID="T305">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:59]]></Time>
+<TimeTick>1454592719</TimeTick>
+<Step rID="T306">
+<Obj plainTxt="False" ><![CDATA[NAV_Entry.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:59]]></Time>
+<TimeTick>1454592719</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="505" >
+<Disp><![CDATA[NAV_Entry.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="504" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="503" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T307">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:01:59]]></Time>
+<TimeTick>1454592719</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="506" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T308">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:03]]></Time>
+<TimeTick>1454592723</TimeTick>
+<Step rID="T309">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:03]]></Time>
+<TimeTick>1454592723</TimeTick>
+<Step rID="T310">
+<Obj plainTxt="False" ><![CDATA[NAV_RequiredQuestions.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:03]]></Time>
+<TimeTick>1454592723</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="510" >
+<Disp><![CDATA[NAV_RequiredQuestions.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="509" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="508" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T311">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:03]]></Time>
+<TimeTick>1454592723</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="511" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T312">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:06]]></Time>
+<TimeTick>1454592726</TimeTick>
+<Step rID="T313">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:06]]></Time>
+<TimeTick>1454592726</TimeTick>
+<Step rID="T314">
+<Obj plainTxt="False" ><![CDATA[NAV_Submit.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:06]]></Time>
+<TimeTick>1454592726</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="515" >
+<Disp><![CDATA[NAV_Submit.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="514" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="513" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T315">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:06]]></Time>
+<TimeTick>1454592726</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="516" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T316">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:09]]></Time>
+<TimeTick>1454592729</TimeTick>
+<Step rID="T317">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:09]]></Time>
+<TimeTick>1454592729</TimeTick>
+<Step rID="T318">
+<Obj plainTxt="False" ><![CDATA[NAV_AdditionalInformation.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:09]]></Time>
+<TimeTick>1454592729</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="520" >
+<Disp><![CDATA[NAV_AdditionalInformation.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="519" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="518" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T319">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:09]]></Time>
+<TimeTick>1454592729</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="521" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T320">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:12]]></Time>
+<TimeTick>1454592732</TimeTick>
+<Step rID="T321">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:12]]></Time>
+<TimeTick>1454592732</TimeTick>
+<Step rID="T322">
+<Obj plainTxt="False" ><![CDATA[NAV_Summary.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:12]]></Time>
+<TimeTick>1454592732</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="525" >
+<Disp><![CDATA[NAV_Summary.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="524" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="523" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T323">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:12]]></Time>
+<TimeTick>1454592732</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="526" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T324">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:15]]></Time>
+<TimeTick>1454592735</TimeTick>
+<Step rID="T325">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:15]]></Time>
+<TimeTick>1454592735</TimeTick>
+<Step rID="T326">
+<Obj plainTxt="False" ><![CDATA[TBL_RepeatingModuleDataTable.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:15]]></Time>
+<TimeTick>1454592735</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="530" >
+<Disp><![CDATA[TBL_RepeatingModuleDataTable.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="529" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="528" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T327">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:15]]></Time>
+<TimeTick>1454592735</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="531" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T328">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:18]]></Time>
+<TimeTick>1454592738</TimeTick>
+<Step rID="T329">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:18]]></Time>
+<TimeTick>1454592738</TimeTick>
+<Step rID="T330">
+<Obj plainTxt="False" ><![CDATA[BTN_NewItem.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:18]]></Time>
+<TimeTick>1454592738</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="535" >
+<Disp><![CDATA[BTN_NewItem.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="534" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="533" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T331">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:18]]></Time>
+<TimeTick>1454592738</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="536" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T332">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:21]]></Time>
+<TimeTick>1454592741</TimeTick>
+<Step rID="T333">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:21]]></Time>
+<TimeTick>1454592741</TimeTick>
+<Step rID="T334">
+<Obj plainTxt="False" ><![CDATA[BTN_NewItem.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:21]]></Time>
+<TimeTick>1454592741</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="540" >
+<Disp><![CDATA[BTN_NewItem.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T335">
+<Obj plainTxt="False" ><![CDATA[BTN_NewItem.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:24]]></Time>
+<TimeTick>1454592744</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="542" >
+<Disp><![CDATA[BTN_NewItem.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="539" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="538" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T336">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:24]]></Time>
+<TimeTick>1454592744</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="543" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T337">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:29]]></Time>
+<TimeTick>1454592749</TimeTick>
+<Step rID="T338">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:29]]></Time>
+<TimeTick>1454592749</TimeTick>
+<Step rID="T339">
+<Obj plainTxt="False" ><![CDATA[NAV_(NEW).Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:29]]></Time>
+<TimeTick>1454592749</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="547" >
+<Disp><![CDATA[NAV_(NEW).Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="546" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="545" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T340">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:29]]></Time>
+<TimeTick>1454592749</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="548" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T341">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:32]]></Time>
+<TimeTick>1454592752</TimeTick>
+<Step rID="T342">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:32]]></Time>
+<TimeTick>1454592752</TimeTick>
+<Step rID="T343">
+<Obj plainTxt="False" ><![CDATA[TXT_FirstName.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:32]]></Time>
+<TimeTick>1454592752</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="552" >
+<Disp><![CDATA[TXT_FirstName.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T344">
+<Obj plainTxt="False" ><![CDATA[TXT_FirstName.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Fred"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:32]]></Time>
+<TimeTick>1454592752</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="554" >
+<Disp><![CDATA[TXT_FirstName.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="551" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="550" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T345">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:32]]></Time>
+<TimeTick>1454592752</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="555" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T346">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:35]]></Time>
+<TimeTick>1454592755</TimeTick>
+<Step rID="T347">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:35]]></Time>
+<TimeTick>1454592755</TimeTick>
+<Step rID="T348">
+<Obj plainTxt="False" ><![CDATA[TXT_LastName.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:35]]></Time>
+<TimeTick>1454592755</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="559" >
+<Disp><![CDATA[TXT_LastName.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T349">
+<Obj plainTxt="False" ><![CDATA[TXT_LastName.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Parsnips"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:35]]></Time>
+<TimeTick>1454592755</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="561" >
+<Disp><![CDATA[TXT_LastName.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="558" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="557" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T350">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:35]]></Time>
+<TimeTick>1454592755</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="562" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T351">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:38]]></Time>
+<TimeTick>1454592758</TimeTick>
+<Step rID="T352">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:38]]></Time>
+<TimeTick>1454592758</TimeTick>
+<Step rID="T353">
+<Obj plainTxt="False" ><![CDATA[TXT_ClientID.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:38]]></Time>
+<TimeTick>1454592758</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="566" >
+<Disp><![CDATA[TXT_ClientID.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T354">
+<Obj plainTxt="False" ><![CDATA[TXT_ClientID.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["123"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:38]]></Time>
+<TimeTick>1454592758</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="568" >
+<Disp><![CDATA[TXT_ClientID.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="565" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="564" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T355">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:38]]></Time>
+<TimeTick>1454592758</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="569" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T356">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:41]]></Time>
+<TimeTick>1454592761</TimeTick>
+<Step rID="T357">
+<Obj plainTxt="False" ><![CDATA[DraftRM]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:41]]></Time>
+<TimeTick>1454592761</TimeTick>
+<Step rID="T358">
+<Obj plainTxt="False" ><![CDATA[BTN_Next_DraftMode.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:41]]></Time>
+<TimeTick>1454592761</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="573" >
+<Disp><![CDATA[BTN_Next_DraftMode.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T359">
+<Obj plainTxt="False" ><![CDATA[BTN_Next_DraftMode.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:44]]></Time>
+<TimeTick>1454592764</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="575" >
+<Disp><![CDATA[BTN_Next_DraftMode.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="572" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="571" >
+<Disp><![CDATA[DraftRM]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T360">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:44]]></Time>
+<TimeTick>1454592764</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="576" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T361">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:48]]></Time>
+<TimeTick>1454592768</TimeTick>
+<Step rID="T362">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:48]]></Time>
+<TimeTick>1454592768</TimeTick>
+<Step rID="T363">
+<Obj plainTxt="False" ><![CDATA[DWL_SelectValue.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:48]]></Time>
+<TimeTick>1454592768</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="580" >
+<Disp><![CDATA[DWL_SelectValue.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T364">
+<Obj plainTxt="False" ><![CDATA[[ WebElement ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:50]]></Time>
+<TimeTick>1454592770</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="582" >
+<Disp><![CDATA[[ WebElement ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T365">
+<Obj plainTxt="False" ><![CDATA[[ The new user interface looks great! ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:52]]></Time>
+<TimeTick>1454592772</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="584" >
+<Disp><![CDATA[[ The new user interface looks great! ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="579" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="578" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T366">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:53]]></Time>
+<TimeTick>1454592773</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="585" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T367">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:56]]></Time>
+<TimeTick>1454592776</TimeTick>
+<Step rID="T368">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:56]]></Time>
+<TimeTick>1454592776</TimeTick>
+<Step rID="T369">
+<Obj plainTxt="False" ><![CDATA[RDL_SelectionRequired.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:56]]></Time>
+<TimeTick>1454592776</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="589" >
+<Disp><![CDATA[RDL_SelectionRequired.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T370">
+<Obj plainTxt="False" ><![CDATA[[ 1454592766193 ].Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["small value"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:56]]></Time>
+<TimeTick>1454592776</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="591" >
+<Disp><![CDATA[[ 1454592766193 ].Select]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="588" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="587" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T371">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:56]]></Time>
+<TimeTick>1454592776</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="592" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T372">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:59]]></Time>
+<TimeTick>1454592779</TimeTick>
+<Step rID="T373">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:59]]></Time>
+<TimeTick>1454592779</TimeTick>
+<Step rID="T374">
+<Obj plainTxt="False" ><![CDATA[TGL_Yes.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:02:59]]></Time>
+<TimeTick>1454592779</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="596" >
+<Disp><![CDATA[TGL_Yes.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T375">
+<Obj plainTxt="False" ><![CDATA[TGL_Yes.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:02]]></Time>
+<TimeTick>1454592782</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="598" >
+<Disp><![CDATA[TGL_Yes.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="595" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="594" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T376">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:02]]></Time>
+<TimeTick>1454592782</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="599" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T377">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:05]]></Time>
+<TimeTick>1454592785</TimeTick>
+<Step rID="T378">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:05]]></Time>
+<TimeTick>1454592785</TimeTick>
+<Step rID="T379">
+<Obj plainTxt="False" ><![CDATA[TXT_SelectADate.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:05]]></Time>
+<TimeTick>1454592785</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="603" >
+<Disp><![CDATA[TXT_SelectADate.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T380">
+<Obj plainTxt="False" ><![CDATA[TXT_SelectADate.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["2/4/2016"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:05]]></Time>
+<TimeTick>1454592785</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="605" >
+<Disp><![CDATA[TXT_SelectADate.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="602" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="601" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T381">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:05]]></Time>
+<TimeTick>1454592785</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="606" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T382">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:08]]></Time>
+<TimeTick>1454592788</TimeTick>
+<Step rID="T383">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:08]]></Time>
+<TimeTick>1454592788</TimeTick>
+<Step rID="T384">
+<Obj plainTxt="False" ><![CDATA[TRKcircleEntry.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:08]]></Time>
+<TimeTick>1454592788</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="610" >
+<Disp><![CDATA[TRKcircleEntry.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="609" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="608" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T385">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:08]]></Time>
+<TimeTick>1454592788</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="611" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T386">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:08]]></Time>
+<TimeTick>1454592788</TimeTick>
+<Step rID="T387">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:08]]></Time>
+<TimeTick>1454592788</TimeTick>
+<Step rID="T388">
+<Obj plainTxt="False" ><![CDATA[TRKcircleEntry.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:08]]></Time>
+<TimeTick>1454592788</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="615" >
+<Disp><![CDATA[TRKcircleEntry.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T389">
+<Obj plainTxt="False" ><![CDATA[TRKcircleEntry.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:08]]></Time>
+<TimeTick>1454592788</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="616" >
+<Disp><![CDATA[TRKcircleEntry.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="614" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="613" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T390">
+<Obj ><![CDATA[VerifyNavMatchesStepTracker]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:08]]></Time>
+<TimeTick>1454592788</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="617" status="Passed" >
+<Disp><![CDATA[VerifyNavMatchesStepTracker]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T391">
+<Obj plainTxt="False" ><![CDATA[[ WebButton ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:09]]></Time>
+<TimeTick>1454592789</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="619" >
+<Disp><![CDATA[[ WebButton ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T392">
+<Obj plainTxt="False" ><![CDATA[[ Logout ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:09]]></Time>
+<TimeTick>1454592789</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="621" >
+<Disp><![CDATA[[ Logout ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T393">
+<Obj ><![CDATA[Logout]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:09]]></Time>
+<TimeTick>1454592789</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="622" status="Passed" >
+<Disp><![CDATA[Logout]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T394">
+<Obj plainTxt="False" ><![CDATA[SystemUtil]]></Obj>
+<Details plainTxt="False" ><![CDATA[SystemUtil]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:22]]></Time>
+<TimeTick>1454592802</TimeTick>
+<Step rID="T395">
+<Obj plainTxt="False" ><![CDATA[Run "iexplore.exe",3]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run "iexplore.exe",3]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:22]]></Time>
+<TimeTick>1454592802</TimeTick>
+<NodeArgs eType="Replay" icon="4" nRep="626" status="Passed" >
+<Disp><![CDATA[Run "iexplore.exe",3]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="4" nRep="625" status="Passed" >
+<Disp><![CDATA[SystemUtil]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T396">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:23]]></Time>
+<TimeTick>1454592803</TimeTick>
+<Step rID="T397">
+<Obj plainTxt="False" ><![CDATA[Login.Sync]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:23]]></Time>
+<TimeTick>1454592803</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="636" >
+<Disp><![CDATA[Login.Sync]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="635" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T398">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:23]]></Time>
+<TimeTick>1454592803</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="637" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T399">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:31]]></Time>
+<TimeTick>1454592811</TimeTick>
+<Step rID="T400">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:31]]></Time>
+<TimeTick>1454592811</TimeTick>
+<Step rID="T401">
+<Obj plainTxt="False" ><![CDATA[TXT_user_name.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:31]]></Time>
+<TimeTick>1454592811</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="697" >
+<Disp><![CDATA[TXT_user_name.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T402">
+<Obj plainTxt="False" ><![CDATA[TXT_user_name.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["chrisj"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:31]]></Time>
+<TimeTick>1454592811</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="699" >
+<Disp><![CDATA[TXT_user_name.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="696" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="695" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T403">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:31]]></Time>
+<TimeTick>1454592811</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="700" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T404">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:31]]></Time>
+<TimeTick>1454592811</TimeTick>
+<Step rID="T405">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:31]]></Time>
+<TimeTick>1454592811</TimeTick>
+<Step rID="T406">
+<Obj plainTxt="False" ><![CDATA[TXT_user_password.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:31]]></Time>
+<TimeTick>1454592811</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="704" >
+<Disp><![CDATA[TXT_user_password.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T407">
+<Obj plainTxt="False" ><![CDATA[TXT_user_password.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["password"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:31]]></Time>
+<TimeTick>1454592811</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="706" >
+<Disp><![CDATA[TXT_user_password.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="703" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="702" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T408">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:31]]></Time>
+<TimeTick>1454592811</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="707" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T409">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:31]]></Time>
+<TimeTick>1454592811</TimeTick>
+<Step rID="T410">
+<Obj plainTxt="False" ><![CDATA[Login]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:31]]></Time>
+<TimeTick>1454592811</TimeTick>
+<Step rID="T411">
+<Obj plainTxt="False" ><![CDATA[BTN_Log In.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:31]]></Time>
+<TimeTick>1454592811</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="711" >
+<Disp><![CDATA[BTN_Log In.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T412">
+<Obj plainTxt="False" ><![CDATA[BTN_Log In.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:34]]></Time>
+<TimeTick>1454592814</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="713" >
+<Disp><![CDATA[BTN_Log In.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="710" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="709" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T413">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:34]]></Time>
+<TimeTick>1454592814</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="714" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T414">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:36]]></Time>
+<TimeTick>1454592816</TimeTick>
+<Step rID="T415">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:36]]></Time>
+<TimeTick>1454592816</TimeTick>
+<Step rID="T416">
+<Obj plainTxt="False" ><![CDATA[TAB _Home.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:36]]></Time>
+<TimeTick>1454592816</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="718" >
+<Disp><![CDATA[TAB _Home.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T417">
+<Obj plainTxt="False" ><![CDATA[Work Queue.Sync]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:36]]></Time>
+<TimeTick>1454592816</TimeTick>
+<NodeArgs eType="Replay" icon="8" nRep="720" >
+<Disp><![CDATA[Work Queue.Sync]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T418">
+<Obj plainTxt="False" ><![CDATA[TAB _Home.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:41]]></Time>
+<TimeTick>1454592821</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="722" >
+<Disp><![CDATA[TAB _Home.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="717" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="716" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T419">
+<Obj ><![CDATA[Login]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:41]]></Time>
+<TimeTick>1454592821</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="723" status="Passed" >
+<Disp><![CDATA[Login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T420">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:44]]></Time>
+<TimeTick>1454592824</TimeTick>
+<Step rID="T421">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:44]]></Time>
+<TimeTick>1454592824</TimeTick>
+<Step rID="T422">
+<Obj plainTxt="False" ><![CDATA[TAB _Home.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:44]]></Time>
+<TimeTick>1454592824</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="727" >
+<Disp><![CDATA[TAB _Home.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="726" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="725" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T423">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:44]]></Time>
+<TimeTick>1454592824</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="728" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T424">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:47]]></Time>
+<TimeTick>1454592827</TimeTick>
+<Step rID="T425">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:47]]></Time>
+<TimeTick>1454592827</TimeTick>
+<Step rID="T426">
+<Obj plainTxt="False" ><![CDATA[TAB_Tests.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:47]]></Time>
+<TimeTick>1454592827</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="732" >
+<Disp><![CDATA[TAB_Tests.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="731" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="730" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T427">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:47]]></Time>
+<TimeTick>1454592827</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="733" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T428">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:50]]></Time>
+<TimeTick>1454592830</TimeTick>
+<Step rID="T429">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:50]]></Time>
+<TimeTick>1454592830</TimeTick>
+<Step rID="T430">
+<Obj plainTxt="False" ><![CDATA[TAB_Tests.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:50]]></Time>
+<TimeTick>1454592830</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="737" >
+<Disp><![CDATA[TAB_Tests.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T431">
+<Obj plainTxt="False" ><![CDATA[TAB_Tests.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:53]]></Time>
+<TimeTick>1454592833</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="739" >
+<Disp><![CDATA[TAB_Tests.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="736" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="735" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T432">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:53]]></Time>
+<TimeTick>1454592833</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="740" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T433">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:57]]></Time>
+<TimeTick>1454592837</TimeTick>
+<Step rID="T434">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:57]]></Time>
+<TimeTick>1454592837</TimeTick>
+<Step rID="T435">
+<Obj plainTxt="False" ><![CDATA[LNK_Draft Mode.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:57]]></Time>
+<TimeTick>1454592837</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="744" >
+<Disp><![CDATA[LNK_Draft Mode.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="743" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="742" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T436">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:03:57]]></Time>
+<TimeTick>1454592837</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="745" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T437">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:00]]></Time>
+<TimeTick>1454592840</TimeTick>
+<Step rID="T438">
+<Obj plainTxt="False" ><![CDATA[Work Queue]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:00]]></Time>
+<TimeTick>1454592840</TimeTick>
+<Step rID="T439">
+<Obj plainTxt="False" ><![CDATA[LNK_Draft Mode.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:00]]></Time>
+<TimeTick>1454592840</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="749" >
+<Disp><![CDATA[LNK_Draft Mode.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T440">
+<Obj plainTxt="False" ><![CDATA[LNK_Draft Mode.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:03]]></Time>
+<TimeTick>1454592843</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="751" >
+<Disp><![CDATA[LNK_Draft Mode.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="748" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="747" >
+<Disp><![CDATA[Work Queue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T441">
+<Obj ><![CDATA[NavigateToDraftMode]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:03]]></Time>
+<TimeTick>1454592843</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="752" status="Passed" >
+<Disp><![CDATA[NavigateToDraftMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T442">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:10]]></Time>
+<TimeTick>1454592850</TimeTick>
+<Step rID="T443">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:10]]></Time>
+<TimeTick>1454592850</TimeTick>
+<Step rID="T444">
+<Obj plainTxt="False" ><![CDATA[LBL_Header_DraftModeEntry.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:10]]></Time>
+<TimeTick>1454592850</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="756" >
+<Disp><![CDATA[LBL_Header_DraftModeEntry.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="755" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="754" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T445">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:10]]></Time>
+<TimeTick>1454592850</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="757" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T446">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:13]]></Time>
+<TimeTick>1454592853</TimeTick>
+<Step rID="T447">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:13]]></Time>
+<TimeTick>1454592853</TimeTick>
+<Step rID="T448">
+<Obj plainTxt="False" ><![CDATA[LBL_Header_DraftModeEntry.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:13]]></Time>
+<TimeTick>1454592853</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="761" >
+<Disp><![CDATA[LBL_Header_DraftModeEntry.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="760" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="759" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T449">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:13]]></Time>
+<TimeTick>1454592853</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="762" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T450">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:16]]></Time>
+<TimeTick>1454592856</TimeTick>
+<Step rID="T451">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:16]]></Time>
+<TimeTick>1454592856</TimeTick>
+<Step rID="T452">
+<Obj plainTxt="False" ><![CDATA[LBL_PageMessage_Thispagecontainrequired.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:16]]></Time>
+<TimeTick>1454592856</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="766" >
+<Disp><![CDATA[LBL_PageMessage_Thispagecontainrequired.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="765" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="764" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T453">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:16]]></Time>
+<TimeTick>1454592856</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="767" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T454">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:20]]></Time>
+<TimeTick>1454592860</TimeTick>
+<Step rID="T455">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:20]]></Time>
+<TimeTick>1454592860</TimeTick>
+<Step rID="T456">
+<Obj plainTxt="False" ><![CDATA[LBL_Warning_Answer theDropDownquestion.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:20]]></Time>
+<TimeTick>1454592860</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="771" >
+<Disp><![CDATA[LBL_Warning_Answer theDropDownquestion.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="770" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="769" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T457">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:20]]></Time>
+<TimeTick>1454592860</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="772" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T458">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:23]]></Time>
+<TimeTick>1454592863</TimeTick>
+<Step rID="T459">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:23]]></Time>
+<TimeTick>1454592863</TimeTick>
+<Step rID="T460">
+<Obj plainTxt="False" ><![CDATA[DWL_SelectValue.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:23]]></Time>
+<TimeTick>1454592863</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="776" >
+<Disp><![CDATA[DWL_SelectValue.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="775" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="774" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T461">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:23]]></Time>
+<TimeTick>1454592863</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="777" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T462">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:26]]></Time>
+<TimeTick>1454592866</TimeTick>
+<Step rID="T463">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:26]]></Time>
+<TimeTick>1454592866</TimeTick>
+<Step rID="T464">
+<Obj plainTxt="False" ><![CDATA[DWL_SelectValue.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:26]]></Time>
+<TimeTick>1454592866</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="781" >
+<Disp><![CDATA[DWL_SelectValue.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T465">
+<Obj plainTxt="False" ><![CDATA[[ WebElement ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:28]]></Time>
+<TimeTick>1454592868</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="783" >
+<Disp><![CDATA[[ WebElement ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T466">
+<Obj plainTxt="False" ><![CDATA[[ The new user interface looks great! ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:30]]></Time>
+<TimeTick>1454592870</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="785" >
+<Disp><![CDATA[[ The new user interface looks great! ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="780" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="779" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T467">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:30]]></Time>
+<TimeTick>1454592870</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="786" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T468">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:33]]></Time>
+<TimeTick>1454592873</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="788" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T469">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:36]]></Time>
+<TimeTick>1454592876</TimeTick>
+<Step rID="T470">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:36]]></Time>
+<TimeTick>1454592876</TimeTick>
+<Step rID="T471">
+<Obj plainTxt="False" ><![CDATA[TGL_Yes.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:36]]></Time>
+<TimeTick>1454592876</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="792" >
+<Disp><![CDATA[TGL_Yes.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T472">
+<Obj plainTxt="False" ><![CDATA[TGL_Yes.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:39]]></Time>
+<TimeTick>1454592879</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="794" >
+<Disp><![CDATA[TGL_Yes.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="791" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="790" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T473">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:40]]></Time>
+<TimeTick>1454592880</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="795" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T474">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:43]]></Time>
+<TimeTick>1454592883</TimeTick>
+<Step rID="T475">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:43]]></Time>
+<TimeTick>1454592883</TimeTick>
+<Step rID="T476">
+<Obj plainTxt="False" ><![CDATA[TXT_SelectADate.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:43]]></Time>
+<TimeTick>1454592883</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="799" >
+<Disp><![CDATA[TXT_SelectADate.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T477">
+<Obj plainTxt="False" ><![CDATA[TXT_SelectADate.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["2/4/2016"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:43]]></Time>
+<TimeTick>1454592883</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="801" >
+<Disp><![CDATA[TXT_SelectADate.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="798" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="797" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T478">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:43]]></Time>
+<TimeTick>1454592883</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="802" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T479">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:46]]></Time>
+<TimeTick>1454592886</TimeTick>
+<Step rID="T480">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:46]]></Time>
+<TimeTick>1454592886</TimeTick>
+<Step rID="T481">
+<Obj plainTxt="False" ><![CDATA[BTN_SkipValidation.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:46]]></Time>
+<TimeTick>1454592886</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="806" >
+<Disp><![CDATA[BTN_SkipValidation.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T482">
+<Obj plainTxt="False" ><![CDATA[BTN_SkipValidation.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:49]]></Time>
+<TimeTick>1454592889</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="808" >
+<Disp><![CDATA[BTN_SkipValidation.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="805" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="804" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T483">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:49]]></Time>
+<TimeTick>1454592889</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="809" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T484">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:53]]></Time>
+<TimeTick>1454592893</TimeTick>
+<Step rID="T485">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:53]]></Time>
+<TimeTick>1454592893</TimeTick>
+<Step rID="T486">
+<Obj plainTxt="False" ><![CDATA[TWL_RequiredCheckboxGroup.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:53]]></Time>
+<TimeTick>1454592893</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="813" >
+<Disp><![CDATA[TWL_RequiredCheckboxGroup.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T487">
+<Obj plainTxt="False" ><![CDATA[[ 1454592891067 ].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["ON"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:53]]></Time>
+<TimeTick>1454592893</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="815" >
+<Disp><![CDATA[[ 1454592891067 ].Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="812" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="811" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T488">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:53]]></Time>
+<TimeTick>1454592893</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="816" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T489">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:56]]></Time>
+<TimeTick>1454592896</TimeTick>
+<Step rID="T490">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:56]]></Time>
+<TimeTick>1454592896</TimeTick>
+<Step rID="T491">
+<Obj plainTxt="False" ><![CDATA[LBL_Answer * Required Checkbox.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:56]]></Time>
+<TimeTick>1454592896</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="820" >
+<Disp><![CDATA[LBL_Answer * Required Checkbox.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="819" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="818" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T492">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:04:56]]></Time>
+<TimeTick>1454592896</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="821" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T493">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:00]]></Time>
+<TimeTick>1454592900</TimeTick>
+<Step rID="T494">
+<Obj plainTxt="False" ><![CDATA[Required Questions]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:00]]></Time>
+<TimeTick>1454592900</TimeTick>
+<Step rID="T495">
+<Obj plainTxt="False" ><![CDATA[BTN_SkipValidation.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:00]]></Time>
+<TimeTick>1454592900</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="825" >
+<Disp><![CDATA[BTN_SkipValidation.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T496">
+<Obj plainTxt="False" ><![CDATA[BTN_SkipValidation.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:03]]></Time>
+<TimeTick>1454592903</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="827" >
+<Disp><![CDATA[BTN_SkipValidation.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="824" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="823" >
+<Disp><![CDATA[Required Questions]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T497">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:03]]></Time>
+<TimeTick>1454592903</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="828" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T498">
+<Obj plainTxt="False" ><![CDATA[Additional Information]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:07]]></Time>
+<TimeTick>1454592907</TimeTick>
+<Step rID="T499">
+<Obj plainTxt="False" ><![CDATA[Additional Information]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:07]]></Time>
+<TimeTick>1454592907</TimeTick>
+<Step rID="T500">
+<Obj plainTxt="False" ><![CDATA[TXT_PetsName.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:07]]></Time>
+<TimeTick>1454592907</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="832" >
+<Disp><![CDATA[TXT_PetsName.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T501">
+<Obj plainTxt="False" ><![CDATA[TXT_PetsName.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Fred"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:07]]></Time>
+<TimeTick>1454592907</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="834" >
+<Disp><![CDATA[TXT_PetsName.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="831" >
+<Disp><![CDATA[Additional Information]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="830" >
+<Disp><![CDATA[Additional Information]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T502">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:07]]></Time>
+<TimeTick>1454592907</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="835" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T503">
+<Obj plainTxt="False" ><![CDATA[Additional Information]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:10]]></Time>
+<TimeTick>1454592910</TimeTick>
+<Step rID="T504">
+<Obj plainTxt="False" ><![CDATA[Additional Information]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:10]]></Time>
+<TimeTick>1454592910</TimeTick>
+<Step rID="T505">
+<Obj plainTxt="False" ><![CDATA[BTN_Next_AdditionalInfo.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:10]]></Time>
+<TimeTick>1454592910</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="839" >
+<Disp><![CDATA[BTN_Next_AdditionalInfo.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T506">
+<Obj plainTxt="False" ><![CDATA[BTN_Next_AdditionalInfo.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:13]]></Time>
+<TimeTick>1454592913</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="841" >
+<Disp><![CDATA[BTN_Next_AdditionalInfo.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="838" >
+<Disp><![CDATA[Additional Information]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="837" >
+<Disp><![CDATA[Additional Information]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T507">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:05:13]]></Time>
+<TimeTick>1454592913</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="842" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T508">
+<Obj plainTxt="False" ><![CDATA[Additional Information2]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:18]]></Time>
+<TimeTick>1454592978</TimeTick>
+<Step rID="T509">
+<Obj plainTxt="False" ><![CDATA[Additional Information2_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:18]]></Time>
+<TimeTick>1454592978</TimeTick>
+<Step rID="T510">
+<Obj plainTxt="False" ><![CDATA["TXT_DateBowlCleaned"- Description mismatch]]></Obj>
+<Details plainTxt="False" ><![CDATA[The object was not found using the test object description. Check the object's properties.]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:18]]></Time>
+<TimeTick>1454592978</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="1226" status="Warning" >
+<Disp><![CDATA["TXT_DateBowlCleaned"- Description mismatch]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T511">
+<Obj plainTxt="False" ><![CDATA["TXT_DateBowlCleaned"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not found.</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>type=text<br>name=P_200211.G_200192.N_DraftMode^AdditionalInfo3<br>micclass=WebEdit<br>html tag=INPUT<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (3 objects found)&nbsp;</FONT></u><br>
+type=text<br>micclass=WebEdit<br>html tag=INPUT<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+name=P_200211.G_200192.N_DraftMode^AdditionalInfo3<SPAN class=Failed> (Skipped)</SPAN><br>html id=P_200211.G_200192.Q_200863<SPAN class=Failed> (Skipped)</SPAN><br>max length=2147483647<SPAN class=passed> (Used</SPAN>, 3 matches)</SPAN><br>default value=<SPAN class=passed> (Used</SPAN>, 3 matches)</SPAN><br>class=ifs-question-value ifs-bound initialized k-input<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>rows=0<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>visible=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:18]]></Time>
+<TimeTick>1454592978</TimeTick>
+<NodeArgs eType="Replay" icon="15" nRep="1227" >
+<Disp><![CDATA["TXT_DateBowlCleaned"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T512">
+<Obj plainTxt="False" ><![CDATA[TXT_DateBowlCleaned.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:18]]></Time>
+<TimeTick>1454592978</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="1228" >
+<Disp><![CDATA[TXT_DateBowlCleaned.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T513">
+<Obj plainTxt="False" ><![CDATA[TXT_DateBowlCleaned.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["2/4/2016"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:18]]></Time>
+<TimeTick>1454592978</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="1230" >
+<Disp><![CDATA[TXT_DateBowlCleaned.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1225" status="Warning" >
+<Disp><![CDATA[Additional Information2_2]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1224" status="Warning" >
+<Disp><![CDATA[Additional Information2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T514">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:18]]></Time>
+<TimeTick>1454592978</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="1231" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T515">
+<Obj plainTxt="False" ><![CDATA[Additional Information2]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:21]]></Time>
+<TimeTick>1454592981</TimeTick>
+<Step rID="T516">
+<Obj plainTxt="False" ><![CDATA[Additional Information2_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:21]]></Time>
+<TimeTick>1454592981</TimeTick>
+<Step rID="T517">
+<Obj plainTxt="False" ><![CDATA[BTN_SkipValidation.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:21]]></Time>
+<TimeTick>1454592981</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="1235" >
+<Disp><![CDATA[BTN_SkipValidation.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T518">
+<Obj plainTxt="False" ><![CDATA[BTN_SkipValidation.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:24]]></Time>
+<TimeTick>1454592984</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="1237" >
+<Disp><![CDATA[BTN_SkipValidation.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1234" >
+<Disp><![CDATA[Additional Information2_2]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1233" >
+<Disp><![CDATA[Additional Information2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T519">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:24]]></Time>
+<TimeTick>1454592984</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="1238" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T520">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:28]]></Time>
+<TimeTick>1454592988</TimeTick>
+<Step rID="T521">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:28]]></Time>
+<TimeTick>1454592988</TimeTick>
+<Step rID="T522">
+<Obj plainTxt="False" ><![CDATA[PNL_Submit.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:28]]></Time>
+<TimeTick>1454592988</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="1242" >
+<Disp><![CDATA[PNL_Submit.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1241" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1240" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T523">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:28]]></Time>
+<TimeTick>1454592988</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="1243" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T524">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:31]]></Time>
+<TimeTick>1454592991</TimeTick>
+<Step rID="T525">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:31]]></Time>
+<TimeTick>1454592991</TimeTick>
+<Step rID="T526">
+<Obj plainTxt="False" ><![CDATA[TRK_BTN_Submit.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:31]]></Time>
+<TimeTick>1454592991</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="1247" >
+<Disp><![CDATA[TRK_BTN_Submit.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T527">
+<Obj plainTxt="False" ><![CDATA[TRK_BTN_Submit.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:34]]></Time>
+<TimeTick>1454592994</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="1249" >
+<Disp><![CDATA[TRK_BTN_Submit.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1246" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1245" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T528">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:34]]></Time>
+<TimeTick>1454592994</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="1250" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T529">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:37]]></Time>
+<TimeTick>1454592997</TimeTick>
+<Step rID="T530">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:37]]></Time>
+<TimeTick>1454592997</TimeTick>
+<Step rID="T531">
+<Obj plainTxt="False" ><![CDATA[STP_PopUp_Submit.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:37]]></Time>
+<TimeTick>1454592997</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="1254" >
+<Disp><![CDATA[STP_PopUp_Submit.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1253" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1252" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T532">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:37]]></Time>
+<TimeTick>1454592997</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="1255" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T533">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:40]]></Time>
+<TimeTick>1454593000</TimeTick>
+<Step rID="T534">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:40]]></Time>
+<TimeTick>1454593000</TimeTick>
+<Step rID="T535">
+<Obj plainTxt="False" ><![CDATA[BTN_Submit_DftMd.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:40]]></Time>
+<TimeTick>1454593000</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="1259" >
+<Disp><![CDATA[BTN_Submit_DftMd.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T536">
+<Obj plainTxt="False" ><![CDATA[BTN_Submit_DftMd.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:43]]></Time>
+<TimeTick>1454593003</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="1261" >
+<Disp><![CDATA[BTN_Submit_DftMd.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1258" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1257" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T537">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:43]]></Time>
+<TimeTick>1454593003</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="1262" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T538">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:48]]></Time>
+<TimeTick>1454593008</TimeTick>
+<Step rID="T539">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:48]]></Time>
+<TimeTick>1454593008</TimeTick>
+<Step rID="T540">
+<Obj plainTxt="False" ><![CDATA[LBL_MSG_CannotSubmit.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:48]]></Time>
+<TimeTick>1454593008</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="1266" >
+<Disp><![CDATA[LBL_MSG_CannotSubmit.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1265" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1264" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T541">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:48]]></Time>
+<TimeTick>1454593008</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="1267" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T542">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:51]]></Time>
+<TimeTick>1454593011</TimeTick>
+<Step rID="T543">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:51]]></Time>
+<TimeTick>1454593011</TimeTick>
+<Step rID="T544">
+<Obj plainTxt="False" ><![CDATA[TRKcircle_Entry_Error.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:51]]></Time>
+<TimeTick>1454593011</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="1271" >
+<Disp><![CDATA[TRKcircle_Entry_Error.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1270" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1269" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T545">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:51]]></Time>
+<TimeTick>1454593011</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="1272" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T546">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:54]]></Time>
+<TimeTick>1454593014</TimeTick>
+<Step rID="T547">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:54]]></Time>
+<TimeTick>1454593014</TimeTick>
+<Step rID="T548">
+<Obj plainTxt="False" ><![CDATA[TRKcircle_AdditionalInfo_Error.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:54]]></Time>
+<TimeTick>1454593014</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="1276" >
+<Disp><![CDATA[TRKcircle_AdditionalInfo_Error.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1275" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1274" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T549">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:54]]></Time>
+<TimeTick>1454593014</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="1277" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T550">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:57]]></Time>
+<TimeTick>1454593017</TimeTick>
+<Step rID="T551">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:57]]></Time>
+<TimeTick>1454593017</TimeTick>
+<Step rID="T552">
+<Obj plainTxt="False" ><![CDATA[TRKcircle_Submit_Error.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:57]]></Time>
+<TimeTick>1454593017</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="1281" >
+<Disp><![CDATA[TRKcircle_Submit_Error.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1280" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1279" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T553">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:06:57]]></Time>
+<TimeTick>1454593017</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="1282" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T554">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:00]]></Time>
+<TimeTick>1454593020</TimeTick>
+<Step rID="T555">
+<Obj plainTxt="False" ><![CDATA[Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:00]]></Time>
+<TimeTick>1454593020</TimeTick>
+<Step rID="T556">
+<Obj plainTxt="False" ><![CDATA[NAV_Entry_Error.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:00]]></Time>
+<TimeTick>1454593020</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="1286" >
+<Disp><![CDATA[NAV_Entry_Error.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T557">
+<Obj plainTxt="False" ><![CDATA[NAV_Entry_Error.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:03]]></Time>
+<TimeTick>1454593023</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="1288" >
+<Disp><![CDATA[NAV_Entry_Error.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1285" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1284" >
+<Disp><![CDATA[Submit]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T558">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:03]]></Time>
+<TimeTick>1454593023</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="1289" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T559">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:07]]></Time>
+<TimeTick>1454593027</TimeTick>
+<Step rID="T560">
+<Obj plainTxt="False" ><![CDATA[Entry]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:07]]></Time>
+<TimeTick>1454593027</TimeTick>
+<Step rID="T561">
+<Obj plainTxt="False" ><![CDATA[BTN_NewItem.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:07]]></Time>
+<TimeTick>1454593027</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="1293" >
+<Disp><![CDATA[BTN_NewItem.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T562">
+<Obj plainTxt="False" ><![CDATA[BTN_NewItem.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:10]]></Time>
+<TimeTick>1454593030</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="1295" >
+<Disp><![CDATA[BTN_NewItem.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1292" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1291" >
+<Disp><![CDATA[Entry]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T563">
+<Obj ><![CDATA[VerifySkipValidation]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:11]]></Time>
+<TimeTick>1454593031</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="1296" status="Passed" >
+<Disp><![CDATA[VerifySkipValidation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T564">
+<Obj plainTxt="False" ><![CDATA[[ WebButton ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:11]]></Time>
+<TimeTick>1454593031</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="1298" >
+<Disp><![CDATA[[ WebButton ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T565">
+<Obj plainTxt="False" ><![CDATA[[ WebElement ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:12]]></Time>
+<TimeTick>1454593032</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="1300" >
+<Disp><![CDATA[[ WebElement ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T566">
+<Obj plainTxt="False" ><![CDATA[[ WebElement ]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the object "[ WebElement ]" (of class WebElement). Verify that this object's properties match an object currently displayed in your application.]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:12]]></Time>
+<TimeTick>1454593032</TimeTick>
+<Step rID="T567">
+<Obj plainTxt="False" ><![CDATA[[ WebElement ]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebElement<br>]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:12]]></Time>
+<TimeTick>1454593032</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="1302" status="Warning" nType="Description" >
+<Disp><![CDATA[[ WebElement ]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="11" nRep="1301" status="Failed" nType="Run Error" >
+<Disp><![CDATA[[ WebElement ]]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T568">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the object &quot;[ WebElement ]&quot; (of class WebElement). Verify that this object's properties match an object currently displayed in your application.<BR>Function file: C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs<BR>Line (52): &quot;						logoutobject(0).click&quot;.]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:12]]></Time>
+<TimeTick>1454593032</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="1303" status="Failed" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="51" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T569">
+<Obj ><![CDATA[Logout]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:12]]></Time>
+<TimeTick>1454593032</TimeTick>
+<NodeArgs eType="User" icon="7" nRep="1304" status="Passed" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\BusinessFunction.vbs" SourceLine="-1" >
+<Disp><![CDATA[Logout]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T570">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object required: 'Wscript'<BR>Function file: C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\CommonLibrary.vbs<BR>Line (635): &quot;	Set objNetwork = Wscript.CreateObject(&quot;Wscript.Network&quot;)&quot;.]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:18]]></Time>
+<TimeTick>1454593038</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="1305" status="Failed" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\CommonLibrary.vbs" SourceLine="634" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T571">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object required: 'objNetwork'<BR>Function file: C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\CommonLibrary.vbs<BR>Line (636): &quot;	currUser = objNetwork.UserName&quot;.]]></Details>
+<Time><![CDATA[04-02-2016 - 19:07:18]]></Time>
+<TimeTick>1454593038</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="1306" status="Failed" Source="C:\IFSAutomation\IFS_Documents_Final\IFS_Documents_Final\Libraries\GeneralLibraries\CommonLibrary.vbs" SourceLine="635" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="04-02-2016 - 18:57:49" eTime="04-02-2016 - 19:07:18" passed="129" failed="6" warnings="3" ></Summary>
+<NodeArgs eType="StartAction" icon="3" nRep="6" status="Failed" >
+<Disp><![CDATA[Action1 Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Summary sTime="04-02-2016 - 18:57:44" eTime="04-02-2016 - 19:07:18" passed="129" failed="6" warnings="3" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="3" status="Failed" >
+<Disp><![CDATA[Test SuiteDriver Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

@@ -1,0 +1,150 @@
+06-09-2016 13:24:43	Start Execution		
+06-09-2016 13:24:45	Start Execution	Open the test suite file	OPEN THE TEST SUITE FILE SUCCESSFULLY
+06-09-2016 13:24:47	Start Execution	Open the TC595_DraftMode_VerifyMessageRemoved file	OPEN THE TC595_DRAFTMODE_VERIFYMESSAGEREMOVED TEST CASE FILE SUCCESSFULLY
+06-09-2016 13:24:47	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+06-09-2016 13:24:47	Start Execution	Associate the DraftMode object repository to test		ASSOCIATE THE DRAFTMODE OBJECT REPOSITORY TO TEST SUCCESSFULLY
+06-09-2016 13:24:48	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\DraftMode.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DRAFTMODE.XLS FILE SUCCESSFULLY
+06-09-2016 13:24:48	Start Execution	start execute of  TC595_DraftMode_VerifyMessageRemoved	
+06-09-2016 13:24:48			Step Name			Expected		STATUS
+06-09-2016 13:25:18	Login	Open the browser and start Application	PASS
+06-09-2016 13:25:18	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+06-09-2016 13:25:18	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+06-09-2016 13:25:21	Login	"BTN_Log In button" object Should be clicked.	PASS
+06-09-2016 13:25:31	Login	"TAB _Home object" should be displayed.	PASS
+06-09-2016 13:25:32	NavigateToDraftMode	"TAB _Home object" should be displayed.	PASS
+06-09-2016 13:25:32	NavigateToDraftMode	"TAB_Tests object" should be displayed.	PASS
+06-09-2016 13:25:35	NavigateToDraftMode	"TAB_Tests object" object Should be clicked.	PASS
+06-09-2016 13:25:35	NavigateToDraftMode	"LNK_Draft Mode object" should be displayed.	PASS
+06-09-2016 13:25:38	NavigateToDraftMode	"LNK_Draft Mode object" object Should be clicked.	PASS
+06-09-2016 13:25:44	VerifyWarningMessageRemoved	LBL_Header_DraftModeEntry object  should be loaded 	PASS
+06-09-2016 13:25:44	VerifyWarningMessageRemoved	"LBL_Header_DraftModeEntry object" should be displayed.	PASS
+06-09-2016 13:25:44	VerifyWarningMessageRemoved	"LBL_PageMessage_Thispagecontainrequired object" should be displayed.	PASS
+06-09-2016 13:25:44	VerifyWarningMessageRemoved	Verify yellow banner is displayed with text  "PreEvent Warning Message. Answer the Drop Down question to remove Warning!"	PASS
+06-09-2016 13:25:44	VerifyWarningMessageRemoved	"DWL_SelectValue object" should be displayed.	PASS
+06-09-2016 13:25:48	VerifyWarningMessageRemoved	select the from "DWL_SelectValue object" dropdown. by using index ::2	PASS
+06-09-2016 13:25:48	VerifyWarningMessageRemoved	"LBL_Warning_Answer theDropDownquestion object" is not  displayed.	PASS
+06-09-2016 13:25:52	VerifyWarningMessageRemoved	"NAV_RequiredQuestions object" object Should be clicked.	PASS
+06-09-2016 13:25:55	VerifyWarningMessageRemoved	"LBL_Answer * Required Checkbox object" should be displayed.	PASS
+06-09-2016 13:25:55	VerifyWarningMessageRemoved	"ChkBox_Brian check box" should be displayed.	PASS
+06-09-2016 13:25:58	VerifyWarningMessageRemoved	"ChkBox_Brian check box" object Should be clicked.	PASS
+06-09-2016 13:25:58	VerifyWarningMessageRemoved	"RDL_RequiredInterview object" should be displayed.	PASS
+06-09-2016 13:25:59	VerifyWarningMessageRemoved	select  small value Radio button for "RDL_RequiredInterview object"	PASS
+06-09-2016 13:25:59	VerifyWarningMessageRemoved	"LBL_Answer * Required Checkbox object" is not  displayed.	PASS
+06-09-2016 13:25:59	Logout	Logout from application	PASS
+06-09-2016 13:26:08	Start Execution	Open the TC802_DateStringEval_RuleSetDate file	OPEN THE TC802_DATESTRINGEVAL_RULESETDATE TEST CASE FILE SUCCESSFULLY
+06-09-2016 13:26:08	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+06-09-2016 13:26:08	Start Execution	Associate the DateStringEval object repository to test		ASSOCIATE THE DATESTRINGEVAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+06-09-2016 13:26:09	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\DateStringEval.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DATESTRINGEVAL.XLS FILE SUCCESSFULLY
+06-09-2016 13:26:09	Start Execution	start execute of  TC802_DateStringEval_RuleSetDate	
+06-09-2016 13:26:09			Step Name			Expected		STATUS
+06-09-2016 13:26:43	Login	Open the browser and start Application	PASS
+06-09-2016 13:26:43	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+06-09-2016 13:26:43	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+06-09-2016 13:26:46	Login	"BTN_Log In button" object Should be clicked.	PASS
+06-09-2016 13:27:00	Login	"TAB _Home object" should be displayed.	PASS
+06-09-2016 13:27:01	NavigatetoDateStringEval	"TAB _Home object" should be displayed.	PASS
+06-09-2016 13:27:01	NavigatetoDateStringEval	"TAB_Tests object" should be displayed.	PASS
+06-09-2016 13:27:04	NavigatetoDateStringEval	"TAB_Tests object" object Should be clicked.	PASS
+06-09-2016 13:27:04	NavigatetoDateStringEval	"LNK_Date/String Evaluation object" should be displayed.	PASS
+06-09-2016 13:27:07	NavigatetoDateStringEval	"LNK_Date/String Evaluation object" object Should be clicked.	PASS
+06-09-2016 13:27:11	DateStringEval_Verify_RuleSetsDate	"LBL_DateNumeric object" should be displayed.	PASS
+06-09-2016 13:27:12	DateStringEval_Verify_RuleSetsDate	"LBL_Description object" should be displayed.	PASS
+06-09-2016 13:27:16	DateStringEval_Verify_RuleSetsDate	select the from "DWL_MakeSelection object" dropdown. by using index ::3	PASS
+06-09-2016 13:27:16	DateStringEval_Verify_RuleSetsDate	"DTL_Date1 object" should be displayed.	PASS
+06-09-2016 13:27:16	DateStringEval_Verify_RuleSetsDate	"Entry Web page" should be displayed.	PASS
+06-09-2016 13:27:16	DateStringEval_Verify_RuleSetsDate	"Entry Web page" should be displayed.	PASS
+06-09-2016 13:27:16	DateStringEval_Verify_RuleSetsDate	"TXT_NumericCompare edit box" should be displayed.	PASS
+06-09-2016 13:27:16	DateStringEval_Verify_RuleSetsDate	.1 : value should be displayed in "TXT_NumericCompare edit box" field.	PASS
+06-09-2016 13:27:16	DateStringEval_Verify_RuleSetsDate	09/24 : value should be displayed in "TXT_DateMonthDay edit box" field.	PASS
+06-09-2016 13:27:16	DateStringEval_Verify_RuleSetsDate	09/23/2015 : value should be displayed in "TXT_DateBizDate edit box" field.	PASS
+06-09-2016 13:27:16	DateStringEval_Verify_RuleSetsDate	09/01/2015 : value should be displayed in "TXT_Date1 edit box" field.	PASS
+06-09-2016 13:27:17	DateStringEval_Verify_RuleSetsDate	"Eval_Next button" should be displayed.	PASS
+06-09-2016 13:27:20	DateStringEval_Verify_RuleSetsDate	"Eval_Next button" object Should be clicked.	PASS
+06-09-2016 13:27:20	DateStringEval_Verify_RuleSetsDate	"MSG_NumericCompareFailed object" is not  displayed.	PASS
+06-09-2016 13:27:21	DateStringEval_Verify_RuleSetsDate	"MSG_DateCompareTestFailed object" is not  displayed.	PASS
+06-09-2016 13:27:21	DateStringEval_Verify_RuleSetsDate	Text: "09/01/2015"  should be displayed at DTL_QADateTest object	PASS
+06-09-2016 13:27:22	DateStringEval_Verify_RuleSetsDate	Text: "09/24"  should be displayed at DTL_MonthDay object	PASS
+06-09-2016 13:27:22	DateStringEval_Verify_RuleSetsDate	Text: "09/23/2015"  should be displayed at DTL_BizDate object	PASS
+06-09-2016 13:27:22	DateStringEval_Verify_RuleSetsDate	Text: "0.1"  should be displayed at TWL_DummyNumeric object	PASS
+06-09-2016 13:27:25	DateStringEval_Verify_RuleSetsDate	"BTN_Gear button" object Should be clicked.	PASS
+06-09-2016 13:27:25	DateStringEval_Verify_RuleSetsDate	"LNK_Debug object" should be displayed.	PASS
+06-09-2016 13:27:28	DateStringEval_Verify_RuleSetsDate	"LNK_Debug object" object Should be clicked.	PASS
+06-09-2016 13:27:42	DateStringEval_Verify_RuleSetsDate	TBL_DebugQuestions table  should be loaded 	PASS
+06-09-2016 13:27:42	DateStringEval_Verify_RuleSetsDate	"TBL_DebugQuestions table" should be displayed.	PASS
+06-09-2016 13:27:42	DateStringEval_Verify_RuleSetsDate	"QA.DATE.TEST.DUMMY" Should be in 3 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is TEST.NUMERIC.COMPARE2	FAIL
+06-09-2016 13:27:42	DateStringEval_Verify_RuleSetsDate	"09/01/2015" Should be in 3 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is .01	FAIL
+06-09-2016 13:27:42	DateStringEval_Verify_RuleSetsDate	"QA.DATETEST1" Should be in 6 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is QA.DATETEST3	FAIL
+06-09-2016 13:27:43	DateStringEval_Verify_RuleSetsDate	"09/01/2015" Should be in 6 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is 09/23/2015	FAIL
+06-09-2016 13:27:43	DateStringEval_Verify_RuleSetsDate	"QA.NUMERIC.TEST.DUMMY" Should be in 9 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is QA.DATE.TEST.DUMMY	FAIL
+06-09-2016 13:27:43	DateStringEval_Verify_RuleSetsDate	"0.1" Should be in 9 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is 09/01/2015	FAIL
+06-09-2016 13:27:43	DateStringEval_Verify_RuleSetsDate	"TEST.NUMERIC.COMPARE" Should be in 11 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is QA.DATE.TEST.DUMMY2	FAIL
+06-09-2016 13:27:43	DateStringEval_Verify_RuleSetsDate	".1" Should be in 11 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is 9/24	FAIL
+06-09-2016 13:27:43	DateStringEval_Verify_RuleSetsDate	"QA.DATE.TEST.DUMMY2" Should be in 4 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is QA.DATETEST1	FAIL
+06-09-2016 13:27:43	DateStringEval_Verify_RuleSetsDate	"9/24" Should be in 4 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is 09/01/2015	FAIL
+06-09-2016 13:27:44	DateStringEval_Verify_RuleSetsDate	"QA.DATETEST2" Should be in 7 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is QADATE.TESTDROPDOWN	FAIL
+06-09-2016 13:27:44	DateStringEval_Verify_RuleSetsDate	"09/24" Should be in 7 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is 3	FAIL
+06-09-2016 13:27:44	DateStringEval_Verify_RuleSetsDate	"QA.DATE.TEST.DUMMY3" Should be in 5 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is QA.DATETEST2	FAIL
+06-09-2016 13:27:44	DateStringEval_Verify_RuleSetsDate	"09/23/2015" Should be in 5 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is 09/24	FAIL
+06-09-2016 13:27:44	DateStringEval_Verify_RuleSetsDate	"QA.DATETEST3" Should be in 8 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is TEST.NUMERIC.COMPARE	FAIL
+06-09-2016 13:27:44	DateStringEval_Verify_RuleSetsDate	"09/23/2015" Should be in 8 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is .1	FAIL
+06-09-2016 13:27:45	Logout	Logout from application	PASS
+06-09-2016 13:27:54	Start Execution	Open the TC803_DateStringEval_ManualEnterValue file	OPEN THE TC803_DATESTRINGEVAL_MANUALENTERVALUE TEST CASE FILE SUCCESSFULLY
+06-09-2016 13:27:54	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+06-09-2016 13:27:54	Start Execution	Associate the DateStringEval object repository to test		ASSOCIATE THE DATESTRINGEVAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+06-09-2016 13:27:55	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\DateStringEval.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DATESTRINGEVAL.XLS FILE SUCCESSFULLY
+06-09-2016 13:27:55	Start Execution	start execute of  TC803_DateStringEval_ManualEnterValue	
+06-09-2016 13:27:55			Step Name			Expected		STATUS
+06-09-2016 13:27:59	Login	Open the browser and start Application	PASS
+06-09-2016 13:28:23	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+06-09-2016 13:28:23	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+06-09-2016 13:28:26	Login	"BTN_Log In button" object Should be clicked.	PASS
+06-09-2016 13:28:42	Login	"TAB _Home object" should be displayed.	PASS
+06-09-2016 13:28:42	NavigatetoDateStringEval	"TAB _Home object" should be displayed.	PASS
+06-09-2016 13:28:42	NavigatetoDateStringEval	"TAB_Tests object" should be displayed.	PASS
+06-09-2016 13:28:45	NavigatetoDateStringEval	"TAB_Tests object" object Should be clicked.	PASS
+06-09-2016 13:28:45	NavigatetoDateStringEval	"LNK_Date/String Evaluation object" should be displayed.	PASS
+06-09-2016 13:28:49	NavigatetoDateStringEval	"LNK_Date/String Evaluation object" object Should be clicked.	PASS
+06-09-2016 13:28:52	DateStringEval_Verify_ManualEnterValues	"LBL_DateNumeric object" should be displayed.	PASS
+06-09-2016 13:28:52	DateStringEval_Verify_ManualEnterValues	"LBL_Description object" should be displayed.	PASS
+06-09-2016 13:28:52	DateStringEval_Verify_ManualEnterValues	"DTL_Date1 object" should be displayed.	PASS
+06-09-2016 13:28:52	DateStringEval_Verify_ManualEnterValues	"Entry Web page" should be displayed.	PASS
+06-09-2016 13:28:52	DateStringEval_Verify_ManualEnterValues	"Entry Web page" should be displayed.	PASS
+06-09-2016 13:28:52	DateStringEval_Verify_ManualEnterValues	"TXT_NumericCompare edit box" should be displayed.	PASS
+06-09-2016 13:28:53	DateStringEval_Verify_ManualEnterValues	".1" : value should be entered in "TXT_NumericCompare edit box" field.	PASS
+06-09-2016 13:28:53	DateStringEval_Verify_ManualEnterValues	"09/01/2015" : value should be entered in "TXT_Date1 edit box" field.	PASS
+06-09-2016 13:28:53	DateStringEval_Verify_ManualEnterValues	"09/24" : value should be entered in "TXT_DateMonthDay edit box" field.	PASS
+06-09-2016 13:28:53	DateStringEval_Verify_ManualEnterValues	"09/23/2015" : value should be entered in "TXT_DateBizDate edit box" field.	PASS
+06-09-2016 13:28:54	DateStringEval_Verify_ManualEnterValues	.1 : value should be displayed in "TXT_NumericCompare edit box" field.	PASS
+06-09-2016 13:28:54	DateStringEval_Verify_ManualEnterValues	09/24 : value should be displayed in "TXT_DateMonthDay edit box" field.	PASS
+06-09-2016 13:28:54	DateStringEval_Verify_ManualEnterValues	09/23/2015 : value should be displayed in "TXT_DateBizDate edit box" field.	PASS
+06-09-2016 13:28:54	DateStringEval_Verify_ManualEnterValues	09/01/2015 : value should be displayed in "TXT_Date1 edit box" field.	PASS
+06-09-2016 13:28:54	DateStringEval_Verify_ManualEnterValues	"Eval_Next button" should be displayed.	PASS
+06-09-2016 13:28:57	DateStringEval_Verify_ManualEnterValues	"Eval_Next button" object Should be clicked.	PASS
+06-09-2016 13:28:58	DateStringEval_Verify_ManualEnterValues	"MSG_NumericCompareFailed object" is not  displayed.	PASS
+06-09-2016 13:28:58	DateStringEval_Verify_ManualEnterValues	"MSG_DateCompareTestFailed object" is displayed.	FAIL
+06-09-2016 13:29:01	DateStringEval_Verify_ManualEnterValues	Text: "09/01/2015"  should be displayed at DTL_QADateTest object	PASS
+06-09-2016 13:29:01	DateStringEval_Verify_ManualEnterValues	Text: "09/24"  should be displayed at DTL_MonthDay object	PASS
+06-09-2016 13:29:01	DateStringEval_Verify_ManualEnterValues	Text: "09/23/2015"  should be displayed at DTL_BizDate object	PASS
+06-09-2016 13:29:01	DateStringEval_Verify_ManualEnterValues	Text: "0.1"  should be displayed at TWL_DummyNumeric object	PASS
+06-09-2016 13:29:04	DateStringEval_Verify_ManualEnterValues	"BTN_Gear button" object Should be clicked.	PASS
+06-09-2016 13:29:04	DateStringEval_Verify_ManualEnterValues	"LNK_Debug object" should be displayed.	PASS
+06-09-2016 13:29:08	DateStringEval_Verify_ManualEnterValues	"LNK_Debug object" object Should be clicked.	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions table  should be loaded 	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"TBL_DebugQuestions table" should be displayed.	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"QA.DATETEST1" Should be in 3 Row and 2 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"09/01/2015" Should be in 3 Row and 3 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"TEST.NUMERIC.COMPARE" Should be in 6 Row and 2 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	".1" Should be in 6 Row and 3 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"QA.DATE.TEST.DUMMY2" Should be in 9 Row and 2 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"9/24" Should be in 9 Row and 3 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"QA.DATE.TEST.DUMMY3" Should be in 10 Row and 2 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"09/23/2015" Should be in 10 Row and 3 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"QA.DATETEST2" Should be in 4 Row and 2 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"09/24" Should be in 4 Row and 3 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"QA.DATE.TEST.DUMMY" Should be in 7 Row and 2 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"09/01/2015" Should be in 7 Row and 3 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"QA.DATETEST3" Should be in 5 Row and 2 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"09/23/2015" Should be in 5 Row and 3 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"QA.NUMERIC.TEST.DUMMY" Should be in 8 Row and 2 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:22	DateStringEval_Verify_ManualEnterValues	"0.1" Should be in 8 Row and 3 Column under TBL_DebugQuestions table"	PASS
+06-09-2016 13:29:24	Logout	Logout from application	PASS

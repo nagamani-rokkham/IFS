@@ -1,0 +1,118 @@
+20-09-2016 18:38:29	Start Execution		
+20-09-2016 18:38:32	Start Execution	Open the test suite file	OPEN THE TEST SUITE FILE SUCCESSFULLY
+20-09-2016 18:38:33	Start Execution	Open the TC711_SmartyStreets_VerifyDefaultSectionsAndValues file	OPEN THE TC711_SMARTYSTREETS_VERIFYDEFAULTSECTIONSANDVALUES TEST CASE FILE SUCCESSFULLY
+20-09-2016 18:38:34	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+20-09-2016 18:38:34	Start Execution	Associate the SmartyStreetsTesting object repository to test		ASSOCIATE THE SMARTYSTREETSTESTING OBJECT REPOSITORY TO TEST SUCCESSFULLY
+20-09-2016 18:38:34	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\SmartyStreets.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\SMARTYSTREETS.XLS FILE SUCCESSFULLY
+20-09-2016 18:38:34	Start Execution	start execute of  TC711_SmartyStreets_VerifyDefaultSectionsAndValues	
+20-09-2016 18:38:34			Step Name			Expected		STATUS
+20-09-2016 18:38:44	Login	Open the browser and start Application	PASS
+20-09-2016 18:38:45	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+20-09-2016 18:38:45	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+20-09-2016 18:38:48	Login	"BTN_Log In button" object Should be clicked.	PASS
+20-09-2016 18:38:53	Login	"TAB _Home object" should be displayed.	PASS
+20-09-2016 18:38:56	NavigateToSmartyStreetTesting	"TAB_Tests object" object Should be clicked.	PASS
+20-09-2016 18:38:57	NavigateToSmartyStreetTesting	"LNK_SmartyStreetsTesting object" should be displayed.	PASS
+20-09-2016 18:39:00	NavigateToSmartyStreetTesting	"LNK_SmartyStreetsTesting object" object Should be clicked.	PASS
+20-09-2016 18:39:15	VerifyDefaultValues	LBL_LegalAddress object  should be loaded 	PASS
+20-09-2016 18:39:15	VerifyDefaultValues	"LBL_LegalAddress object" should be displayed.	PASS
+20-09-2016 18:39:15	VerifyDefaultValues	"LBL_EmployerAddress object" should be displayed.	PASS
+20-09-2016 18:39:15	VerifyDefaultValues	"LBL_Free-formAddress object" should be displayed.	PASS
+20-09-2016 18:39:16	VerifyDefaultValues	"LBL_ForeignAddress object" should be displayed.	PASS
+20-09-2016 18:39:16	VerifyDefaultValues	Not Run : value should be displayed in "TXT_LA_ValidationStatus edit box" field.	PASS
+20-09-2016 18:39:16	VerifyDefaultValues	Text: "Alabama"  should be displayed at LBL_FA_StateAlabamaselect object	PASS
+20-09-2016 18:39:16	VerifyDefaultValues	"BTN_Validate button" should be displayed.	PASS
+20-09-2016 18:39:16	VerifyDefaultValues	"BTN_Next button" should be displayed.	PASS
+20-09-2016 18:39:16	VerifyDefaultValues	"BTN_CorrectLater button" should be displayed.	PASS
+20-09-2016 18:39:16	VerifyDefaultValues	"BTN_Back button" should be displayed.	PASS
+20-09-2016 18:39:17	Logout	Logout from application	PASS
+20-09-2016 18:39:25	Start Execution	Open the TC712_SmartyStreets_ValidateRequiredErrors file	OPEN THE TC712_SMARTYSTREETS_VALIDATEREQUIREDERRORS TEST CASE FILE SUCCESSFULLY
+20-09-2016 18:39:26	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+20-09-2016 18:39:26	Start Execution	Associate the SmartyStreetsTesting object repository to test		ASSOCIATE THE SMARTYSTREETSTESTING OBJECT REPOSITORY TO TEST SUCCESSFULLY
+20-09-2016 18:39:26	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\SmartyStreets.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\SMARTYSTREETS.XLS FILE SUCCESSFULLY
+20-09-2016 18:39:26	Start Execution	start execute of  TC712_SmartyStreets_ValidateRequiredErrors	
+20-09-2016 18:39:26			Step Name			Expected		STATUS
+20-09-2016 18:39:38	Login	Open the browser and start Application	PASS
+20-09-2016 18:39:58	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+20-09-2016 18:39:58	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+20-09-2016 18:40:01	Login	"BTN_Log In button" object Should be clicked.	PASS
+20-09-2016 18:40:09	Login	"TAB _Home object" should be displayed.	PASS
+20-09-2016 18:40:12	NavigateToSmartyStreetTesting	"TAB_Tests object" object Should be clicked.	PASS
+20-09-2016 18:40:12	NavigateToSmartyStreetTesting	"LNK_SmartyStreetsTesting object" should be displayed.	PASS
+20-09-2016 18:40:16	NavigateToSmartyStreetTesting	"LNK_SmartyStreetsTesting object" object Should be clicked.	PASS
+20-09-2016 18:40:31	VerifyRequiredErrorMeesage	LBL_LegalAddress object  should be loaded 	PASS
+20-09-2016 18:40:41	VerifyRequiredErrorMeesage	Should click on Next button	PASS
+20-09-2016 18:40:43	VerifyRequiredErrorMeesage	Text: "This is a required field"  should be displayed at LBL_LA_Address object	PASS
+20-09-2016 18:40:43	Logout	Logout from application	PASS
+20-09-2016 18:40:52	Start Execution	Open the TC717_SmartyStreets_ForeinTestAddressSkipValidation file	OPEN THE TC717_SMARTYSTREETS_FOREINTESTADDRESSSKIPVALIDATION TEST CASE FILE SUCCESSFULLY
+20-09-2016 18:40:52	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+20-09-2016 18:40:52	Start Execution	Associate the SmartyStreetsTesting object repository to test		ASSOCIATE THE SMARTYSTREETSTESTING OBJECT REPOSITORY TO TEST SUCCESSFULLY
+20-09-2016 18:40:53	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\SmartyStreets.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\SMARTYSTREETS.XLS FILE SUCCESSFULLY
+20-09-2016 18:40:53	Start Execution	start execute of  TC717_SmartyStreets_ForeinTestAddressSkipValidation	
+20-09-2016 18:40:53			Step Name			Expected		STATUS
+20-09-2016 18:41:02	Login	Open the browser and start Application	PASS
+20-09-2016 18:41:19	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+20-09-2016 18:41:19	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+20-09-2016 18:41:22	Login	"BTN_Log In button" object Should be clicked.	PASS
+20-09-2016 18:41:30	Login	"TAB _Home object" should be displayed.	PASS
+20-09-2016 18:41:33	NavigateToSmartyStreetTesting	"TAB_Tests object" object Should be clicked.	PASS
+20-09-2016 18:41:33	NavigateToSmartyStreetTesting	"LNK_SmartyStreetsTesting object" should be displayed.	PASS
+20-09-2016 18:41:36	NavigateToSmartyStreetTesting	"LNK_SmartyStreetsTesting object" object Should be clicked.	PASS
+20-09-2016 18:41:52	EnterInvalidData	LBL_LegalAddress object  should be loaded 	PASS
+20-09-2016 18:41:52	EnterInvalidData	"722 Jetton" : value should be entered in "TXT_LA_Address edit box" field.	PASS
+20-09-2016 18:41:52	EnterInvalidData	"Davidson" : value should be entered in "TXT_LA_City edit box" field.	PASS
+20-09-2016 18:41:52	EnterInvalidData	"NC" : value should be entered in "TXT_LA_State edit box" field.	PASS
+20-09-2016 18:41:52	EnterInvalidData	"28036" : value should be entered in "TXT_LA_Zip edit box" field.	PASS
+20-09-2016 18:41:55	EnterInvalidData	"BTN_Validate button" object Should be clicked.	PASS
+20-09-2016 18:43:11	LegalAddressOverRideValidation	BTN_Retry button  should be loaded 	PASS
+20-09-2016 18:43:12	LegalAddressOverRideValidation	Text: "Legal Address is not valid"  should be displayed at LBL_LA_LegalAddressIsNotValid object	PASS
+20-09-2016 18:43:12	LegalAddressOverRideValidation	"BTN_OverRide button" should be displayed.	PASS
+20-09-2016 18:43:15	LegalAddressOverRideValidation	"BTN_OverRide button" object Should be clicked.	PASS
+20-09-2016 18:43:16	LegalAddressOverRideValidation	Text: "Address verification will be bypassed"  should be displayed at LBL_AddressVerificationlBypass object	PASS
+20-09-2016 18:43:16	LegalAddressOverRideValidation	"BTN_Accept button" should be displayed.	PASS
+20-09-2016 18:43:16	LegalAddressOverRideValidation	"BTN_Cancel button" should be displayed.	PASS
+20-09-2016 18:43:19	LegalAddressOverRideValidation	"BTN_Accept button" object Should be clicked.	PASS
+20-09-2016 18:43:35	ForeignAddressSkipValidation	BTN_Retry button  should be loaded 	PASS
+20-09-2016 18:43:35	ForeignAddressSkipValidation	"BTN_Retry button" should be displayed.	PASS
+20-09-2016 18:43:35	ForeignAddressSkipValidation	Text: "Sorry, but there was an error"  should be displayed at LBL_FA_SorryButThereWas object	PASS
+20-09-2016 18:43:36	ForeignAddressSkipValidation	"BTN_Skip button" should be displayed.	PASS
+20-09-2016 18:43:39	ForeignAddressSkipValidation	"BTN_Skip button" object Should be clicked.	PASS
+20-09-2016 18:44:40	ForeignAddressSkipValidation	Text: "Address verification will be temporarily bypassed"  should be displayed at LBL_AddressVerificationlBypass object	PASS
+20-09-2016 18:44:40	ForeignAddressSkipValidation	"BTN_Accept button" should be displayed.	PASS
+20-09-2016 18:44:40	ForeignAddressSkipValidation	"BTN_Cancel button" should be displayed.	PASS
+20-09-2016 18:44:43	ForeignAddressSkipValidation	"BTN_Accept button" object Should be clicked.	PASS
+20-09-2016 18:44:43	ForeignAddressSkipValidation	"LNK_Close link" should be displayed.	PASS
+20-09-2016 18:44:47	ForeignAddressSkipValidation	"LNK_Close link" object Should be clicked.	PASS
+20-09-2016 18:45:02	VerifyForeignAddressSkipDataOnReadOnlyPage	LBL_LegalAddress object  should be loaded 	PASS
+20-09-2016 18:45:05	VerifyForeignAddressSkipDataOnReadOnlyPage	"BTN_Next button" object Should be clicked.	PASS
+20-09-2016 18:45:20	VerifyForeignAddressSkipDataOnReadOnlyPage	RWL_LA_Address object  should be loaded 	PASS
+20-09-2016 18:45:20	VerifyForeignAddressSkipDataOnReadOnlyPage	Text: "722 Jetton"  should be displayed at RWL_LA_Address object	PASS
+20-09-2016 18:45:20	VerifyForeignAddressSkipDataOnReadOnlyPage	Text: "Davidson"  should be displayed at RWL_LA_City object	PASS
+20-09-2016 18:45:20	VerifyForeignAddressSkipDataOnReadOnlyPage	Text: "NC"  should be displayed at RWL_LA_State object	PASS
+20-09-2016 18:45:20	VerifyForeignAddressSkipDataOnReadOnlyPage	Text: "28036"  should be displayed at RWL_LA_Zip object	PASS
+20-09-2016 18:45:20	VerifyForeignAddressSkipDataOnReadOnlyPage	Text: "Invalid"  should be displayed at RWL_LA_ValidationStatus object	PASS
+20-09-2016 18:45:21	VerifyForeignAddressSkipDataOnReadOnlyPage	Text: "Overridden"  should be displayed at RWL_LA_Overridden object	PASS
+20-09-2016 18:45:21	VerifyForeignAddressSkipDataOnReadOnlyPage	Text: "False"  should be displayed at RWL_EA_OverriddenStatus object	PASS
+20-09-2016 18:45:21	VerifyForeignAddressSkipDataOnReadOnlyPage	Text: "Not Run"  should be displayed at RWL_EA_ValidationStatus object	PASS
+20-09-2016 18:45:21	VerifyForeignAddressSkipDataOnReadOnlyPage	Text: "False"  should be displayed at RWL_FFA_Overridden object	PASS
+20-09-2016 18:45:21	VerifyForeignAddressSkipDataOnReadOnlyPage	Text: "Not Run"  should be displayed at RWL_FFA_ValidationStatus object	PASS
+20-09-2016 18:45:21	VerifyForeignAddressSkipDataOnReadOnlyPage	Text: "Alabama"  should be displayed at RWL_FA_State object	PASS
+20-09-2016 18:45:21	VerifyForeignAddressSkipDataOnReadOnlyPage	Text: "Error"  should be displayed at RWL_FA_ValidationStatus object	PASS
+20-09-2016 18:45:21	VerifyForeignAddressSkipDataOnReadOnlyPage	Text: "SetSkipped"  should be displayed at RWL_FA_AddressOverridden object	PASS
+20-09-2016 18:45:24	VerifyForeignAddressSkipDataOnReadOnlyPage	"WebButton_Gear button" object Should be clicked.	PASS
+20-09-2016 18:45:24	VerifyForeignAddressSkipDataOnReadOnlyPage	"LNK_Debug object" should be displayed.	PASS
+20-09-2016 18:45:37	VerifyForeignAddressSkipDataOnReadOnlyPage	"LNK_Debug object" object Should be clicked.	PASS
+20-09-2016 18:45:57	VerifyForeignAddressSkipDataOnReadOnlyPage	TBL_Debug table  should be loaded 	PASS
+20-09-2016 18:45:58	VerifyForeignAddressSkipDataOnReadOnlyPage	"TBL_Debug table" should be displayed.	PASS
+20-09-2016 18:45:58	VerifyForeignAddressSkipDataOnReadOnlyPage	"722 JETTON" Should be in 3 Row and 3 Column under TBL_Debug table"	PASS
+20-09-2016 18:45:58	VerifyForeignAddressSkipDataOnReadOnlyPage	"DAVIDSON" Should be in 4 Row and 3 Column under TBL_Debug table"	PASS
+20-09-2016 18:45:58	VerifyForeignAddressSkipDataOnReadOnlyPage	"NC" Should be in 5 Row and 3 Column under TBL_Debug table"	PASS
+20-09-2016 18:45:58	VerifyForeignAddressSkipDataOnReadOnlyPage	"28036" Should be in 6 Row and 3 Column under TBL_Debug table"	PASS
+20-09-2016 18:45:58	VerifyForeignAddressSkipDataOnReadOnlyPage	"INVALID" Should be in 7 Row and 3 Column under TBL_Debug table"	PASS
+20-09-2016 18:45:58	VerifyForeignAddressSkipDataOnReadOnlyPage	"OVERRIDDEN" Should be in 8 Row and 3 Column under TBL_Debug table"	PASS
+20-09-2016 18:45:58	VerifyForeignAddressSkipDataOnReadOnlyPage	"NOT RUN" Should be in 9 Row and 3 Column under TBL_Debug table"	PASS
+20-09-2016 18:45:58	VerifyForeignAddressSkipDataOnReadOnlyPage	"FALSE" Should be in 10 Row and 3 Column under TBL_Debug table"	PASS
+20-09-2016 18:45:58	VerifyForeignAddressSkipDataOnReadOnlyPage	"NOT RUN" Should be in 11 Row and 3 Column under TBL_Debug table"	PASS
+20-09-2016 18:45:58	VerifyForeignAddressSkipDataOnReadOnlyPage	"AL" Should be in 20 Row and 3 Column under TBL_Debug table"	PASS
+20-09-2016 18:45:58	VerifyForeignAddressSkipDataOnReadOnlyPage	"ERROR" Should be in 21 Row and 3 Column under TBL_Debug table"	PASS
+20-09-2016 18:45:59	Logout	Logout from application	PASS

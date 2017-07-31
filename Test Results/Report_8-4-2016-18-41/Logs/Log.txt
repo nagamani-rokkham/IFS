@@ -1,0 +1,151 @@
+04-08-2016 18:41:47	Start Execution		
+04-08-2016 18:41:49	Start Execution	Open the test suite file	OPEN THE TEST SUITE FILE SUCCESSFULLY
+04-08-2016 18:41:51	Start Execution	Open the TC801_EditNonEdit_Toggles file	OPEN THE TC801_EDITNONEDIT_TOGGLES TEST CASE FILE SUCCESSFULLY
+04-08-2016 18:41:51	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+04-08-2016 18:41:51	Start Execution	Associate the EditNonEdit object repository to test		ASSOCIATE THE EDITNONEDIT OBJECT REPOSITORY TO TEST SUCCESSFULLY
+04-08-2016 18:41:53	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\EditNonEdit.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\EDITNONEDIT.XLS FILE SUCCESSFULLY
+04-08-2016 18:41:53	Start Execution	start execute of  TC801_EditNonEdit_Toggles	
+04-08-2016 18:41:53			Step Name			Expected		STATUS
+04-08-2016 18:41:59	Login	Open the browser and start Application	PASS
+04-08-2016 18:42:05	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+04-08-2016 18:42:05	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+04-08-2016 18:42:08	Login	"BTN_Log In button" object Should be clicked.	PASS
+04-08-2016 18:42:12	Login	"TAB _Home object" should be displayed.	PASS
+04-08-2016 18:42:12	NavigatetoEditNonEdit	"TAB _Home object" should be displayed.	PASS
+04-08-2016 18:42:12	NavigatetoEditNonEdit	"TAB_Tests object" should be displayed.	PASS
+04-08-2016 18:42:16	NavigatetoEditNonEdit	"TAB_Tests object" object Should be clicked.	PASS
+04-08-2016 18:42:19	NavigatetoEditNonEdit	"LNK_QuestionsReadOnly object" should be displayed.	PASS
+04-08-2016 18:42:25	NavigatetoEditNonEdit	"LNK_QuestionsReadOnly object" object Should be clicked.	PASS
+04-08-2016 18:43:35	EditNonEdit_ValidateToggles	LBL_MakeQuestionsNonEditable object  should be loaded 	PASS
+04-08-2016 18:44:38	EditNonEdit_ValidateToggles	"LBL_MakeQuestionsNonEditable object" should be displayed.	PASS
+04-08-2016 18:44:38	EditNonEdit_ValidateToggles	"TWL_Numeric object" should be displayed.	PASS
+04-08-2016 18:44:38	EditNonEdit_ValidateToggles	"345" : value should be entered in "TXT_QANumeric edit box" field.	PASS
+04-08-2016 18:44:38	EditNonEdit_ValidateToggles	"TGL_#1 object" should be displayed.	PASS
+04-08-2016 18:44:39	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#1 object	PASS
+04-08-2016 18:44:39	EditNonEdit_ValidateToggles	TXT_QANumeric edit box should be visible and Disabled	PASS
+04-08-2016 18:44:39	EditNonEdit_ValidateToggles	"TXT_NumericInput2Decimal edit box" should be displayed.	PASS
+04-08-2016 18:44:39	EditNonEdit_ValidateToggles	"345" : value should be entered in "TXT_NumericInput2Decimal edit box" field.	PASS
+04-08-2016 18:44:39	EditNonEdit_ValidateToggles	"TGL_#2 object" should be displayed.	PASS
+04-08-2016 18:44:39	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#2 object	PASS
+04-08-2016 18:44:39	EditNonEdit_ValidateToggles	TXT_NumericInput2Decimal edit box should be visible and Disabled	PASS
+04-08-2016 18:44:39	EditNonEdit_ValidateToggles	"TXT_NumericInputNonDecimal edit box" should be displayed.	PASS
+04-08-2016 18:44:39	EditNonEdit_ValidateToggles	"345" : value should be entered in "TXT_NumericInputNonDecimal edit box" field.	PASS
+04-08-2016 18:44:39	EditNonEdit_ValidateToggles	"TGL_#3 object" should be displayed.	PASS
+04-08-2016 18:44:40	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#3 object	PASS
+04-08-2016 18:44:40	EditNonEdit_ValidateToggles	TXT_NumericInputNonDecimal edit box should be visible and Disabled	PASS
+04-08-2016 18:44:40	EditNonEdit_ValidateToggles	"TXT_NumericInputCommaDelimted edit box" should be displayed.	PASS
+04-08-2016 18:44:40	EditNonEdit_ValidateToggles	"345" : value should be entered in "TXT_NumericInputCommaDelimted edit box" field.	PASS
+04-08-2016 18:44:40	EditNonEdit_ValidateToggles	"TGL_#4 object" should be displayed.	PASS
+04-08-2016 18:44:40	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#4 object	PASS
+04-08-2016 18:44:40	EditNonEdit_ValidateToggles	TXT_NumericInputCommaDelimted edit box should be visible and Disabled	PASS
+04-08-2016 18:44:41	EditNonEdit_ValidateToggles	"TGL_YesNoFireTheRule object" should be displayed.	PASS
+04-08-2016 18:44:42	EditNonEdit_ValidateToggles	"DWL_DropDown1 object" should be displayed.	PASS
+04-08-2016 18:44:42	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_YesNoFireTheRule object	PASS
+04-08-2016 18:44:43	EditNonEdit_ValidateToggles	Verify "DWL_DropDown1 object"is read only	PASS
+04-08-2016 18:44:43	EditNonEdit_ValidateToggles	"TXT_NameAlphaSpecialChar edit box" should be displayed.	PASS
+04-08-2016 18:44:43	EditNonEdit_ValidateToggles	"Testing" : value should be entered in "TXT_NameAlphaSpecialChar edit box" field.	PASS
+04-08-2016 18:44:43	EditNonEdit_ValidateToggles	"TGL_#37 object" should be displayed.	PASS
+04-08-2016 18:44:43	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#37 object	PASS
+04-08-2016 18:44:44	EditNonEdit_ValidateToggles	TXT_NameAlphaSpecialChar edit box should be visible and Disabled	PASS
+04-08-2016 18:44:44	EditNonEdit_ValidateToggles	"TXT_Currency edit box" should be displayed.	PASS
+04-08-2016 18:44:44	EditNonEdit_ValidateToggles	"$345.00" : value should be entered in "TXT_Currency edit box" field.	PASS
+04-08-2016 18:44:44	EditNonEdit_ValidateToggles	"TGL_#5 object" should be displayed.	PASS
+04-08-2016 18:44:44	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#5 object	PASS
+04-08-2016 18:44:44	EditNonEdit_ValidateToggles	TXT_Currency edit box should be visible and Disabled	PASS
+04-08-2016 18:44:44	EditNonEdit_ValidateToggles	"$345.00" : value should be entered in "TXT_CurrencyWholeNumber edit box" field.	PASS
+04-08-2016 18:44:44	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#6 object	PASS
+04-08-2016 18:44:44	EditNonEdit_ValidateToggles	TXT_CurrencyWholeNumber edit box should be visible and Disabled	PASS
+04-08-2016 18:44:45	EditNonEdit_ValidateToggles	"$345.00" : value should be entered in "TXT_Currecy_Formated_NEG edit box" field.	PASS
+04-08-2016 18:44:45	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#7 object	PASS
+04-08-2016 18:44:45	EditNonEdit_ValidateToggles	TXT_Currecy_Formated_NEG edit box should be visible and Disabled	PASS
+04-08-2016 18:44:45	EditNonEdit_ValidateToggles	"$345.00" : value should be entered in "TXT_Currecy_Truncate edit box" field.	PASS
+04-08-2016 18:44:45	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#8 object	PASS
+04-08-2016 18:44:45	EditNonEdit_ValidateToggles	TXT_Currecy_Truncate edit box should be visible and Disabled	PASS
+04-08-2016 18:44:45	EditNonEdit_ValidateToggles	"Testing" : value should be entered in "TXT_String edit box" field.	PASS
+04-08-2016 18:44:46	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#9 object	PASS
+04-08-2016 18:44:46	EditNonEdit_ValidateToggles	TXT_String edit box should be visible and Disabled	PASS
+04-08-2016 18:44:46	EditNonEdit_ValidateToggles	"Testing" : value should be entered in "TXT_String_alpha_Only edit box" field.	PASS
+04-08-2016 18:44:46	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#10 object	PASS
+04-08-2016 18:44:46	EditNonEdit_ValidateToggles	TXT_String_alpha_Only edit box should be visible and Disabled	PASS
+04-08-2016 18:44:46	EditNonEdit_ValidateToggles	"345" : value should be entered in "TXT_String_NumericOnly edit box" field.	PASS
+04-08-2016 18:44:46	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#11 object	PASS
+04-08-2016 18:44:47	EditNonEdit_ValidateToggles	TXT_String_NumericOnly edit box should be visible and Disabled	PASS
+04-08-2016 18:44:47	EditNonEdit_ValidateToggles	"8/4/2016" : value should be entered in "TXT_Date edit box" field.	PASS
+04-08-2016 18:44:47	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#12 object	PASS
+04-08-2016 18:44:47	EditNonEdit_ValidateToggles	TXT_Date edit box should be visible and Disabled	PASS
+04-08-2016 18:44:47	EditNonEdit_ValidateToggles	"08/04" : value should be entered in "TXT_DateMonthDayOnly edit box" field.	PASS
+04-08-2016 18:44:47	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#14 object	PASS
+04-08-2016 18:44:47	EditNonEdit_ValidateToggles	TXT_DateMonthDayOnly edit box should be visible and Disabled	PASS
+04-08-2016 18:44:48	EditNonEdit_ValidateToggles	"8/4/2016" : value should be entered in "TXT_BusinessDate edit box" field.	PASS
+04-08-2016 18:44:48	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#15 object	PASS
+04-08-2016 18:44:48	EditNonEdit_ValidateToggles	TXT_BusinessDate edit box should be visible and Disabled	PASS
+04-08-2016 18:44:48	EditNonEdit_ValidateToggles	"8/4/2016" : value should be entered in "TXT_BirthDate edit box" field.	PASS
+04-08-2016 18:44:48	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#35 object	PASS
+04-08-2016 18:44:48	EditNonEdit_ValidateToggles	TXT_BirthDate edit box should be visible and Disabled	PASS
+04-08-2016 18:44:48	EditNonEdit_ValidateToggles	"8/2016" : value should be entered in "TXT_MonthYearDate edit box" field.	PASS
+04-08-2016 18:44:49	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#36 object	PASS
+04-08-2016 18:44:49	EditNonEdit_ValidateToggles	TXT_MonthYearDate edit box should be visible and Disabled	PASS
+04-08-2016 18:44:50	EditNonEdit_ValidateToggles	"8885555555" : value should be entered in "TWL_PhoneNumber edit box" field.	PASS
+04-08-2016 18:44:50	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#17 object	PASS
+04-08-2016 18:44:50	EditNonEdit_ValidateToggles	TWL_PhoneNumber edit box should be visible and Disabled	PASS
+04-08-2016 18:44:51	EditNonEdit_ValidateToggles	"1010-1010" : value should be entered in "TWL_BLAccountNumber edit box" field.	PASS
+04-08-2016 18:44:51	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#22 object	PASS
+04-08-2016 18:44:51	EditNonEdit_ValidateToggles	TWL_BLAccountNumber edit box should be visible and Disabled	PASS
+04-08-2016 18:44:51	EditNonEdit_ValidateToggles	"chris@ifautomation.com" : value should be entered in "TWL_Email edit box" field.	PASS
+04-08-2016 18:44:52	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#23 object	PASS
+04-08-2016 18:44:52	EditNonEdit_ValidateToggles	TWL_Email edit box should be visible and Disabled	PASS
+04-08-2016 18:44:52	EditNonEdit_ValidateToggles	"111-11-1111" : value should be entered in "TWL_Social edit box" field.	PASS
+04-08-2016 18:44:53	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#26 object	PASS
+04-08-2016 18:44:53	EditNonEdit_ValidateToggles	TWL_Social edit box should be visible and Disabled	PASS
+04-08-2016 18:44:53	EditNonEdit_ValidateToggles	"111-11-1111" : value should be entered in "TWL_SocialwDashes edit box" field.	PASS
+04-08-2016 18:44:54	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#27 object	PASS
+04-08-2016 18:44:54	EditNonEdit_ValidateToggles	TWL_SocialwDashes edit box should be visible and Disabled	PASS
+04-08-2016 18:44:54	EditNonEdit_ValidateToggles	"11-1111111" : value should be entered in "TWL_TaxID edit box" field.	PASS
+04-08-2016 18:44:55	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#28 object	PASS
+04-08-2016 18:44:55	EditNonEdit_ValidateToggles	TWL_TaxID edit box should be visible and Disabled	PASS
+04-08-2016 18:44:55	EditNonEdit_ValidateToggles	"11-1111111" : value should be entered in "TWL_TaxIDwDashes edit box" field.	PASS
+04-08-2016 18:44:56	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#29 object	PASS
+04-08-2016 18:44:56	EditNonEdit_ValidateToggles	TWL_TaxIDwDashes edit box should be visible and Disabled	PASS
+04-08-2016 18:44:56	EditNonEdit_ValidateToggles	"32232-2223" : value should be entered in "TWL_Zip edit box" field.	PASS
+04-08-2016 18:44:57	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#30 object	PASS
+04-08-2016 18:44:57	EditNonEdit_ValidateToggles	TWL_Zip edit box should be visible and Disabled	PASS
+04-08-2016 18:44:57	EditNonEdit_ValidateToggles	"Testing" : value should be entered in "TWL_XML edit box" field.	PASS
+04-08-2016 18:44:58	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#33 object	PASS
+04-08-2016 18:44:58	EditNonEdit_ValidateToggles	TWL_XML edit box should be visible and Disabled	PASS
+04-08-2016 18:44:58	EditNonEdit_ValidateToggles	"Testing" : value should be entered in "TXT_AuditNote edit box" field.	PASS
+04-08-2016 18:44:59	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#34 object	PASS
+04-08-2016 18:44:59	EditNonEdit_ValidateToggles	TXT_AuditNote edit box should be visible and Disabled	PASS
+04-08-2016 18:44:59	EditNonEdit_ValidateToggles	"BTN_Next button" object Should be clicked.	PASS
+04-08-2016 18:45:00	EditNonEdit_ValidateToggles	TWL_Editable/Non-Editable object  should be loaded 	PASS
+04-08-2016 18:45:00	EditNonEdit_ValidateToggles	"TWL_Editable/Non-Editable object" should be displayed.	PASS
+04-08-2016 18:45:00	EditNonEdit_ValidateToggles	"BTN_Back button" object Should be clicked.	PASS
+04-08-2016 18:45:01	EditNonEdit_ValidateToggles	LBL_MakeQuestionsNonEditable object  should be loaded 	PASS
+04-08-2016 18:45:01	EditNonEdit_ValidateToggles	TXT_QANumeric edit box should be visible and Disabled	PASS
+04-08-2016 18:45:01	EditNonEdit_ValidateToggles	TXT_NumericInput2Decimal edit box should be visible and Disabled	PASS
+04-08-2016 18:45:01	EditNonEdit_ValidateToggles	TXT_NumericInputNonDecimal edit box should be visible and Disabled	PASS
+04-08-2016 18:45:01	EditNonEdit_ValidateToggles	TXT_NumericInputCommaDelimted edit box should be visible and Disabled	PASS
+04-08-2016 18:45:02	EditNonEdit_ValidateToggles	TWL_DropDown#1 objectshould exist	FAIL
+04-08-2016 18:45:02	EditNonEdit_ValidateToggles	TXT_NameAlphaSpecialChar edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:03	EditNonEdit_ValidateToggles	TXT_Currency edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:03	EditNonEdit_ValidateToggles	TXT_CurrencyWholeNumber edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:03	EditNonEdit_ValidateToggles	TXT_Currecy_Formated_NEG edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:03	EditNonEdit_ValidateToggles	TXT_Currecy_Truncate edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:03	EditNonEdit_ValidateToggles	TXT_String edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:03	EditNonEdit_ValidateToggles	TXT_String_alpha_Only edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:04	EditNonEdit_ValidateToggles	TXT_String_NumericOnly edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:04	EditNonEdit_ValidateToggles	TXT_Date edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:04	EditNonEdit_ValidateToggles	TXT_DateMonthDayOnly edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:04	EditNonEdit_ValidateToggles	TXT_BusinessDate edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:04	EditNonEdit_ValidateToggles	TXT_BirthDate edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:04	EditNonEdit_ValidateToggles	TXT_MonthYearDate edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:05	EditNonEdit_ValidateToggles	TWL_PhoneNumber edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:05	EditNonEdit_ValidateToggles	TWL_BLAccountNumber edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:05	EditNonEdit_ValidateToggles	TWL_Email edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:05	EditNonEdit_ValidateToggles	TWL_Social edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:05	EditNonEdit_ValidateToggles	TWL_SocialwDashes edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:05	EditNonEdit_ValidateToggles	TWL_TaxID edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:05	EditNonEdit_ValidateToggles	TWL_TaxIDwDashes edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:06	EditNonEdit_ValidateToggles	TWL_Zip edit box should be visible and Disabled	FAIL
+04-08-2016 18:45:06	EditNonEdit_ValidateToggles	TWL_XML edit box object should exist.	FAIL
+04-08-2016 18:45:06	EditNonEdit_ValidateToggles	TXT_AuditNote edit box object should exist.	FAIL
+04-08-2016 18:45:10	Logout	Logout from application	PASS

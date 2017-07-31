@@ -1,0 +1,5 @@
+﻿<Properties>
+  <WatchEntry0 value="strValue" />
+  <WatchEntry1 value="RadioGroup(0).GetROProperty(&quot;all items&quot;)" />
+  <WatchEntry2 value="strTitle" />
+</Properties>

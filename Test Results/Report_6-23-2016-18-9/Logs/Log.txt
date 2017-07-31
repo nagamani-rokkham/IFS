@@ -1,0 +1,1657 @@
+23-06-2016 18:09:56	Start Execution		
+23-06-2016 18:09:58	Start Execution	Open the test suite file	OPEN THE TEST SUITE FILE SUCCESSFULLY
+23-06-2016 18:10:00	Start Execution	Open the TC552_Documents_ValidateEntry file	OPEN THE TC552_DOCUMENTS_VALIDATEENTRY TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:10:00	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:10:00	Start Execution	Associate the Documents object repository to test		ASSOCIATE THE DOCUMENTS OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:10:02	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Documents.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DOCUMENTS.XLS FILE SUCCESSFULLY
+23-06-2016 18:10:02	Start Execution	start execute of  TC552_Documents_ValidateEntry	
+23-06-2016 18:10:02			Step Name			Expected		STATUS
+23-06-2016 18:10:12	Login	Open the browser and start Application	PASS
+23-06-2016 18:10:17	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:10:18	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:10:21	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:10:30	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 18:10:36	NavigatetoDocument	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 18:10:42	NavigatetoDocument	"LNK_Test Document Tab object" object Should be clicked.	PASS
+23-06-2016 18:10:57	NavigatetoDocument	TXT_TestingtheDescription edit box  should be loaded 	PASS
+23-06-2016 18:11:00	ValidateEntryPage	"LBL_DocumentWorkflowTesting object" should be displayed.	PASS
+23-06-2016 18:11:03	ValidateEntryPage	"TXT_TestingtheDescription edit box" should be displayed.	PASS
+23-06-2016 18:11:10	ValidateEntryPage	"BTN_NextQADoumentTestNext button" object Should be clicked.	PASS
+23-06-2016 18:11:14	ValidateEntryPage	"BTN_Submit button" should be displayed.	PASS
+23-06-2016 18:11:20	ValidateEntryPage	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 18:11:30	ValidateEntryPage	"TBL_RequestDetails table" should be displayed.	PASS
+23-06-2016 18:11:33	ValidateEntryPage	241764Value should be verified under TBL_RequestDetails table	PASS
+23-06-2016 18:11:36	ValidateEntryPage	Approval,Document Pending Receipt Value should be verified under StatusTBL_RequestDetails table	PASS
+23-06-2016 18:11:39	ValidateEntryPage	Chris Jarrell Value should be verified under Created ByTBL_RequestDetails table	PASS
+23-06-2016 18:11:42	ValidateEntryPage	6/23/2016 Value should be verified under Created OnTBL_RequestDetails table	PASS
+23-06-2016 18:11:45	ValidateEntryPage	Due DateValue has displayed future Date 6/28/2016TBL_RequestDetails table	PASS
+23-06-2016 18:11:48	ValidateEntryPage	"TBL_WorkflowDetails table" should be displayed.	PASS
+23-06-2016 18:11:52	ValidateEntryPage	"IMG_DocumentTestEntry object" should be displayed.	PASS
+23-06-2016 18:11:55	ValidateEntryPage	"IMG_Approval object" should be displayed.	PASS
+23-06-2016 18:12:01	ValidateEntryPage	"TAB_Details link" object Should be clicked.	PASS
+23-06-2016 18:12:04	ValidateEntryPage	"LBL_DocumentTest object" should be displayed.	PASS
+23-06-2016 18:12:07	ValidateEntryPage	"TAB_Documents link" should be displayed.	PASS
+23-06-2016 18:12:13	ValidateEntryPage	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:12:16	ValidateEntryPage	"LBL_Documents object" should be displayed.	PASS
+23-06-2016 18:12:20	ValidateEntryPage	"BTN_AddDocument button" should be displayed.	PASS
+23-06-2016 18:12:28	ValidateEntryPage	LBL_DocumentsDue object  should be loaded 	PASS
+23-06-2016 18:12:29	Logout	Logout from application	PASS
+23-06-2016 18:12:37	Start Execution	Open the TC261_Documents_AddDocuments file	OPEN THE TC261_DOCUMENTS_ADDDOCUMENTS TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:12:38	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:12:38	Start Execution	Associate the Documents object repository to test		ASSOCIATE THE DOCUMENTS OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:12:38	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Documents.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DOCUMENTS.XLS FILE SUCCESSFULLY
+23-06-2016 18:12:38	Start Execution	start execute of  TC261_Documents_AddDocuments	
+23-06-2016 18:12:38			Step Name			Expected		STATUS
+23-06-2016 18:12:44	Login	Open the browser and start Application	PASS
+23-06-2016 18:12:51	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:12:51	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:12:54	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:13:01	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 18:13:07	NavigatetoDocument	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 18:13:14	NavigatetoDocument	"LNK_Test Document Tab object" object Should be clicked.	PASS
+23-06-2016 18:13:28	NavigatetoDocument	TXT_TestingtheDescription edit box  should be loaded 	PASS
+23-06-2016 18:13:31	ValidateAddDocument	"LBL_DocumentWorkflowTesting object" should be displayed.	PASS
+23-06-2016 18:13:34	ValidateAddDocument	"TXT_TestingtheDescription edit box" should be displayed.	PASS
+23-06-2016 18:13:38	ValidateAddDocument	"Testing" : value should be entered in "TXT_TestingtheDescription edit box" field.	PASS
+23-06-2016 18:13:44	ValidateAddDocument	"BTN_NextQADoumentTestNext button" object Should be clicked.	PASS
+23-06-2016 18:13:51	ValidateAddDocument	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 18:14:01	ValidateAddDocument	TAB_Documents link  should be loaded 	PASS
+23-06-2016 18:14:04	ValidateAddDocument	"TAB_Documents link" should be displayed.	PASS
+23-06-2016 18:14:10	ValidateAddDocument	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:14:13	ValidateAddDocument	"LBL_Documents object" should be displayed.	PASS
+23-06-2016 18:14:19	ValidateAddDocument	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:14:22	ValidateAddDocument	"BTN_AddDocument button" should be displayed.	PASS
+23-06-2016 18:14:29	ValidateAddDocument	"BTN_AddDocument button" object Should be clicked.	PASS
+23-06-2016 18:14:37	ValidateAddDocument	"Misc. Document (name input) should be displayed in suggestions list	PASS
+23-06-2016 18:14:45	ValidateAddDocument	"Miscellaneous should be displayed in suggestions list	PASS
+23-06-2016 18:14:53	ValidateAddDocument	"Optional Document for Doc Test should be displayed in suggestions list	PASS
+23-06-2016 18:14:56	ValidateAddDocument	Miscellaneous should be selected from dropdown.	PASS
+23-06-2016 18:15:00	ValidateAddDocument	"TXT_MiscellanousInput edit box" should be displayed.	PASS
+23-06-2016 18:15:03	ValidateAddDocument	"Testing" : value should be entered in "TXT_MiscellanousInput edit box" field.	PASS
+23-06-2016 18:15:12	ValidateAddDocument	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+23-06-2016 18:15:15	ValidateAddDocument	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\pass.png" : value should be entered in "TXT_Filename edit box" field.	PASS
+23-06-2016 18:15:20	ValidateAddDocument	"BTN_Open button" object should be clicked.	PASS
+23-06-2016 18:15:28	ValidateAddDocument	BTN_UploadDocument button  should be loaded 	PASS
+23-06-2016 18:15:34	ValidateAddDocument	"BTN_UploadDocument button" object Should be clicked.	PASS
+23-06-2016 18:15:49	ValidateAddDocument	TBL_Documents table  should be loaded 	PASS
+23-06-2016 18:15:53	ValidateAddDocument	TestingValue should be verified under status: CompleteTBL_Documents table	PASS
+23-06-2016 18:15:57	ValidateAddDocument	 icon should be clicked under TBL_Documents table	PASS
+23-06-2016 18:17:03	ValidateAddDocument	BTN_SaveAsDropDown button object should exist.	FAIL
+23-06-2016 18:18:14	ValidateAddDocument	TXT_FileName edit box object should exist.	FAIL
+23-06-2016 18:19:21	ValidateAddDocument	BTN_Save button object should exist.	FAIL
+23-06-2016 18:19:29	ValidateAddDocument	TBL_Documents table  should be loaded 	PASS
+23-06-2016 18:19:29	ValidateAddDocument	 File does not exist in the specified path 	FAIL
+23-06-2016 18:19:29	Start Execution	Open the TC257_Documents_ValidateDocuments file	OPEN THE TC257_DOCUMENTS_VALIDATEDOCUMENTS TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:19:30	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:19:30	Start Execution	Associate the Documents object repository to test		ASSOCIATE THE DOCUMENTS OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:19:30	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Documents.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DOCUMENTS.XLS FILE SUCCESSFULLY
+23-06-2016 18:19:30	Start Execution	start execute of  TC257_Documents_ValidateDocuments	
+23-06-2016 18:19:30			Step Name			Expected		STATUS
+23-06-2016 18:19:40	Login	Open the browser and start Application	PASS
+23-06-2016 18:19:44	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:19:45	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:19:48	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:19:52	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 18:19:55	NavigatetoDocument	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 18:20:01	NavigatetoDocument	"LNK_Test Document Tab object" object Should be clicked.	PASS
+23-06-2016 18:20:16	NavigatetoDocument	TXT_TestingtheDescription edit box  should be loaded 	PASS
+23-06-2016 18:20:19	ValidateDocuments	"LBL_DocumentWorkflowTesting object" should be displayed.	PASS
+23-06-2016 18:20:22	ValidateDocuments	"TXT_TestingtheDescription edit box" should be displayed.	PASS
+23-06-2016 18:20:25	ValidateDocuments	"Testing" : value should be entered in "TXT_TestingtheDescription edit box" field.	PASS
+23-06-2016 18:20:32	ValidateDocuments	"BTN_NextQADoumentTestNext button" object Should be clicked.	PASS
+23-06-2016 18:20:36	ValidateDocuments	"BTN_Submit button" should be displayed.	PASS
+23-06-2016 18:20:42	ValidateDocuments	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 18:20:52	ValidateDocuments	TAB_Documents link  should be loaded 	PASS
+23-06-2016 18:20:55	ValidateDocuments	"TAB_Documents link" should be displayed.	PASS
+23-06-2016 18:21:01	ValidateDocuments	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:21:04	ValidateDocuments	"LBL_Documents object" should be displayed.	PASS
+23-06-2016 18:21:10	ValidateDocuments	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:21:13	ValidateDocuments	"BTN_AddDocument button" should be displayed.	PASS
+23-06-2016 18:21:16	ValidateDocuments	"BTN_PrintCoverSheets button" should be displayed.	PASS
+23-06-2016 18:21:19	ValidateDocuments	"BTN_ViewPrintAllForms button" should be displayed.	PASS
+23-06-2016 18:21:20	Logout	Logout from application	PASS
+23-06-2016 18:21:29	Start Execution	Open the TC263_Documents_ApproveDocuments file	OPEN THE TC263_DOCUMENTS_APPROVEDOCUMENTS TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:21:29	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:21:29	Start Execution	Associate the Documents object repository to test		ASSOCIATE THE DOCUMENTS OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:21:30	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Documents.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DOCUMENTS.XLS FILE SUCCESSFULLY
+23-06-2016 18:21:30	Start Execution	start execute of  TC263_Documents_ApproveDocuments	
+23-06-2016 18:21:30			Step Name			Expected		STATUS
+23-06-2016 18:21:34	Login	Open the browser and start Application	PASS
+23-06-2016 18:21:40	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:21:40	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:21:43	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:21:54	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 18:22:00	NavigatetoDocument	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 18:22:06	NavigatetoDocument	"LNK_Test Document Tab object" object Should be clicked.	PASS
+23-06-2016 18:22:20	NavigatetoDocument	TXT_TestingtheDescription edit box  should be loaded 	PASS
+23-06-2016 18:22:24	ValidateDocumentApproval	"LBL_DocumentWorkflowTesting object" should be displayed.	PASS
+23-06-2016 18:22:27	ValidateDocumentApproval	"TXT_TestingtheDescription edit box" should be displayed.	PASS
+23-06-2016 18:22:30	ValidateDocumentApproval	" QA Rules!" : value should be entered in "TXT_TestingtheDescription edit box" field.	PASS
+23-06-2016 18:22:36	ValidateDocumentApproval	"BTN_NextQADoumentTestNext button" object Should be clicked.	PASS
+23-06-2016 18:22:44	ValidateDocumentApproval	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 18:22:53	ValidateDocumentApproval	TAB_Documents link  should be loaded 	PASS
+23-06-2016 18:22:59	ValidateDocumentApproval	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:23:02	ValidateDocumentApproval	"LBL_Documents object" should be displayed.	PASS
+23-06-2016 18:23:08	ValidateDocumentApproval	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:23:12	ValidateDocumentApproval	"BTN_AddDocument button" should be displayed.	PASS
+23-06-2016 18:23:18	ValidateDocumentApproval	"BTN_AddDocument button" object Should be clicked.	PASS
+23-06-2016 18:23:26	ValidateDocumentApproval	"Optional Document for Doc Test should be displayed in suggestions list	PASS
+23-06-2016 18:23:29	ValidateDocumentApproval	Optional Document for Doc Test should be selected from dropdown.	PASS
+23-06-2016 18:23:38	ValidateDocumentApproval	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+23-06-2016 18:23:41	ValidateDocumentApproval	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Optional Document for Doc Test.pdf" : value should be entered in "TXT_Filename edit box" field.	PASS
+23-06-2016 18:23:46	ValidateDocumentApproval	"BTN_Open button" object should be clicked.	PASS
+23-06-2016 18:23:54	ValidateDocumentApproval	BTN_UploadDocument button  should be loaded 	PASS
+23-06-2016 18:24:01	ValidateDocumentApproval	"BTN_UploadDocument button" object Should be clicked.	PASS
+23-06-2016 18:24:16	ValidateDocumentApproval	TBL_Documents table  should be loaded 	PASS
+23-06-2016 18:24:19	ValidateDocumentApproval	Optional Document for Doc TestValue should be verified under status: Pending ReviewTBL_Documents table	PASS
+23-06-2016 18:24:23	ValidateDocumentApproval	Optional Document for Doc Test|view attachment icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:24:26	ValidateDocumentApproval	Optional Document for Doc Test|Reject document icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:24:29	ValidateDocumentApproval	Optional Document for Doc Test|View document details and version history icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:24:33	ValidateDocumentApproval	Optional Document for Doc Test|Accept/Approve document icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:24:36	ValidateDocumentApproval	 icon should be clicked under TBL_Documents table	PASS
+23-06-2016 18:24:51	ValidateDocumentApproval	TBL_Documents table  should be loaded 	PASS
+23-06-2016 18:24:54	ValidateDocumentApproval	Optional Document for Doc TestValue should be verified under status: Pending ImagingTBL_Documents table	PASS
+23-06-2016 18:24:55	Logout	Logout from application	PASS
+23-06-2016 18:25:03	Start Execution	Open the TC264_Documents_RejectDocuments file	OPEN THE TC264_DOCUMENTS_REJECTDOCUMENTS TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:25:04	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:25:04	Start Execution	Associate the Documents object repository to test		ASSOCIATE THE DOCUMENTS OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:25:04	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Documents.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DOCUMENTS.XLS FILE SUCCESSFULLY
+23-06-2016 18:25:04	Start Execution	start execute of  TC264_Documents_RejectDocuments	
+23-06-2016 18:25:04			Step Name			Expected		STATUS
+23-06-2016 18:25:09	Login	Open the browser and start Application	PASS
+23-06-2016 18:25:14	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:25:14	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:25:17	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:25:21	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 18:25:24	NavigatetoDocument	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 18:25:31	NavigatetoDocument	"LNK_Test Document Tab object" object Should be clicked.	PASS
+23-06-2016 18:25:45	NavigatetoDocument	TXT_TestingtheDescription edit box  should be loaded 	PASS
+23-06-2016 18:25:48	ValidateDocumentReject	"LBL_DocumentWorkflowTesting object" should be displayed.	PASS
+23-06-2016 18:25:51	ValidateDocumentReject	"TXT_TestingtheDescription edit box" should be displayed.	PASS
+23-06-2016 18:25:55	ValidateDocumentReject	"QA Rules!" : value should be entered in "TXT_TestingtheDescription edit box" field.	PASS
+23-06-2016 18:26:01	ValidateDocumentReject	"BTN_NextQADoumentTestNext button" object Should be clicked.	PASS
+23-06-2016 18:26:08	ValidateDocumentReject	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 18:26:18	ValidateDocumentReject	TAB_Documents link  should be loaded 	PASS
+23-06-2016 18:26:24	ValidateDocumentReject	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:26:27	ValidateDocumentReject	"LBL_Documents object" should be displayed.	PASS
+23-06-2016 18:26:33	ValidateDocumentReject	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:26:36	ValidateDocumentReject	"BTN_AddDocument button" should be displayed.	PASS
+23-06-2016 18:26:43	ValidateDocumentReject	"BTN_AddDocument button" object Should be clicked.	PASS
+23-06-2016 18:26:51	ValidateDocumentReject	"Optional Document for Doc Test should be displayed in suggestions list	PASS
+23-06-2016 18:26:54	ValidateDocumentReject	Optional Document for Doc Test should be selected from dropdown.	PASS
+23-06-2016 18:27:03	ValidateDocumentReject	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+23-06-2016 18:27:06	ValidateDocumentReject	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Optional Document for Doc Test.pdf" : value should be entered in "TXT_Filename edit box" field.	PASS
+23-06-2016 18:27:11	ValidateDocumentReject	"BTN_Open button" object should be clicked.	PASS
+23-06-2016 18:27:19	ValidateDocumentReject	BTN_UploadDocument button  should be loaded 	PASS
+23-06-2016 18:27:25	ValidateDocumentReject	"BTN_UploadDocument button" object Should be clicked.	PASS
+23-06-2016 18:27:41	ValidateDocumentReject	TBL_Documents table  should be loaded 	PASS
+23-06-2016 18:27:44	ValidateDocumentReject	Optional Document for Doc TestValue should be verified under status: Pending ReviewTBL_Documents table	PASS
+23-06-2016 18:27:47	ValidateDocumentReject	Optional Document for Doc Test|view attachment icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:27:50	ValidateDocumentReject	Optional Document for Doc Test|Reject document icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:27:54	ValidateDocumentReject	Optional Document for Doc Test|View document details and version history icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:27:57	ValidateDocumentReject	Optional Document for Doc Test|Accept/Approve document icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:28:00	ValidateDocumentReject	Optional Document for Doc TestValue should be verified under status: Pending ReviewTBL_Documents table	PASS
+23-06-2016 18:28:04	ValidateDocumentReject	 icon should be clicked under TBL_Documents table	PASS
+23-06-2016 18:28:12	ValidateDocumentReject	"QA Testing document rejection reason" : value should be entered in "TXT_RejectReason edit box" field.	PASS
+23-06-2016 18:28:15	ValidateDocumentReject	"BTN_RejectDocument button" should be displayed.	PASS
+23-06-2016 18:28:18	ValidateDocumentReject	"BTN_DoNOTRejectDocument button" should be displayed.	PASS
+23-06-2016 18:28:24	ValidateDocumentReject	"BTN_RejectDocument button" object Should be clicked.	PASS
+23-06-2016 18:28:34	ValidateDocumentReject	TBL_Documents table  should be loaded 	PASS
+23-06-2016 18:28:37	ValidateDocumentReject	Optional Document for Doc TestValue should be verified under status: RejectedTBL_Documents table	PASS
+23-06-2016 18:28:38	Logout	Logout from application	PASS
+23-06-2016 18:28:46	Start Execution	Open the TC553_Documents_AddOptionalDocument file	OPEN THE TC553_DOCUMENTS_ADDOPTIONALDOCUMENT TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:28:47	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:28:47	Start Execution	Associate the Documents object repository to test		ASSOCIATE THE DOCUMENTS OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:28:47	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Documents.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DOCUMENTS.XLS FILE SUCCESSFULLY
+23-06-2016 18:28:47	Start Execution	start execute of  TC553_Documents_AddOptionalDocument	
+23-06-2016 18:28:47			Step Name			Expected		STATUS
+23-06-2016 18:28:52	Login	Open the browser and start Application	PASS
+23-06-2016 18:28:56	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:28:56	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:28:59	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:29:04	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 18:29:07	NavigatetoDocument	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 18:29:13	NavigatetoDocument	"LNK_Test Document Tab object" object Should be clicked.	PASS
+23-06-2016 18:29:28	NavigatetoDocument	TXT_TestingtheDescription edit box  should be loaded 	PASS
+23-06-2016 18:29:31	ValidateAddOptionalDocument	"LBL_DocumentWorkflowTesting object" should be displayed.	PASS
+23-06-2016 18:29:34	ValidateAddOptionalDocument	"TXT_TestingtheDescription edit box" should be displayed.	PASS
+23-06-2016 18:29:37	ValidateAddOptionalDocument	"QA Testing" : value should be entered in "TXT_TestingtheDescription edit box" field.	PASS
+23-06-2016 18:29:44	ValidateAddOptionalDocument	"BTN_NextQADoumentTestNext button" object Should be clicked.	PASS
+23-06-2016 18:29:51	ValidateAddOptionalDocument	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 18:30:00	ValidateAddOptionalDocument	TAB_Documents link  should be loaded 	PASS
+23-06-2016 18:30:04	ValidateAddOptionalDocument	"TAB_Documents link" should be displayed.	PASS
+23-06-2016 18:30:10	ValidateAddOptionalDocument	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:30:13	ValidateAddOptionalDocument	"LBL_Documents object" should be displayed.	PASS
+23-06-2016 18:30:19	ValidateAddOptionalDocument	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:30:22	ValidateAddOptionalDocument	"BTN_AddDocument button" should be displayed.	PASS
+23-06-2016 18:30:28	ValidateAddOptionalDocument	"BTN_AddDocument button" object Should be clicked.	PASS
+23-06-2016 18:30:37	ValidateAddOptionalDocument	"Misc. Document (name input) should be displayed in suggestions list	PASS
+23-06-2016 18:30:45	ValidateAddOptionalDocument	"Miscellaneous should be displayed in suggestions list	PASS
+23-06-2016 18:30:53	ValidateAddOptionalDocument	"Optional Document for Doc Test should be displayed in suggestions list	PASS
+23-06-2016 18:30:56	ValidateAddOptionalDocument	Optional Document for Doc Test should be selected from dropdown.	PASS
+23-06-2016 18:30:59	ValidateAddOptionalDocument	"TXT_MiscellanousInput edit box" is not  displayed.	PASS
+23-06-2016 18:31:08	ValidateAddOptionalDocument	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+23-06-2016 18:31:11	ValidateAddOptionalDocument	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Optional Document for Doc Test.pdf" : value should be entered in "TXT_Filename edit box" field.	PASS
+23-06-2016 18:31:16	ValidateAddOptionalDocument	"BTN_Open button" object should be clicked.	PASS
+23-06-2016 18:31:25	ValidateAddOptionalDocument	BTN_UploadDocument button  should be loaded 	PASS
+23-06-2016 18:31:31	ValidateAddOptionalDocument	"BTN_UploadDocument button" object Should be clicked.	PASS
+23-06-2016 18:31:46	ValidateAddOptionalDocument	TBL_Documents table  should be loaded 	PASS
+23-06-2016 18:31:49	ValidateAddOptionalDocument	Optional Document for Doc TestValue should be verified under status: Pending ReviewTBL_Documents table	PASS
+23-06-2016 18:31:53	ValidateAddOptionalDocument	Optional Document for Doc Test|view attachment icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:31:56	ValidateAddOptionalDocument	 icon should be clicked under TBL_Documents table	PASS
+23-06-2016 18:33:08	ValidateAddOptionalDocument	BTN_SaveAsDropDown button object should exist.	FAIL
+23-06-2016 18:34:13	ValidateAddOptionalDocument	TXT_FileName edit box object should exist.	FAIL
+23-06-2016 18:35:20	ValidateAddOptionalDocument	BTN_Save button object should exist.	FAIL
+23-06-2016 18:35:28	ValidateAddOptionalDocument	Optional Document for Doc Test|view attachment icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:35:32	ValidateAddOptionalDocument	Optional Document for Doc Test|View document details and version history icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:35:35	ValidateAddOptionalDocument	Optional Document for Doc Test|Accept/Approve document icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:35:38	ValidateAddOptionalDocument	Optional Document for Doc Test|Reject document icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:35:39	Start Execution	Open the TC554_Documents_RejectCanBeCancelled file	OPEN THE TC554_DOCUMENTS_REJECTCANBECANCELLED TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:35:39	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:35:40	Start Execution	Associate the Documents object repository to test		ASSOCIATE THE DOCUMENTS OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:35:40	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Documents.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DOCUMENTS.XLS FILE SUCCESSFULLY
+23-06-2016 18:35:40	Start Execution	start execute of  TC554_Documents_RejectCanBeCancelled	
+23-06-2016 18:35:40			Step Name			Expected		STATUS
+23-06-2016 18:35:50	Login	Open the browser and start Application	PASS
+23-06-2016 18:35:54	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:35:54	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:35:57	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:36:01	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 18:36:04	NavigatetoDocument	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 18:36:11	NavigatetoDocument	"LNK_Test Document Tab object" object Should be clicked.	PASS
+23-06-2016 18:36:25	NavigatetoDocument	TXT_TestingtheDescription edit box  should be loaded 	PASS
+23-06-2016 18:36:28	ValidateRejectCanBeCancelled	"LBL_DocumentWorkflowTesting object" should be displayed.	PASS
+23-06-2016 18:36:31	ValidateRejectCanBeCancelled	"TXT_TestingtheDescription edit box" should be displayed.	PASS
+23-06-2016 18:36:35	ValidateRejectCanBeCancelled	"IFS QA Automated Testing" : value should be entered in "TXT_TestingtheDescription edit box" field.	PASS
+23-06-2016 18:36:41	ValidateRejectCanBeCancelled	"BTN_NextQADoumentTestNext button" object Should be clicked.	PASS
+23-06-2016 18:36:48	ValidateRejectCanBeCancelled	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 18:36:58	ValidateRejectCanBeCancelled	TAB_Documents link  should be loaded 	PASS
+23-06-2016 18:37:04	ValidateRejectCanBeCancelled	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:37:07	ValidateRejectCanBeCancelled	"LBL_Documents object" should be displayed.	PASS
+23-06-2016 18:37:13	ValidateRejectCanBeCancelled	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:37:16	ValidateRejectCanBeCancelled	"BTN_AddDocument button" should be displayed.	PASS
+23-06-2016 18:37:23	ValidateRejectCanBeCancelled	"BTN_AddDocument button" object Should be clicked.	PASS
+23-06-2016 18:37:31	ValidateRejectCanBeCancelled	"Optional Document for Doc Test should be displayed in suggestions list	PASS
+23-06-2016 18:37:34	ValidateRejectCanBeCancelled	Optional Document for Doc Test should be selected from dropdown.	PASS
+23-06-2016 18:37:43	ValidateRejectCanBeCancelled	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+23-06-2016 18:37:46	ValidateRejectCanBeCancelled	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Optional Document for Doc Test.pdf" : value should be entered in "TXT_Filename edit box" field.	PASS
+23-06-2016 18:37:51	ValidateRejectCanBeCancelled	"BTN_Open button" object should be clicked.	PASS
+23-06-2016 18:37:59	ValidateRejectCanBeCancelled	BTN_UploadDocument button  should be loaded 	PASS
+23-06-2016 18:38:05	ValidateRejectCanBeCancelled	"BTN_UploadDocument button" object Should be clicked.	PASS
+23-06-2016 18:38:21	ValidateRejectCanBeCancelled	TBL_Documents table  should be loaded 	PASS
+23-06-2016 18:38:24	ValidateRejectCanBeCancelled	Optional Document for Doc TestValue should be verified under status: Pending ReviewTBL_Documents table	PASS
+23-06-2016 18:38:27	ValidateRejectCanBeCancelled	Optional Document for Doc Test|view attachment icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:38:31	ValidateRejectCanBeCancelled	Optional Document for Doc Test|Reject document icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:38:34	ValidateRejectCanBeCancelled	Optional Document for Doc Test|View document details and version history icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:38:37	ValidateRejectCanBeCancelled	Optional Document for Doc Test|Accept/Approve document icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:38:40	ValidateRejectCanBeCancelled	Optional Document for Doc TestValue should be verified under status: Pending ReviewTBL_Documents table	PASS
+23-06-2016 18:38:44	ValidateRejectCanBeCancelled	 icon should be clicked under TBL_Documents table	PASS
+23-06-2016 18:38:52	ValidateRejectCanBeCancelled	"Summary Web page" should be displayed.	PASS
+23-06-2016 18:38:55	ValidateRejectCanBeCancelled	"BTN_RejectDocument button" should be displayed.	PASS
+23-06-2016 18:38:58	ValidateRejectCanBeCancelled	"TXT_RejectReason edit box" should be displayed.	PASS
+23-06-2016 18:39:04	ValidateRejectCanBeCancelled	"BTN_DoNOTRejectDocument button" object Should be clicked.	PASS
+23-06-2016 18:39:18	ValidateRejectCanBeCancelled	TBL_Documents table  should be loaded 	PASS
+23-06-2016 18:39:21	ValidateRejectCanBeCancelled	Optional Document for Doc Test|Reject document icon should be displayed under TBL_Documents table	PASS
+23-06-2016 18:39:22	Logout	Logout from application	PASS
+23-06-2016 18:39:30	Start Execution	Open the TC800_Documents_ValidateNotRequiredDocuments file	OPEN THE TC800_DOCUMENTS_VALIDATENOTREQUIREDDOCUMENTS TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:39:31	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:39:31	Start Execution	Associate the Documents object repository to test		ASSOCIATE THE DOCUMENTS OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:39:31	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Documents.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DOCUMENTS.XLS FILE SUCCESSFULLY
+23-06-2016 18:39:31	Start Execution	start execute of  TC800_Documents_ValidateNotRequiredDocuments	
+23-06-2016 18:39:31			Step Name			Expected		STATUS
+23-06-2016 18:39:36	Login	Open the browser and start Application	PASS
+23-06-2016 18:39:39	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:39:39	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:39:43	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:39:47	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 18:39:50	NavigatetoDocument	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 18:39:53	NavigatetoDocument	"LNK_Test Document Tab object" object Should be clicked.	PASS
+23-06-2016 18:40:08	NavigatetoDocument	TXT_TestingtheDescription edit box  should be loaded 	PASS
+23-06-2016 18:40:11	ValidateNotRequiredDocument	"LBL_DocumentWorkflowTesting object" should be displayed.	PASS
+23-06-2016 18:40:14	ValidateNotRequiredDocument	"TXT_TestingtheDescription edit box" should be displayed.	PASS
+23-06-2016 18:40:17	ValidateNotRequiredDocument	"Testing" : value should be entered in "TXT_TestingtheDescription edit box" field.	PASS
+23-06-2016 18:40:24	ValidateNotRequiredDocument	"BTN_NextQADoumentTestNext button" object Should be clicked.	PASS
+23-06-2016 18:40:28	ValidateNotRequiredDocument	"BTN_Submit button" should be displayed.	PASS
+23-06-2016 18:40:34	ValidateNotRequiredDocument	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 18:40:44	ValidateNotRequiredDocument	TAB_Documents link  should be loaded 	PASS
+23-06-2016 18:40:47	ValidateNotRequiredDocument	"TAB_Documents link" should be displayed.	PASS
+23-06-2016 18:40:53	ValidateNotRequiredDocument	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:40:56	ValidateNotRequiredDocument	"LBL_Documents object" should be displayed.	PASS
+23-06-2016 18:41:02	ValidateNotRequiredDocument	"TAB_Documents link" object Should be clicked.	PASS
+23-06-2016 18:41:05	ValidateNotRequiredDocument	"BTN_AddDocument button" should be displayed.	PASS
+23-06-2016 18:41:08	ValidateNotRequiredDocument	"BTN_PrintCoverSheets button" should be displayed.	PASS
+23-06-2016 18:41:11	ValidateNotRequiredDocument	"BTN_ViewPrintAllForms button" should be displayed.	PASS
+23-06-2016 18:41:15	ValidateNotRequiredDocument	"CWL_Not_Required check box" should be displayed.	PASS
+23-06-2016 18:41:19	Logout	Logout from application	PASS
+23-06-2016 18:41:27	Start Execution	Open the TC275_Workflow_Assign file	OPEN THE TC275_WORKFLOW_ASSIGN TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:41:27	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:41:28	Start Execution	Associate the Workflow object repository to test		ASSOCIATE THE WORKFLOW OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:41:28	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Workflow.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\WORKFLOW.XLS FILE SUCCESSFULLY
+23-06-2016 18:41:28	Start Execution	start execute of  TC275_Workflow_Assign	
+23-06-2016 18:41:28			Step Name			Expected		STATUS
+23-06-2016 18:41:33	Login	Open the browser and start Application	PASS
+23-06-2016 18:41:36	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:41:37	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:41:41	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:41:45	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 18:41:48	NavigatetoWorkflow	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 18:41:54	NavigatetoWorkflow	"LNK_TestWorkflowTab object" object Should be clicked.	PASS
+23-06-2016 18:42:09	NavigatetoWorkflow	BTN_Next button  should be loaded 	PASS
+23-06-2016 18:42:12	ValidateAssign	"BTN_Next button" should be displayed.	PASS
+23-06-2016 18:42:19	ValidateAssign	"BTN_Next button" object Should be clicked.	PASS
+23-06-2016 18:42:28	ValidateAssign	BTN_Submit button  should be loaded 	PASS
+23-06-2016 18:42:31	ValidateAssign	"BTN_Submit button" should be displayed.	PASS
+23-06-2016 18:42:37	ValidateAssign	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 18:42:46	ValidateAssign	TAB_WorkFlow link  should be loaded 	PASS
+23-06-2016 18:42:53	ValidateAssign	"TAB_WorkFlow link" object Should be clicked.	PASS
+23-06-2016 18:43:06	ValidateAssign	LBL_Workflow object  should be loaded 	PASS
+23-06-2016 18:43:09	ValidateAssign	"LBL_Workflow object" should be displayed.	PASS
+23-06-2016 18:43:21	ValidateAssign	 button should be clicked under TBL_Task table	PASS
+23-06-2016 18:43:25	ValidateAssign	"LNK_Assign object" should be displayed.	PASS
+23-06-2016 18:43:31	ValidateAssign	"LNK_Assign object" object Should be clicked.	PASS
+23-06-2016 18:43:44	ValidateAssign	BTN_SaveAssignment button  should be loaded 	PASS
+23-06-2016 18:43:47	ValidateAssign	"BTN_SaveAssignment button" should be displayed.	PASS
+23-06-2016 18:43:50	ValidateAssign	"BTN_ClearAssignment button" should be displayed.	PASS
+23-06-2016 18:43:53	ValidateAssign	"BTN_Cancel button" should be displayed.	PASS
+23-06-2016 18:44:01	ValidateAssign	Admin, Sally should be selected from dropdown.	PASS
+23-06-2016 18:44:04	ValidateAssign	"BTN_SaveAssignment button" should be displayed.	PASS
+23-06-2016 18:44:10	ValidateAssign	"BTN_SaveAssignment button" object Should be clicked.	PASS
+23-06-2016 18:44:23	ValidateAssign	TBL_Task table  should be loaded 	PASS
+23-06-2016 18:44:27	ValidateAssign	"TBL_Task table" should be displayed.	PASS
+23-06-2016 18:44:30	ValidateAssign	Sally Admin Value should be verified under Step 1TBL_Task table	PASS
+23-06-2016 18:44:34	Logout	Logout from application	PASS
+23-06-2016 18:44:42	Start Execution	Open the TC278_Workflow_ValidateDueDate file	OPEN THE TC278_WORKFLOW_VALIDATEDUEDATE TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:44:43	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:44:43	Start Execution	Associate the Workflow object repository to test		ASSOCIATE THE WORKFLOW OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:44:43	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Workflow.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\WORKFLOW.XLS FILE SUCCESSFULLY
+23-06-2016 18:44:43	Start Execution	start execute of  TC278_Workflow_ValidateDueDate	
+23-06-2016 18:44:43			Step Name			Expected		STATUS
+23-06-2016 18:44:48	Login	Open the browser and start Application	PASS
+23-06-2016 18:44:52	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:44:52	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:44:55	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:44:59	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 18:45:02	NavigatetoWorkflow	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 18:45:09	NavigatetoWorkflow	"LNK_TestWorkflowTab object" object Should be clicked.	PASS
+23-06-2016 18:45:23	NavigatetoWorkflow	BTN_Next button  should be loaded 	PASS
+23-06-2016 18:45:27	ValidateDueDate	"BTN_Next button" should be displayed.	PASS
+23-06-2016 18:45:33	ValidateDueDate	"BTN_Next button" object Should be clicked.	PASS
+23-06-2016 18:45:42	ValidateDueDate	BTN_Submit button  should be loaded 	PASS
+23-06-2016 18:45:45	ValidateDueDate	"BTN_Submit button" should be displayed.	PASS
+23-06-2016 18:45:51	ValidateDueDate	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 18:46:01	ValidateDueDate	TAB_WorkFlow link  should be loaded 	PASS
+23-06-2016 18:46:07	ValidateDueDate	"TAB_WorkFlow link" object Should be clicked.	PASS
+23-06-2016 18:46:20	ValidateDueDate	LBL_Workflow object  should be loaded 	PASS
+23-06-2016 18:46:23	ValidateDueDate	"LBL_Workflow object" should be displayed.	PASS
+23-06-2016 18:46:37	ValidateDueDate	TBL_Task table  should be loaded 	PASS
+23-06-2016 18:46:50	ValidateDueDate	 button should be clicked under TBL_Task table	PASS
+23-06-2016 18:46:58	ValidateDueDate	LNK_DueDate object  should be loaded 	PASS
+23-06-2016 18:47:01	ValidateDueDate	"LNK_DueDate object" should be displayed.	PASS
+23-06-2016 18:47:07	ValidateDueDate	"LNK_DueDate object" object Should be clicked.	PASS
+23-06-2016 18:47:10	ValidateDueDate	"LBL_Workflow object" should be displayed.	PASS
+23-06-2016 18:47:13	ValidateDueDate	"LBL_TaskName object" should be displayed.	PASS
+23-06-2016 18:47:17	ValidateDueDate	"LBL_CreatedOn object" should be displayed.	PASS
+23-06-2016 18:47:20	ValidateDueDate	"LBL_OriginalDueDate object" should be displayed.	PASS
+23-06-2016 18:47:23	ValidateDueDate	"LBL_NewDueDate object" should be displayed.	PASS
+23-06-2016 18:47:26	ValidateDueDate	"TXT_NewDueDate edit box" should be displayed.	PASS
+23-06-2016 18:47:29	ValidateDueDate	"TXT_DueDateReason edit box" should be displayed.	PASS
+23-06-2016 18:47:32	ValidateDueDate	"BTN_UpdateDueDate button" should be displayed.	PASS
+23-06-2016 18:47:35	ValidateDueDate	"BTN_Cancel button" should be displayed.	PASS
+23-06-2016 18:47:38	ValidateDueDate	"06/24" : value should be entered in "TXT_NewDueDate edit box" field.	PASS
+23-06-2016 18:47:42	ValidateDueDate	"Testing" : value should be entered in "TXT_DueDateReason edit box" field.	PASS
+23-06-2016 18:47:48	ValidateDueDate	"BTN_UpdateDueDate button" object Should be clicked.	PASS
+23-06-2016 18:48:02	ValidateDueDate	TBL_Task table  should be loaded 	PASS
+23-06-2016 18:48:05	ValidateDueDate	06/24/16 Value should be verified under Step 1 TBL_Task table	PASS
+23-06-2016 18:48:06	Logout	Logout from application	PASS
+23-06-2016 18:48:15	Start Execution	Open the TC551_Workflow_ValidateWorkflow file	OPEN THE TC551_WORKFLOW_VALIDATEWORKFLOW TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:48:15	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:48:15	Start Execution	Associate the Workflow object repository to test		ASSOCIATE THE WORKFLOW OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:48:16	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Workflow.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\WORKFLOW.XLS FILE SUCCESSFULLY
+23-06-2016 18:48:16	Start Execution	start execute of  TC551_Workflow_ValidateWorkflow	
+23-06-2016 18:48:16			Step Name			Expected		STATUS
+23-06-2016 18:48:21	Login	Open the browser and start Application	PASS
+23-06-2016 18:48:24	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:48:24	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:48:27	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:48:31	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 18:48:35	NavigatetoWorkflow	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 18:48:41	NavigatetoWorkflow	"LNK_TestWorkflowTab object" object Should be clicked.	PASS
+23-06-2016 18:48:56	NavigatetoWorkflow	BTN_Next button  should be loaded 	PASS
+23-06-2016 18:48:59	ValidateWorkflow	"BTN_Next button" should be displayed.	PASS
+23-06-2016 18:49:05	ValidateWorkflow	"BTN_Next button" object Should be clicked.	PASS
+23-06-2016 18:49:14	ValidateWorkflow	BTN_Submit button  should be loaded 	PASS
+23-06-2016 18:49:18	ValidateWorkflow	"BTN_Submit button" should be displayed.	PASS
+23-06-2016 18:49:24	ValidateWorkflow	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 18:49:33	ValidateWorkflow	TAB_WorkFlow link  should be loaded 	PASS
+23-06-2016 18:49:39	ValidateWorkflow	"TAB_WorkFlow link" object Should be clicked.	PASS
+23-06-2016 18:49:47	ValidateWorkflow	LBL_Workflow object  should be loaded 	PASS
+23-06-2016 18:49:51	ValidateWorkflow	"LBL_Workflow object" should be displayed.	PASS
+23-06-2016 18:50:04	ValidateWorkflow	TBL_Task table  should be loaded 	PASS
+23-06-2016 18:50:07	ValidateWorkflow	"TBL_Task table" should be displayed.	PASS
+23-06-2016 18:50:13	ValidateWorkflow	In Progress Value should be verified under Step 1 TBL_Task table	PASS
+23-06-2016 18:50:16	ValidateWorkflow	06/23/16 Value should be verified under Step 1 TBL_Task table	PASS
+23-06-2016 18:50:20	ValidateWorkflow	Chris Jarrell Value should be verified under Step 1 TBL_Task table	PASS
+23-06-2016 18:50:23	ValidateWorkflow	06/23/16 Value should be verified under Step 1 TBL_Task table	PASS
+23-06-2016 18:50:39	ValidateWorkflow	 button should be clicked under TBL_Task table	PASS
+23-06-2016 18:50:47	ValidateWorkflow	LNK_Work object  should be loaded 	PASS
+23-06-2016 18:50:50	ValidateWorkflow	"LNK_Work object" should be displayed.	PASS
+23-06-2016 18:50:53	ValidateWorkflow	"LNK_Assign object" should be displayed.	PASS
+23-06-2016 18:50:57	ValidateWorkflow	"LNK_DueDate object" should be displayed.	PASS
+23-06-2016 18:50:58	Logout	Logout from application	PASS
+23-06-2016 18:51:06	Start Execution	Open the TC281_Workflow_UserPermissions file	OPEN THE TC281_WORKFLOW_USERPERMISSIONS TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:51:06	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:51:06	Start Execution	Associate the Workflow object repository to test		ASSOCIATE THE WORKFLOW OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:51:07	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Workflow.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\WORKFLOW.XLS FILE SUCCESSFULLY
+23-06-2016 18:51:07	Start Execution	start execute of  TC281_Workflow_UserPermissions	
+23-06-2016 18:51:07			Step Name			Expected		STATUS
+23-06-2016 18:51:12	LoginToUser	Open the browser and start Application	PASS
+23-06-2016 18:51:15	LoginToUser	"user" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:51:15	LoginToUser	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:51:19	LoginToUser	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:51:23	LoginToUser	"Home object" should be displayed.	PASS
+23-06-2016 18:51:27	NavigatetoWorkflowUser	"Tests object" object Should be clicked.	PASS
+23-06-2016 18:51:33	NavigatetoWorkflowUser	"Test Workflow Tab object" object Should be clicked.	PASS
+23-06-2016 18:51:48	NavigatetoWorkflowUser	BTN_Next button  should be loaded 	PASS
+23-06-2016 18:51:51	ValidateUserPermissions	"BTN_Next button" should be displayed.	PASS
+23-06-2016 18:51:57	ValidateUserPermissions	"BTN_Next button" object Should be clicked.	PASS
+23-06-2016 18:52:07	ValidateUserPermissions	BTN_Submit button  should be loaded 	PASS
+23-06-2016 18:52:10	ValidateUserPermissions	"BTN_Submit button" should be displayed.	PASS
+23-06-2016 18:52:16	ValidateUserPermissions	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 18:52:26	ValidateUserPermissions	TAB_WorkFlow link  should be loaded 	PASS
+23-06-2016 18:52:32	ValidateUserPermissions	"TAB_WorkFlow link" object Should be clicked.	PASS
+23-06-2016 18:52:40	ValidateUserPermissions	LBL_Workflow object  should be loaded 	PASS
+23-06-2016 18:52:43	ValidateUserPermissions	"LBL_Workflow object" should be displayed.	PASS
+23-06-2016 18:52:49	ValidateUserPermissions	"LBL_Step1_Work object" object Should be clicked.	PASS
+23-06-2016 18:53:54	ValidateUserPermissions	BTN_Proceed button  should be loaded 	PASS
+23-06-2016 18:54:13	ValidateUserPermissions	Should click on Proceed button	PASS
+23-06-2016 18:54:27	ValidateUserPermissions	TAB_WorkFlow link  should be loaded 	PASS
+23-06-2016 18:54:33	ValidateUserPermissions	"TAB_WorkFlow link" object Should be clicked.	PASS
+23-06-2016 18:54:46	ValidateUserPermissions	TBL_Task table  should be loaded 	PASS
+23-06-2016 18:54:53	ValidateUserPermissions	Proceed Value should be verified under Step 1 TBL_Task table	PASS
+23-06-2016 18:54:56	ValidateUserPermissions	 button should not be displayed under TBL_Task table	PASS
+23-06-2016 18:54:56	Start Execution	Open the TC276_Workflow_ClearAssignment file	OPEN THE TC276_WORKFLOW_CLEARASSIGNMENT TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:54:57	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:54:57	Start Execution	Associate the Workflow object repository to test		ASSOCIATE THE WORKFLOW OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:54:57	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Workflow.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\WORKFLOW.XLS FILE SUCCESSFULLY
+23-06-2016 18:54:57	Start Execution	start execute of  TC276_Workflow_ClearAssignment	
+23-06-2016 18:54:57			Step Name			Expected		STATUS
+23-06-2016 18:55:07	Login	Open the browser and start Application	PASS
+23-06-2016 18:55:11	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:55:11	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:55:14	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:55:18	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 18:55:21	NavigatetoWorkflow	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 18:55:27	NavigatetoWorkflow	"LNK_TestWorkflowTab object" object Should be clicked.	PASS
+23-06-2016 18:55:42	NavigatetoWorkflow	BTN_Next button  should be loaded 	PASS
+23-06-2016 18:55:46	ValidateClearAssignment	"BTN_Next button" should be displayed.	PASS
+23-06-2016 18:55:52	ValidateClearAssignment	"BTN_Next button" object Should be clicked.	PASS
+23-06-2016 18:56:01	ValidateClearAssignment	BTN_Submit button  should be loaded 	PASS
+23-06-2016 18:56:04	ValidateClearAssignment	"BTN_Submit button" should be displayed.	PASS
+23-06-2016 18:56:10	ValidateClearAssignment	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 18:56:20	ValidateClearAssignment	TAB_WorkFlow link  should be loaded 	PASS
+23-06-2016 18:56:26	ValidateClearAssignment	"TAB_WorkFlow link" object Should be clicked.	PASS
+23-06-2016 18:56:34	ValidateClearAssignment	LBL_Workflow object  should be loaded 	PASS
+23-06-2016 18:56:37	ValidateClearAssignment	"LBL_Workflow object" should be displayed.	PASS
+23-06-2016 18:56:51	ValidateClearAssignment	TBL_Task table  should be loaded 	PASS
+23-06-2016 18:56:54	ValidateClearAssignment	Chris Jarrell Value should be verified under Step 1 TBL_Task table	PASS
+23-06-2016 18:57:07	ValidateClearAssignment	 button should be clicked under TBL_Task table	PASS
+23-06-2016 18:57:15	ValidateClearAssignment	LNK_Assign object  should be loaded 	PASS
+23-06-2016 18:57:18	ValidateClearAssignment	"LNK_Assign object" should be displayed.	PASS
+23-06-2016 18:57:24	ValidateClearAssignment	"LNK_Assign object" object Should be clicked.	PASS
+23-06-2016 18:57:38	ValidateClearAssignment	BTN_SaveAssignment button  should be loaded 	PASS
+23-06-2016 18:57:41	ValidateClearAssignment	"BTN_SaveAssignment button" should be displayed.	PASS
+23-06-2016 18:57:44	ValidateClearAssignment	"BTN_ClearAssignment button" should be displayed.	PASS
+23-06-2016 18:57:47	ValidateClearAssignment	"BTN_Cancel button" should be displayed.	PASS
+23-06-2016 18:57:53	ValidateClearAssignment	"BTN_ClearAssignment button" object Should be clicked.	PASS
+23-06-2016 18:58:07	ValidateClearAssignment	TBL_Task table  should be loaded 	PASS
+23-06-2016 18:58:23	ValidateClearAssignment	 button should be clicked under TBL_Task table	PASS
+23-06-2016 18:58:31	ValidateClearAssignment	LNK_Assign object  should be loaded 	PASS
+23-06-2016 18:58:37	ValidateClearAssignment	"LNK_Assign object" object Should be clicked.	PASS
+23-06-2016 18:58:45	ValidateClearAssignment	DWL_NewAssignment object  should be loaded 	PASS
+23-06-2016 18:58:53	ValidateClearAssignment	Admin, Sally should be selected from dropdown.	PASS
+23-06-2016 18:58:56	ValidateClearAssignment	"BTN_SaveAssignment button" should be displayed.	PASS
+23-06-2016 18:59:02	ValidateClearAssignment	"BTN_SaveAssignment button" object Should be clicked.	PASS
+23-06-2016 18:59:15	ValidateClearAssignment	TBL_Task table  should be loaded 	PASS
+23-06-2016 18:59:19	ValidateClearAssignment	"TBL_Task table" should be displayed.	PASS
+23-06-2016 18:59:22	ValidateClearAssignment	Sally Admin Value should be verified under Step 1TBL_Task table	PASS
+23-06-2016 18:59:26	Logout	Logout from application	PASS
+23-06-2016 18:59:34	Start Execution	Open the TC280_Workflow_CancelDueDate file	OPEN THE TC280_WORKFLOW_CANCELDUEDATE TEST CASE FILE SUCCESSFULLY
+23-06-2016 18:59:34	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:59:35	Start Execution	Associate the Workflow object repository to test		ASSOCIATE THE WORKFLOW OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 18:59:35	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Workflow.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\WORKFLOW.XLS FILE SUCCESSFULLY
+23-06-2016 18:59:35	Start Execution	start execute of  TC280_Workflow_CancelDueDate	
+23-06-2016 18:59:35			Step Name			Expected		STATUS
+23-06-2016 18:59:40	Login	Open the browser and start Application	PASS
+23-06-2016 18:59:43	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 18:59:43	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 18:59:47	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 18:59:53	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 18:59:56	NavigatetoWorkflow	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:00:02	NavigatetoWorkflow	"LNK_TestWorkflowTab object" object Should be clicked.	PASS
+23-06-2016 19:00:17	NavigatetoWorkflow	BTN_Next button  should be loaded 	PASS
+23-06-2016 19:00:20	ValidateCancelDueDate	"BTN_Next button" should be displayed.	PASS
+23-06-2016 19:00:27	ValidateCancelDueDate	"BTN_Next button" object Should be clicked.	PASS
+23-06-2016 19:00:36	ValidateCancelDueDate	BTN_Submit button  should be loaded 	PASS
+23-06-2016 19:00:39	ValidateCancelDueDate	"BTN_Submit button" should be displayed.	PASS
+23-06-2016 19:00:45	ValidateCancelDueDate	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 19:00:55	ValidateCancelDueDate	TAB_WorkFlow link  should be loaded 	PASS
+23-06-2016 19:01:01	ValidateCancelDueDate	"TAB_WorkFlow link" object Should be clicked.	PASS
+23-06-2016 19:01:09	ValidateCancelDueDate	LBL_Workflow object  should be loaded 	PASS
+23-06-2016 19:01:12	ValidateCancelDueDate	"LBL_Workflow object" should be displayed.	PASS
+23-06-2016 19:01:26	ValidateCancelDueDate	TBL_Task table  should be loaded 	PASS
+23-06-2016 19:01:39	ValidateCancelDueDate	 button should be clicked under TBL_Task table	PASS
+23-06-2016 19:01:47	ValidateCancelDueDate	LNK_DueDate object  should be loaded 	PASS
+23-06-2016 19:01:50	ValidateCancelDueDate	"LNK_DueDate object" should be displayed.	PASS
+23-06-2016 19:01:56	ValidateCancelDueDate	"LNK_DueDate object" object Should be clicked.	PASS
+23-06-2016 19:01:59	ValidateCancelDueDate	"LBL_Workflow object" should be displayed.	PASS
+23-06-2016 19:02:02	ValidateCancelDueDate	"LBL_TaskName object" should be displayed.	PASS
+23-06-2016 19:02:06	ValidateCancelDueDate	"LBL_CreatedOn object" should be displayed.	PASS
+23-06-2016 19:02:09	ValidateCancelDueDate	"LBL_OriginalDueDate object" should be displayed.	PASS
+23-06-2016 19:02:12	ValidateCancelDueDate	"LBL_NewDueDate object" should be displayed.	PASS
+23-06-2016 19:02:15	ValidateCancelDueDate	"TXT_NewDueDate edit box" should be displayed.	PASS
+23-06-2016 19:02:18	ValidateCancelDueDate	"TXT_DueDateReason edit box" should be displayed.	PASS
+23-06-2016 19:02:21	ValidateCancelDueDate	"BTN_UpdateDueDate button" should be displayed.	PASS
+23-06-2016 19:02:24	ValidateCancelDueDate	"BTN_Cancel button" should be displayed.	PASS
+23-06-2016 19:02:27	ValidateCancelDueDate	"06/24" : value should be entered in "TXT_NewDueDate edit box" field.	PASS
+23-06-2016 19:02:31	ValidateCancelDueDate	"QA Automated Testing" : value should be entered in "TXT_DueDateReason edit box" field.	PASS
+23-06-2016 19:02:37	ValidateCancelDueDate	"BTN_Cancel button" object Should be clicked.	PASS
+23-06-2016 19:02:50	ValidateCancelDueDate	TBL_Task table  should be loaded 	PASS
+23-06-2016 19:02:53	ValidateCancelDueDate	Due DateValue has displayed future Date Assigned ToTBL_Task table	PASS
+23-06-2016 19:02:54	Logout	Logout from application	PASS
+23-06-2016 19:03:03	Start Execution	Open the TC570_Workflow_CancelAssignment file	OPEN THE TC570_WORKFLOW_CANCELASSIGNMENT TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:03:03	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:03:03	Start Execution	Associate the Workflow object repository to test		ASSOCIATE THE WORKFLOW OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:03:03	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Workflow.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\WORKFLOW.XLS FILE SUCCESSFULLY
+23-06-2016 19:03:04	Start Execution	start execute of  TC570_Workflow_CancelAssignment	
+23-06-2016 19:03:04			Step Name			Expected		STATUS
+23-06-2016 19:03:08	Login	Open the browser and start Application	PASS
+23-06-2016 19:03:12	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:03:12	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:03:15	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:03:19	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:03:22	NavigatetoWorkflow	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:03:25	NavigatetoWorkflow	"LNK_TestWorkflowTab object" object Should be clicked.	PASS
+23-06-2016 19:03:40	NavigatetoWorkflow	BTN_Next button  should be loaded 	PASS
+23-06-2016 19:03:43	ValidateCancelAssignment	"BTN_Next button" should be displayed.	PASS
+23-06-2016 19:03:50	ValidateCancelAssignment	"BTN_Next button" object Should be clicked.	PASS
+23-06-2016 19:03:59	ValidateCancelAssignment	BTN_Submit button  should be loaded 	PASS
+23-06-2016 19:04:02	ValidateCancelAssignment	"BTN_Submit button" should be displayed.	PASS
+23-06-2016 19:04:08	ValidateCancelAssignment	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 19:04:17	ValidateCancelAssignment	TAB_WorkFlow link  should be loaded 	PASS
+23-06-2016 19:04:24	ValidateCancelAssignment	"TAB_WorkFlow link" object Should be clicked.	PASS
+23-06-2016 19:04:32	ValidateCancelAssignment	LBL_Workflow object  should be loaded 	PASS
+23-06-2016 19:04:35	ValidateCancelAssignment	"LBL_Workflow object" should be displayed.	PASS
+23-06-2016 19:04:48	ValidateCancelAssignment	TBL_Task table  should be loaded 	PASS
+23-06-2016 19:05:01	ValidateCancelAssignment	 button should be clicked under TBL_Task table	PASS
+23-06-2016 19:05:04	ValidateCancelAssignment	"LNK_Assign object" should be displayed.	PASS
+23-06-2016 19:05:11	ValidateCancelAssignment	"LNK_Assign object" object Should be clicked.	PASS
+23-06-2016 19:05:14	ValidateCancelAssignment	"BTN_Cancel button" should be displayed.	PASS
+23-06-2016 19:05:20	ValidateCancelAssignment	"BTN_Cancel button" object Should be clicked.	PASS
+23-06-2016 19:05:33	ValidateCancelAssignment	TBL_Task table  should be loaded 	PASS
+23-06-2016 19:05:36	ValidateCancelAssignment	Chris Jarrell Value should be verified under Step 1 TBL_Task table	PASS
+23-06-2016 19:05:37	Logout	Logout from application	PASS
+23-06-2016 19:05:46	Start Execution	Open the TC286_Workflow_AddNoteinAudit file	OPEN THE TC286_WORKFLOW_ADDNOTEINAUDIT TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:05:46	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:05:46	Start Execution	Associate the Workflow object repository to test		ASSOCIATE THE WORKFLOW OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:05:47	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Workflow.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\WORKFLOW.XLS FILE SUCCESSFULLY
+23-06-2016 19:05:47	Start Execution	start execute of  TC286_Workflow_AddNoteinAudit	
+23-06-2016 19:05:47			Step Name			Expected		STATUS
+23-06-2016 19:05:52	Login	Open the browser and start Application	PASS
+23-06-2016 19:05:56	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:05:56	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:05:59	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:06:03	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:06:06	NavigatetoWorkflow	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:06:13	NavigatetoWorkflow	"LNK_TestWorkflowTab object" object Should be clicked.	PASS
+23-06-2016 19:06:27	NavigatetoWorkflow	BTN_Next button  should be loaded 	PASS
+23-06-2016 19:06:31	AddNoteinAudit	"BTN_Next button" should be displayed.	PASS
+23-06-2016 19:06:37	AddNoteinAudit	"BTN_Next button" object Should be clicked.	PASS
+23-06-2016 19:06:46	AddNoteinAudit	BTN_Submit button  should be loaded 	PASS
+23-06-2016 19:06:49	AddNoteinAudit	"BTN_Submit button" should be displayed.	PASS
+23-06-2016 19:06:55	AddNoteinAudit	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 19:07:05	AddNoteinAudit	TAB_WorkFlow link  should be loaded 	PASS
+23-06-2016 19:07:08	AddNoteinAudit	"TAB_WorkFlow link" should be displayed.	PASS
+23-06-2016 19:07:16	AddNoteinAudit	TAB_Audit object  should be loaded 	PASS
+23-06-2016 19:07:19	AddNoteinAudit	"TAB_Audit object" should be displayed.	PASS
+23-06-2016 19:07:25	AddNoteinAudit	"TAB_Audit object" object Should be clicked.	PASS
+23-06-2016 19:07:34	AddNoteinAudit	TAB_Audit object  should be loaded 	PASS
+23-06-2016 19:07:40	AddNoteinAudit	"TAB_Audit object" object Should be clicked.	PASS
+23-06-2016 19:07:51	AddNoteinAudit	"BTN_ViewAll button" object Should be clicked.	PASS
+23-06-2016 19:08:03	AddNoteinAudit	"LBL_AddNote object" object Should be clicked.	PASS
+23-06-2016 19:08:06	AddNoteinAudit	"TXT_AddNote edit box" should be displayed.	PASS
+23-06-2016 19:08:09	AddNoteinAudit	"BTN_CancelinAddNoteAudit button" should be displayed.	PASS
+23-06-2016 19:08:12	AddNoteinAudit	"BTN_AddNote button" should be displayed.	PASS
+23-06-2016 19:08:15	AddNoteinAudit	"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc congue, est nec congue consectetur, ex erat mattis nisi, quis sodales" : value should be entered in "TXT_AddNote edit box" field.	PASS
+23-06-2016 19:08:21	AddNoteinAudit	"BTN_AddNote button" object Should be clicked.	PASS
+23-06-2016 19:08:35	AddNoteinAudit	TBL_History table  should be loaded 	PASS
+23-06-2016 19:08:35	AddNoteinAudit	"NOTE" Should be in 2 Row and 4 Column under TBL_History table"	PASS
+23-06-2016 19:08:35	AddNoteinAudit	"ENTERED NOTE: LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. NUNC CONGUE, EST NEC CONGUE CONSECTETUR, EX ERAT MATTIS NISI, QUIS SODALES" Should be in 2 Row and 5 Column under TBL_History table"	PASS
+23-06-2016 19:08:36	Logout	Logout from application	PASS
+23-06-2016 19:08:44	Start Execution	Open the TC287_Workflow_ValidateAuditHistory file	OPEN THE TC287_WORKFLOW_VALIDATEAUDITHISTORY TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:08:44	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:08:44	Start Execution	Associate the Workflow object repository to test		ASSOCIATE THE WORKFLOW OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:08:45	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Workflow.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\WORKFLOW.XLS FILE SUCCESSFULLY
+23-06-2016 19:08:45	Start Execution	start execute of  TC287_Workflow_ValidateAuditHistory	
+23-06-2016 19:08:45			Step Name			Expected		STATUS
+23-06-2016 19:08:50	Login	Open the browser and start Application	PASS
+23-06-2016 19:08:53	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:08:53	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:08:57	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:09:01	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:09:04	NavigatetoWorkflow	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:09:10	NavigatetoWorkflow	"LNK_TestWorkflowTab object" object Should be clicked.	PASS
+23-06-2016 19:09:25	NavigatetoWorkflow	BTN_Next button  should be loaded 	PASS
+23-06-2016 19:09:28	VerifyTaskHistoryinAudit	"BTN_Next button" should be displayed.	PASS
+23-06-2016 19:09:34	VerifyTaskHistoryinAudit	"BTN_Next button" object Should be clicked.	PASS
+23-06-2016 19:09:44	VerifyTaskHistoryinAudit	BTN_Submit button  should be loaded 	PASS
+23-06-2016 19:09:47	VerifyTaskHistoryinAudit	"BTN_Submit button" should be displayed.	PASS
+23-06-2016 19:09:53	VerifyTaskHistoryinAudit	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 19:10:02	VerifyTaskHistoryinAudit	TAB_WorkFlow link  should be loaded 	PASS
+23-06-2016 19:10:05	VerifyTaskHistoryinAudit	"TAB_WorkFlow link" should be displayed.	PASS
+23-06-2016 19:10:12	VerifyTaskHistoryinAudit	"TAB_Audit object" object Should be clicked.	PASS
+23-06-2016 19:10:25	VerifyTaskHistoryinAudit	TAB_Audit object  should be loaded 	PASS
+23-06-2016 19:10:28	VerifyTaskHistoryinAudit	"TAB_Audit object" should be displayed.	PASS
+23-06-2016 19:10:34	VerifyTaskHistoryinAudit	"TAB_Audit object" object Should be clicked.	PASS
+23-06-2016 19:10:46	VerifyTaskHistoryinAudit	"BTN_ViewAll button" object Should be clicked.	PASS
+23-06-2016 19:10:54	VerifyTaskHistoryinAudit	selectedView All checkbox.	PASS
+23-06-2016 19:11:07	VerifyTaskHistoryinAudit	TBL_History table  should be loaded 	PASS
+23-06-2016 19:11:08	VerifyTaskHistoryinAudit	"JARRELL, CHRIS (CHRISJ)" Should be in 2 Row and 3 Column under TBL_History table"	PASS
+23-06-2016 19:11:08	VerifyTaskHistoryinAudit	"ASSIGNED TASK" Should be in 2 Row and 4 Column under TBL_History table"	PASS
+23-06-2016 19:11:08	VerifyTaskHistoryinAudit	"CHRIS JARRELL ASSIGNED TO TASK STEP 1" Should be in 2 Row and 5 Column under TBL_History table"	PASS
+23-06-2016 19:11:11	VerifyTaskHistoryinAudit	06/23/16 Value should be verified under Created Regular TaskTBL_History table	PASS
+23-06-2016 19:11:11	VerifyTaskHistoryinAudit	"JARRELL, CHRIS (CHRISJ)" Should be in 3 Row and 3 Column under TBL_History table"	PASS
+23-06-2016 19:11:11	VerifyTaskHistoryinAudit	"CREATED REGULAR TASK" Should be in 3 Row and 4 Column under TBL_History table"	PASS
+23-06-2016 19:11:11	VerifyTaskHistoryinAudit	"ADDED TASK STEP 1" Should be in 3 Row and 5 Column under TBL_History table"	PASS
+23-06-2016 19:11:12	Logout	Logout from application	PASS
+23-06-2016 19:11:20	Start Execution	Open the TC274_Workflow_ValidateWorkingTask file	OPEN THE TC274_WORKFLOW_VALIDATEWORKINGTASK TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:11:21	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:11:21	Start Execution	Associate the Workflow object repository to test		ASSOCIATE THE WORKFLOW OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:11:21	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Workflow.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\WORKFLOW.XLS FILE SUCCESSFULLY
+23-06-2016 19:11:21	Start Execution	start execute of  TC274_Workflow_ValidateWorkingTask	
+23-06-2016 19:11:21			Step Name			Expected		STATUS
+23-06-2016 19:11:26	Login	Open the browser and start Application	PASS
+23-06-2016 19:11:29	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:11:30	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:11:33	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:11:37	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:11:40	NavigatetoWorkflow	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:11:43	NavigatetoWorkflow	"LNK_TestWorkflowTab object" object Should be clicked.	PASS
+23-06-2016 19:11:58	NavigatetoWorkflow	BTN_Next button  should be loaded 	PASS
+23-06-2016 19:12:01	ValidateWorkingTask	"BTN_Next button" should be displayed.	PASS
+23-06-2016 19:12:07	ValidateWorkingTask	"BTN_Next button" object Should be clicked.	PASS
+23-06-2016 19:12:17	ValidateWorkingTask	BTN_Submit button  should be loaded 	PASS
+23-06-2016 19:12:20	ValidateWorkingTask	"BTN_Submit button" should be displayed.	PASS
+23-06-2016 19:12:26	ValidateWorkingTask	"BTN_Submit button" object Should be clicked.	PASS
+23-06-2016 19:12:35	ValidateWorkingTask	TAB_WorkFlow link  should be loaded 	PASS
+23-06-2016 19:12:39	ValidateWorkingTask	"TAB_WorkFlow link" should be displayed.	PASS
+23-06-2016 19:12:45	ValidateWorkingTask	"TAB_WorkFlow link" object Should be clicked.	PASS
+23-06-2016 19:12:58	ValidateWorkingTask	LBL_Workflow object  should be loaded 	PASS
+23-06-2016 19:13:01	ValidateWorkingTask	"LBL_Workflow object" should be displayed.	PASS
+23-06-2016 19:13:08	ValidateWorkingTask	"LBL_Step1_Work object" object Should be clicked.	PASS
+23-06-2016 19:14:12	ValidateWorkingTask	BTN_Proceed button  should be loaded 	PASS
+23-06-2016 19:14:31	ValidateWorkingTask	Should click on Proceed button	PASS
+23-06-2016 19:14:40	ValidateWorkingTask	TAB_Audit object  should be loaded 	PASS
+23-06-2016 19:15:03	ValidateWorkingTask	TAB_Audit object  should be loaded 	PASS
+23-06-2016 19:15:10	ValidateWorkingTask	"TAB_Audit object" object Should be clicked.	PASS
+23-06-2016 19:15:18	ValidateWorkingTask	BTN_ViewAll button  should be loaded 	PASS
+23-06-2016 19:15:29	ValidateWorkingTask	"BTN_ViewAll button" object Should be clicked.	PASS
+23-06-2016 19:15:38	ValidateWorkingTask	CWL_ViewAll object  should be loaded 	PASS
+23-06-2016 19:15:46	ValidateWorkingTask	selectedView All checkbox.	PASS
+23-06-2016 19:15:59	ValidateWorkingTask	TBL_AuditHistory table  should be loaded 	PASS
+23-06-2016 19:16:02	ValidateWorkingTask	Performed action 'Proceed' on task 'Step 1' Value should be verified under Completed TaskTBL_AuditHistory table	PASS
+23-06-2016 19:16:06	ValidateWorkingTask	Added task Step 2 - Path 1 Value should be verified under Created Regular TaskTBL_AuditHistory table	PASS
+23-06-2016 19:16:09	ValidateWorkingTask	Created Regular Task Value should be verified under Added task Step 2 - Path 2TBL_AuditHistory table	PASS
+23-06-2016 19:16:15	ValidateWorkingTask	"TAB_WorkFlow link" object Should be clicked.	PASS
+23-06-2016 19:16:28	ValidateWorkingTask	LBL_Workflow object  should be loaded 	PASS
+23-06-2016 19:16:40	ValidateWorkingTask	Proceed Value should be verified under Step 1 TBL_Task table	PASS
+23-06-2016 19:16:52	ValidateWorkingTask	 button should be clicked under TBL_Task table	PASS
+23-06-2016 19:16:56	ValidateWorkingTask	"LNK_Reopen object" should be displayed.	PASS
+23-06-2016 19:16:57	Logout	Logout from application	PASS
+23-06-2016 19:17:05	Start Execution	Open the TC147_Validate_ButtonsTopAndBottomOfPage file	OPEN THE TC147_VALIDATE_BUTTONSTOPANDBOTTOMOFPAGE TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:17:05	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:17:06	Start Execution	Associate the Buttons object repository to test		ASSOCIATE THE BUTTONS OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:17:06	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Buttons.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\BUTTONS.XLS FILE SUCCESSFULLY
+23-06-2016 19:17:06	Start Execution	start execute of  TC147_Validate_ButtonsTopAndBottomOfPage	
+23-06-2016 19:17:06			Step Name			Expected		STATUS
+23-06-2016 19:17:11	Login	Open the browser and start Application	PASS
+23-06-2016 19:17:15	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:17:15	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:17:18	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:17:22	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:17:26	NavigateToButtonTesting	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:17:32	NavigateToButtonTesting	"LNK_ButtonTesting object" object Should be clicked.	PASS
+23-06-2016 19:17:46	NavigateToButtonTesting	TOP_BTN_Next button  should be loaded 	PASS
+23-06-2016 19:18:00	ValidateButtonsTopAndBottomOfPage	LBL_QATestingPageHeader object  should be loaded 	PASS
+23-06-2016 19:18:03	ValidateButtonsTopAndBottomOfPage	"LBL_QATestingPageHeader object" should be displayed.	PASS
+23-06-2016 19:18:06	ValidateButtonsTopAndBottomOfPage	"TOP_BTN_Cancel button" should be displayed.	PASS
+23-06-2016 19:18:09	ValidateButtonsTopAndBottomOfPage	"TOP_BTN_Back button" should be displayed.	PASS
+23-06-2016 19:18:13	ValidateButtonsTopAndBottomOfPage	"TOP_BTN_Edit button" should be displayed.	PASS
+23-06-2016 19:18:16	ValidateButtonsTopAndBottomOfPage	"TOP_BTN_Delete button" should be displayed.	PASS
+23-06-2016 19:18:19	ValidateButtonsTopAndBottomOfPage	"TOP_BTN_Next button" should be displayed.	PASS
+23-06-2016 19:18:22	ValidateButtonsTopAndBottomOfPage	"BOT_BTN_Back button" should be displayed.	PASS
+23-06-2016 19:18:25	ValidateButtonsTopAndBottomOfPage	"BOT_BTN_Edit button" should be displayed.	PASS
+23-06-2016 19:18:28	ValidateButtonsTopAndBottomOfPage	"BOT_BTN_Cancel button" should be displayed.	PASS
+23-06-2016 19:18:32	ValidateButtonsTopAndBottomOfPage	"BOT_BTN_Delete button" should be displayed.	PASS
+23-06-2016 19:18:35	ValidateButtonsTopAndBottomOfPage	"BOT_BTN_Next button" should be displayed.	PASS
+23-06-2016 19:18:36	Logout	Logout from application	PASS
+23-06-2016 19:18:44	Start Execution	Open the TC586_Validate_HideButtonRule file	OPEN THE TC586_VALIDATE_HIDEBUTTONRULE TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:18:45	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:18:45	Start Execution	Associate the Buttons object repository to test		ASSOCIATE THE BUTTONS OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:18:45	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Buttons.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\BUTTONS.XLS FILE SUCCESSFULLY
+23-06-2016 19:18:45	Start Execution	start execute of  TC586_Validate_HideButtonRule	
+23-06-2016 19:18:45			Step Name			Expected		STATUS
+23-06-2016 19:18:50	Login	Open the browser and start Application	PASS
+23-06-2016 19:18:53	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:18:53	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:18:57	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:19:01	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:19:04	NavigateToButtonTesting	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:19:10	NavigateToButtonTesting	"LNK_ButtonTesting object" object Should be clicked.	PASS
+23-06-2016 19:19:25	NavigateToButtonTesting	TOP_BTN_Next button  should be loaded 	PASS
+23-06-2016 19:19:33	ValidateHideButtonRule	"LBL_QATestingPageHeader object" should be displayed.	PASS
+23-06-2016 19:19:37	ValidateHideButtonRule	"BOT_BTN_Edit button" should be displayed.	PASS
+23-06-2016 19:19:40	ValidateHideButtonRule	"TOP_BTN_Edit button" should be displayed.	PASS
+23-06-2016 19:19:47	ValidateHideButtonRule	Social Security Number should be selected from dropdown.	PASS
+23-06-2016 19:19:50	ValidateHideButtonRule	"TOP_BTN_Next button" should be displayed.	PASS
+23-06-2016 19:19:57	ValidateHideButtonRule	"TOP_BTN_Next button" object Should be clicked.	PASS
+23-06-2016 19:19:59	Logout	Logout from application	PASS
+23-06-2016 19:20:07	Start Execution	Open the TC149_Validate_DeleteButton file	OPEN THE TC149_VALIDATE_DELETEBUTTON TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:20:08	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:20:08	Start Execution	Associate the Buttons object repository to test		ASSOCIATE THE BUTTONS OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:20:08	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Buttons.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\BUTTONS.XLS FILE SUCCESSFULLY
+23-06-2016 19:20:08	Start Execution	start execute of  TC149_Validate_DeleteButton	
+23-06-2016 19:20:08			Step Name			Expected		STATUS
+23-06-2016 19:20:13	Login	Open the browser and start Application	PASS
+23-06-2016 19:20:18	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:20:19	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:20:22	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:20:26	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:20:29	NavigateToButtonTesting	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:20:35	NavigateToButtonTesting	"LNK_ButtonTesting object" object Should be clicked.	PASS
+23-06-2016 19:20:50	NavigateToButtonTesting	TOP_BTN_Next button  should be loaded 	PASS
+23-06-2016 19:20:58	ValidateDeleteButton	"LBL_QATestingPageHeader object" should be displayed.	PASS
+23-06-2016 19:21:02	ValidateDeleteButton	"TOP_BTN_Delete button" should be displayed.	PASS
+23-06-2016 19:21:05	ValidateDeleteButton	"BOT_BTN_Delete button" should be displayed.	PASS
+23-06-2016 19:21:08	ValidateDeleteButton	"DWL_TaxIndicator object" should be displayed.	PASS
+23-06-2016 19:21:15	ValidateDeleteButton	Corporate Tax-ID should be selected from dropdown.	PASS
+23-06-2016 19:21:25	ValidateDeleteButton	"TOP_BTN_Delete button" object Should be clicked.	PASS
+23-06-2016 19:21:28	ValidateDeleteButton	"MSG_This action will permanently text label" should be displayed.	PASS
+23-06-2016 19:21:32	ValidateDeleteButton	"BTN_OK button" object should be clicked.	PASS
+23-06-2016 19:21:36	ValidateDeleteButton	"" should be displayed as selected value in dropdown : "DWL_TaxIndicator object"	PASS
+23-06-2016 19:21:37	Logout	Logout from application	PASS
+23-06-2016 19:21:46	Start Execution	Open the TC587_Validate_DeleteCanBeCancelled file	OPEN THE TC587_VALIDATE_DELETECANBECANCELLED TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:21:46	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:21:46	Start Execution	Associate the Buttons object repository to test		ASSOCIATE THE BUTTONS OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:21:47	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Buttons.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\BUTTONS.XLS FILE SUCCESSFULLY
+23-06-2016 19:21:47	Start Execution	start execute of  TC587_Validate_DeleteCanBeCancelled	
+23-06-2016 19:21:47			Step Name			Expected		STATUS
+23-06-2016 19:21:51	Login	Open the browser and start Application	PASS
+23-06-2016 19:21:56	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:21:56	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:21:59	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:22:03	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:22:07	NavigateToButtonTesting	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:22:13	NavigateToButtonTesting	"LNK_ButtonTesting object" object Should be clicked.	PASS
+23-06-2016 19:22:27	NavigateToButtonTesting	TOP_BTN_Next button  should be loaded 	PASS
+23-06-2016 19:22:36	ValidateDeleteCanBeCancelled	"LBL_QATestingPageHeader object" should be displayed.	PASS
+23-06-2016 19:22:39	ValidateDeleteCanBeCancelled	"TOP_BTN_Delete button" should be displayed.	PASS
+23-06-2016 19:22:42	ValidateDeleteCanBeCancelled	"BOT_BTN_Delete button" should be displayed.	PASS
+23-06-2016 19:22:45	ValidateDeleteCanBeCancelled	"DWL_TaxIndicator object" should be displayed.	PASS
+23-06-2016 19:22:53	ValidateDeleteCanBeCancelled	Social Security Number should be selected from dropdown.	PASS
+23-06-2016 19:22:56	ValidateDeleteCanBeCancelled	"BOT_BTN_Delete button" should be displayed.	PASS
+23-06-2016 19:23:05	ValidateDeleteCanBeCancelled	"BOT_BTN_Delete button" object Should be clicked.	PASS
+23-06-2016 19:23:08	ValidateDeleteCanBeCancelled	"MSG_This action will permanently text label" should be displayed.	PASS
+23-06-2016 19:23:13	ValidateDeleteCanBeCancelled	"BTN_Cancel button" object should be clicked.	PASS
+23-06-2016 19:23:16	ValidateDeleteCanBeCancelled	"DWL_TaxIndicator object" should be displayed.	PASS
+23-06-2016 19:23:19	ValidateDeleteCanBeCancelled	"Social Security Number" should be displayed as selected value in dropdown : "DWL_TaxIndicator object"	PASS
+23-06-2016 19:23:20	Logout	Logout from application	PASS
+23-06-2016 19:23:28	Start Execution	Open the TC595_DraftMode_VerifyMessageRemoved file	OPEN THE TC595_DRAFTMODE_VERIFYMESSAGEREMOVED TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:23:29	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:23:29	Start Execution	Associate the DraftMode object repository to test		ASSOCIATE THE DRAFTMODE OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:23:29	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\DraftMode.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DRAFTMODE.XLS FILE SUCCESSFULLY
+23-06-2016 19:23:29	Start Execution	start execute of  TC595_DraftMode_VerifyMessageRemoved	
+23-06-2016 19:23:29			Step Name			Expected		STATUS
+23-06-2016 19:23:34	Login	Open the browser and start Application	PASS
+23-06-2016 19:23:39	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:23:39	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:23:42	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:23:47	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:23:47	NavigateToDraftMode	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:23:47	NavigateToDraftMode	"TAB_Tests object" should be displayed.	PASS
+23-06-2016 19:23:50	NavigateToDraftMode	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:23:53	NavigateToDraftMode	"LNK_Draft Mode object" should be displayed.	PASS
+23-06-2016 19:24:00	NavigateToDraftMode	"LNK_Draft Mode object" object Should be clicked.	PASS
+23-06-2016 19:24:09	VerifyWarningMessageRemoved	LBL_Header_DraftModeEntry object  should be loaded 	PASS
+23-06-2016 19:24:12	VerifyWarningMessageRemoved	"LBL_Header_DraftModeEntry object" should be displayed.	PASS
+23-06-2016 19:24:16	VerifyWarningMessageRemoved	"LBL_PageMessage_Thispagecontainrequired object" should be displayed.	PASS
+23-06-2016 19:24:19	VerifyWarningMessageRemoved	Verify yellow banner is displayed with text  "PreEvent Warning Message. Answer the Drop Down question to remove Warning!"	PASS
+23-06-2016 19:24:22	VerifyWarningMessageRemoved	"DWL_SelectValue object" should be displayed.	PASS
+23-06-2016 19:24:29	VerifyWarningMessageRemoved	select the from "DWL_SelectValue object" dropdown. by using index ::2	PASS
+23-06-2016 19:24:33	VerifyWarningMessageRemoved	"LBL_Warning_Answer theDropDownquestion object" is not  displayed.	PASS
+23-06-2016 19:24:39	VerifyWarningMessageRemoved	"NAV_RequiredQuestions object" object Should be clicked.	PASS
+23-06-2016 19:24:43	VerifyWarningMessageRemoved	"LBL_Answer * Required Checkbox object" should be displayed.	PASS
+23-06-2016 19:24:46	VerifyWarningMessageRemoved	"ChkBox_Brian check box" should be displayed.	PASS
+23-06-2016 19:24:52	VerifyWarningMessageRemoved	"ChkBox_Brian check box" object Should be clicked.	PASS
+23-06-2016 19:24:56	VerifyWarningMessageRemoved	"RDL_RequiredInterview object" should be displayed.	PASS
+23-06-2016 19:24:59	VerifyWarningMessageRemoved	select  small value Radio button for "RDL_RequiredInterview object"	PASS
+23-06-2016 19:25:02	VerifyWarningMessageRemoved	"LBL_Answer * Required Checkbox object" is not  displayed.	PASS
+23-06-2016 19:25:03	Logout	Logout from application	PASS
+23-06-2016 19:25:11	Start Execution	Open the TC596_DraftMode_VerifyNavBarStatus file	OPEN THE TC596_DRAFTMODE_VERIFYNAVBARSTATUS TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:25:12	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:25:12	Start Execution	Associate the DraftMode object repository to test		ASSOCIATE THE DRAFTMODE OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:25:12	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\DraftMode.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DRAFTMODE.XLS FILE SUCCESSFULLY
+23-06-2016 19:25:12	Start Execution	start execute of  TC596_DraftMode_VerifyNavBarStatus	
+23-06-2016 19:25:12			Step Name			Expected		STATUS
+23-06-2016 19:25:17	Login	Open the browser and start Application	PASS
+23-06-2016 19:25:22	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:25:22	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:25:25	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:25:29	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:25:30	NavigateToDraftMode	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:25:30	NavigateToDraftMode	"TAB_Tests object" should be displayed.	PASS
+23-06-2016 19:25:33	NavigateToDraftMode	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:25:36	NavigateToDraftMode	"LNK_Draft Mode object" should be displayed.	PASS
+23-06-2016 19:25:42	NavigateToDraftMode	"LNK_Draft Mode object" object Should be clicked.	PASS
+23-06-2016 19:25:47	VerifiyNavBarStatus	"NAV_Entry object" should be displayed.	PASS
+23-06-2016 19:25:50	VerifiyNavBarStatus	"NAV_RequiredQuestions object" should be displayed.	PASS
+23-06-2016 19:25:53	VerifiyNavBarStatus	"NAV_Submit object" should be displayed.	PASS
+23-06-2016 19:25:56	VerifiyNavBarStatus	"NAV_AdditionalInformation object" should be displayed.	PASS
+23-06-2016 19:25:59	VerifiyNavBarStatus	"NAV_Summary object" should be displayed.	PASS
+23-06-2016 19:26:02	VerifiyNavBarStatus	"TBL_RepeatingModuleDataTable table" should be displayed.	PASS
+23-06-2016 19:26:06	VerifiyNavBarStatus	"BTN_NewItem button" should be displayed.	PASS
+23-06-2016 19:26:12	VerifiyNavBarStatus	"BTN_NewItem button" object Should be clicked.	PASS
+23-06-2016 19:26:16	VerifiyNavBarStatus	"NAV_(NEW) object" should be displayed.	PASS
+23-06-2016 19:26:19	VerifiyNavBarStatus	"Fred" : value should be entered in "TXT_FirstName edit box" field.	PASS
+23-06-2016 19:26:22	VerifiyNavBarStatus	"Parsnips" : value should be entered in "TXT_LastName edit box" field.	PASS
+23-06-2016 19:26:26	VerifiyNavBarStatus	"1111-1111" : value should be entered in "TXT_ClientID edit box" field.	PASS
+23-06-2016 19:26:32	VerifiyNavBarStatus	"BTN_Next_DraftMode button" object Should be clicked.	PASS
+23-06-2016 19:26:36	VerifiyNavBarStatus	"NAV_TitleDanger object" should be displayed.	PASS
+23-06-2016 19:26:43	VerifiyNavBarStatus	"NAV_TitleDanger object" object Should be clicked.	PASS
+23-06-2016 19:27:48	VerifiyNavBarStatus	TXT_ClientID edit box object should exist.	FAIL
+23-06-2016 19:28:52	VerifiyNavBarStatus	BTN_Next_DraftMode button object should exist.	FAIL
+23-06-2016 19:29:55	VerifiyNavBarStatus	"NAV_TitleSuccess object" should be displayed.	FAIL
+23-06-2016 19:29:58	VerifiyNavBarStatus	"Entry Web page" should be displayed.	PASS
+23-06-2016 19:30:04	VerifiyNavBarStatus	"TRKcircle_Button_Entry object" object Should be clicked.	PASS
+23-06-2016 19:30:07	VerifiyNavBarStatus	"Entry_StepPopUp object" should be displayed.	PASS
+23-06-2016 19:30:08	Logout	Logout from application	PASS
+23-06-2016 19:30:17	Start Execution	Open the TC597_DraftMode_NavMatchesStepTRK file	OPEN THE TC597_DRAFTMODE_NAVMATCHESSTEPTRK TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:30:17	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:30:17	Start Execution	Associate the DraftMode object repository to test		ASSOCIATE THE DRAFTMODE OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:30:18	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\DraftMode.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DRAFTMODE.XLS FILE SUCCESSFULLY
+23-06-2016 19:30:18	Start Execution	start execute of  TC597_DraftMode_NavMatchesStepTRK	
+23-06-2016 19:30:18			Step Name			Expected		STATUS
+23-06-2016 19:30:23	Login	Open the browser and start Application	PASS
+23-06-2016 19:30:27	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:30:27	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:30:31	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:30:35	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:30:35	NavigateToDraftMode	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:30:35	NavigateToDraftMode	"TAB_Tests object" should be displayed.	PASS
+23-06-2016 19:30:38	NavigateToDraftMode	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:30:42	NavigateToDraftMode	"LNK_Draft Mode object" should be displayed.	PASS
+23-06-2016 19:30:48	NavigateToDraftMode	"LNK_Draft Mode object" object Should be clicked.	PASS
+23-06-2016 19:30:52	VerifyNavMatchesStepTracker	"NAV_Entry object" should be displayed.	PASS
+23-06-2016 19:30:55	VerifyNavMatchesStepTracker	"NAV_RequiredQuestions object" should be displayed.	PASS
+23-06-2016 19:30:58	VerifyNavMatchesStepTracker	"NAV_Submit object" should be displayed.	PASS
+23-06-2016 19:31:02	VerifyNavMatchesStepTracker	"NAV_AdditionalInformation object" should be displayed.	PASS
+23-06-2016 19:31:05	VerifyNavMatchesStepTracker	"NAV_Summary object" should be displayed.	PASS
+23-06-2016 19:31:08	VerifyNavMatchesStepTracker	"TBL_RepeatingModuleDataTable table" should be displayed.	PASS
+23-06-2016 19:31:11	VerifyNavMatchesStepTracker	"BTN_NewItem button" should be displayed.	PASS
+23-06-2016 19:31:17	VerifyNavMatchesStepTracker	"BTN_NewItem button" object Should be clicked.	PASS
+23-06-2016 19:31:22	VerifyNavMatchesStepTracker	"NAV_(NEW) object" should be displayed.	PASS
+23-06-2016 19:31:25	VerifyNavMatchesStepTracker	"Fred" : value should be entered in "TXT_FirstName edit box" field.	PASS
+23-06-2016 19:31:28	VerifyNavMatchesStepTracker	"Parsnips" : value should be entered in "TXT_LastName edit box" field.	PASS
+23-06-2016 19:31:31	VerifyNavMatchesStepTracker	"123" : value should be entered in "TXT_ClientID edit box" field.	PASS
+23-06-2016 19:31:37	VerifyNavMatchesStepTracker	"BTN_Next_DraftMode button" object Should be clicked.	PASS
+23-06-2016 19:31:46	VerifyNavMatchesStepTracker	select the from "DWL_SelectValue object" dropdown. by using index ::2	PASS
+23-06-2016 19:31:49	VerifyNavMatchesStepTracker	select  small value Radio button for "RDL_SelectionRequired object"	PASS
+23-06-2016 19:31:55	VerifyNavMatchesStepTracker	"TGL_Yes object" object Should be clicked.	PASS
+23-06-2016 19:31:59	VerifyNavMatchesStepTracker	"6/23/2016" : value should be entered in "TXT_SelectADate edit box" field.	PASS
+23-06-2016 19:32:02	VerifyNavMatchesStepTracker	"TRKcircleEntry object" should be displayed.	PASS
+23-06-2016 19:32:02	VerifyNavMatchesStepTracker	 State should be displayed in "TRKcircleEntry object" field. And the state is valid	PASS
+23-06-2016 19:32:03	Logout	Logout from application	PASS
+23-06-2016 19:32:11	Start Execution	Open the TC598_DraftMode_SkipValidation file	OPEN THE TC598_DRAFTMODE_SKIPVALIDATION TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:32:12	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:32:12	Start Execution	Associate the DraftMode object repository to test		ASSOCIATE THE DRAFTMODE OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:32:12	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\DraftMode.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DRAFTMODE.XLS FILE SUCCESSFULLY
+23-06-2016 19:32:12	Start Execution	start execute of  TC598_DraftMode_SkipValidation	
+23-06-2016 19:32:12			Step Name			Expected		STATUS
+23-06-2016 19:32:17	Login	Open the browser and start Application	PASS
+23-06-2016 19:32:22	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:32:22	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:32:25	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:32:29	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:32:30	NavigateToDraftMode	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:32:30	NavigateToDraftMode	"TAB_Tests object" should be displayed.	PASS
+23-06-2016 19:32:33	NavigateToDraftMode	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:32:36	NavigateToDraftMode	"LNK_Draft Mode object" should be displayed.	PASS
+23-06-2016 19:32:43	NavigateToDraftMode	"LNK_Draft Mode object" object Should be clicked.	PASS
+23-06-2016 19:32:52	VerifySkipValidation	LBL_Header_DraftModeEntry object  should be loaded 	PASS
+23-06-2016 19:32:55	VerifySkipValidation	"LBL_Header_DraftModeEntry object" should be displayed.	PASS
+23-06-2016 19:32:58	VerifySkipValidation	"LBL_PageMessage_Thispagecontainrequired object" should be displayed.	PASS
+23-06-2016 19:33:01	VerifySkipValidation	Verify yellow banner is displayed with text  "PreEvent Warning Message. Answer the Drop Down question to remove Warning!"	PASS
+23-06-2016 19:33:05	VerifySkipValidation	"DWL_SelectValue object" should be displayed.	PASS
+23-06-2016 19:33:12	VerifySkipValidation	select the from "DWL_SelectValue object" dropdown. by using index ::2	PASS
+23-06-2016 19:33:15	VerifySkipValidation	"LBL_Warning_Answer theDropDownquestion object" is not  displayed.	PASS
+23-06-2016 19:33:22	VerifySkipValidation	"TGL_Yes object" object Should be clicked.	PASS
+23-06-2016 19:33:25	VerifySkipValidation	"6/23/2016" : value should be entered in "TXT_SelectADate edit box" field.	PASS
+23-06-2016 19:33:31	VerifySkipValidation	"BTN_SkipValidation button" object Should be clicked.	PASS
+23-06-2016 19:33:35	VerifySkipValidation	selectedRequired Checkbox Group BrianBrianJeffJoelMarkTim  checkbox.	PASS
+23-06-2016 19:33:39	VerifySkipValidation	"LBL_Answer * Required Checkbox object" should be displayed.	PASS
+23-06-2016 19:33:45	VerifySkipValidation	"BTN_SkipValidation button" object Should be clicked.	PASS
+23-06-2016 19:33:49	VerifySkipValidation	"Fred" : value should be entered in "TXT_PetsName edit box" field.	PASS
+23-06-2016 19:33:56	VerifySkipValidation	"BTN_Next_AdditionalInfo button" object Should be clicked.	PASS
+23-06-2016 19:35:00	VerifySkipValidation	"6/23/2016" : value should be entered in "TXT_DateBowlCleaned edit box" field.	PASS
+23-06-2016 19:35:06	VerifySkipValidation	"BTN_SkipValidation button" object Should be clicked.	PASS
+23-06-2016 19:35:11	VerifySkipValidation	"PNL_Submit object" should be displayed.	PASS
+23-06-2016 19:35:17	VerifySkipValidation	"TRK_BTN_Submit object" object Should be clicked.	PASS
+23-06-2016 19:35:20	VerifySkipValidation	"STP_PopUp_Submit object" should be displayed.	PASS
+23-06-2016 19:35:26	VerifySkipValidation	"BTN_Submit_DftMd button" object Should be clicked.	PASS
+23-06-2016 19:35:30	VerifySkipValidation	"LBL_MSG_CannotSubmit object" should be displayed.	PASS
+23-06-2016 19:35:34	VerifySkipValidation	"TRKcircle_Entry_Error object" should be displayed.	PASS
+23-06-2016 19:35:37	VerifySkipValidation	"TRKcircle_AdditionalInfo_Error object" should be displayed.	PASS
+23-06-2016 19:35:40	VerifySkipValidation	"TRKcircle_Submit_Error object" should be displayed.	PASS
+23-06-2016 19:35:46	VerifySkipValidation	"NAV_Entry_Error object" object Should be clicked.	PASS
+23-06-2016 19:35:53	VerifySkipValidation	"BTN_NewItem button" object Should be clicked.	PASS
+23-06-2016 19:35:55	Logout	Logout from application	PASS
+23-06-2016 19:35:59	Start Execution	Open the TC703_RepeatingSaveAndNew_AddOne file	OPEN THE TC703_REPEATINGSAVEANDNEW_ADDONE TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:35:59	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:36:00	Start Execution	Associate the RepeatingSaveAndNew object repository to test		ASSOCIATE THE REPEATINGSAVEANDNEW OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:36:00	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\RepeatingSaveAndNew.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\REPEATINGSAVEANDNEW.XLS FILE SUCCESSFULLY
+23-06-2016 19:36:00	Start Execution	start execute of  TC703_RepeatingSaveAndNew_AddOne	
+23-06-2016 19:36:00			Step Name			Expected		STATUS
+23-06-2016 19:36:05	Login	Open the browser and start Application	PASS
+23-06-2016 19:36:15	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:36:15	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:36:18	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:36:26	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:36:29	NavigatetoRepeatingSaveAndNew	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:36:32	NavigatetoRepeatingSaveAndNew	"TAB_Tests object" should be displayed.	PASS
+23-06-2016 19:36:38	NavigatetoRepeatingSaveAndNew	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:36:40	Logout	Logout from application	PASS
+23-06-2016 19:36:48	Start Execution	Open the TC704_RepeatingSaveAndNew_AddMultiple file	OPEN THE TC704_REPEATINGSAVEANDNEW_ADDMULTIPLE TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:36:48	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:36:49	Start Execution	Associate the RepeatingSaveAndNew object repository to test		ASSOCIATE THE REPEATINGSAVEANDNEW OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:36:49	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\RepeatingSaveAndNew.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\REPEATINGSAVEANDNEW.XLS FILE SUCCESSFULLY
+23-06-2016 19:36:49	Start Execution	start execute of  TC704_RepeatingSaveAndNew_AddMultiple	
+23-06-2016 19:36:49			Step Name			Expected		STATUS
+23-06-2016 19:36:54	Login	Open the browser and start Application	PASS
+23-06-2016 19:37:02	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:37:02	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:37:05	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:37:13	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:37:16	NavigatetoRepeatingSaveAndNew	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:37:19	NavigatetoRepeatingSaveAndNew	"TAB_Tests object" should be displayed.	PASS
+23-06-2016 19:37:25	NavigatetoRepeatingSaveAndNew	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:37:27	Logout	Logout from application	PASS
+23-06-2016 19:37:31	Start Execution	Open the TC800_ShowHide_QuestionsWithToggle file	OPEN THE TC800_SHOWHIDE_QUESTIONSWITHTOGGLE TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:37:32	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:37:32	Start Execution	Associate the ToggleShowHide object repository to test		ASSOCIATE THE TOGGLESHOWHIDE OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:37:32	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\ShowHide.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\SHOWHIDE.XLS FILE SUCCESSFULLY
+23-06-2016 19:37:32	Start Execution	start execute of  TC800_ShowHide_QuestionsWithToggle	
+23-06-2016 19:37:32			Step Name			Expected		STATUS
+23-06-2016 19:37:37	Login	Open the browser and start Application	PASS
+23-06-2016 19:37:43	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:37:43	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:37:46	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:37:50	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:37:50	NavigatetoShowHide	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:37:51	NavigatetoShowHide	"TAB_Tests object" should be displayed.	PASS
+23-06-2016 19:37:54	NavigatetoShowHide	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:37:57	NavigatetoShowHide	"LNK_ShowHide object" should be displayed.	PASS
+23-06-2016 19:38:03	NavigatetoShowHide	"LNK_ShowHide object" object Should be clicked.	PASS
+23-06-2016 19:39:13	ShowHide_QuestionsWithToggle	LBL_EntryPageforShow/Hide object  should be loaded 	PASS
+23-06-2016 19:40:17	ShowHide_QuestionsWithToggle	"LBL_EntryPageforShow/Hide object" should be displayed.	PASS
+23-06-2016 19:40:20	ShowHide_QuestionsWithToggle	"LBL_Warning object" should be displayed.	PASS
+23-06-2016 19:40:23	ShowHide_QuestionsWithToggle	"TWL_HiddenStringQuestion object" is not  displayed.	PASS
+23-06-2016 19:40:26	ShowHide_QuestionsWithToggle	"QG_EditableNonEditable object" is not  displayed.	PASS
+23-06-2016 19:40:29	ShowHide_QuestionsWithToggle	"TWL_Numeric object" is not  displayed.	PASS
+23-06-2016 19:40:32	ShowHide_QuestionsWithToggle	"TGL_Toggle1 object" should be displayed.	PASS
+23-06-2016 19:40:36	ShowHide_QuestionsWithToggle	Yes Toggle should be clicked under TGL_Toggle1 object	PASS
+23-06-2016 19:40:39	ShowHide_QuestionsWithToggle	"TWL_HiddenStringQuestion object" should be displayed.	PASS
+23-06-2016 19:40:42	ShowHide_QuestionsWithToggle	"TGL_Toggle2 object" should be displayed.	PASS
+23-06-2016 19:40:45	ShowHide_QuestionsWithToggle	Yes Toggle should be clicked under TGL_Toggle2 object	PASS
+23-06-2016 19:40:48	ShowHide_QuestionsWithToggle	"TWL_Numeric object" should be displayed.	PASS
+23-06-2016 19:40:51	ShowHide_QuestionsWithToggle	"TWL_String object" should be displayed.	PASS
+23-06-2016 19:40:54	ShowHide_QuestionsWithToggle	"TGL_Toggle4 object" should be displayed.	PASS
+23-06-2016 19:40:58	ShowHide_QuestionsWithToggle	Yes Toggle should be clicked under TGL_Toggle4 object	PASS
+23-06-2016 19:41:01	ShowHide_QuestionsWithToggle	"QG_EditableNonEditable object" should be displayed.	PASS
+23-06-2016 19:41:04	ShowHide_QuestionsWithToggle	"TGL_Toggle3 object" should be displayed.	PASS
+23-06-2016 19:41:07	ShowHide_QuestionsWithToggle	Yes Toggle should be clicked under TGL_Toggle3 object	PASS
+23-06-2016 19:41:10	ShowHide_QuestionsWithToggle	"TWL_String object" is not  displayed.	PASS
+23-06-2016 19:41:13	ShowHide_QuestionsWithToggle	No Toggle should be clicked under TGL_Toggle3 object	PASS
+23-06-2016 19:41:17	ShowHide_QuestionsWithToggle	"TWL_String object" should be displayed.	PASS
+23-06-2016 19:41:18	Logout	Logout from application	PASS
+23-06-2016 19:41:26	Start Execution	Open the TC801_EditNonEdit_Toggles file	OPEN THE TC801_EDITNONEDIT_TOGGLES TEST CASE FILE SUCCESSFULLY
+23-06-2016 19:41:27	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:41:27	Start Execution	Associate the EditNonEdit object repository to test		ASSOCIATE THE EDITNONEDIT OBJECT REPOSITORY TO TEST SUCCESSFULLY
+23-06-2016 19:41:27	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\EditNonEdit.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\EDITNONEDIT.XLS FILE SUCCESSFULLY
+23-06-2016 19:41:27	Start Execution	start execute of  TC801_EditNonEdit_Toggles	
+23-06-2016 19:41:27			Step Name			Expected		STATUS
+23-06-2016 19:41:32	Login	Open the browser and start Application	PASS
+23-06-2016 19:41:39	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+23-06-2016 19:41:39	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+23-06-2016 19:41:42	Login	"BTN_Log In button" object Should be clicked.	PASS
+23-06-2016 19:41:49	Login	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:41:53	NavigatetoEditNonEdit	"TAB _Home object" should be displayed.	PASS
+23-06-2016 19:41:56	NavigatetoEditNonEdit	"TAB_Tests object" should be displayed.	PASS
+23-06-2016 19:42:02	NavigatetoEditNonEdit	"TAB_Tests object" object Should be clicked.	PASS
+23-06-2016 19:42:05	NavigatetoEditNonEdit	"LNK_QuestionsReadOnly object" should be displayed.	PASS
+23-06-2016 19:42:12	NavigatetoEditNonEdit	"LNK_QuestionsReadOnly object" object Should be clicked.	PASS
+23-06-2016 19:43:22	EditNonEdit_ValidateToggles	LBL_MakeQuestionsNonEditable object  should be loaded 	PASS
+23-06-2016 19:44:26	EditNonEdit_ValidateToggles	"LBL_MakeQuestionsNonEditable object" should be displayed.	PASS
+23-06-2016 19:44:29	EditNonEdit_ValidateToggles	"TWL_Numeric object" should be displayed.	PASS
+23-06-2016 19:45:32	EditNonEdit_ValidateToggles	"345" : value should be entered in "TXT_QANumeric edit box" field.	PASS
+23-06-2016 19:45:35	EditNonEdit_ValidateToggles	"TGL_#1 object" should be displayed.	PASS
+23-06-2016 19:45:39	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#1 object	PASS
+23-06-2016 19:46:39	EditNonEdit_ValidateToggles	TXT_QANumeric edit box should be visible and Disabled	PASS
+23-06-2016 19:47:42	EditNonEdit_ValidateToggles	"TXT_NumericInput2Decimal edit box" should be displayed.	PASS
+23-06-2016 19:48:46	EditNonEdit_ValidateToggles	"345" : value should be entered in "TXT_NumericInput2Decimal edit box" field.	PASS
+23-06-2016 19:48:49	EditNonEdit_ValidateToggles	"TGL_#2 object" should be displayed.	PASS
+23-06-2016 19:48:52	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#2 object	PASS
+23-06-2016 19:49:52	EditNonEdit_ValidateToggles	TXT_NumericInput2Decimal edit box should be visible and Disabled	PASS
+23-06-2016 19:50:56	EditNonEdit_ValidateToggles	"TXT_NumericInputNonDecimal edit box" should be displayed.	PASS
+23-06-2016 19:51:59	EditNonEdit_ValidateToggles	"345" : value should be entered in "TXT_NumericInputNonDecimal edit box" field.	PASS
+23-06-2016 19:52:02	EditNonEdit_ValidateToggles	"TGL_#3 object" should be displayed.	PASS
+23-06-2016 19:52:05	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#3 object	PASS
+23-06-2016 19:53:06	EditNonEdit_ValidateToggles	TXT_NumericInputNonDecimal edit box should be visible and Disabled	PASS
+23-06-2016 19:54:09	EditNonEdit_ValidateToggles	"TXT_NumericInputCommaDelimted edit box" should be displayed.	PASS
+23-06-2016 19:55:12	EditNonEdit_ValidateToggles	"345" : value should be entered in "TXT_NumericInputCommaDelimted edit box" field.	PASS
+23-06-2016 19:55:15	EditNonEdit_ValidateToggles	"TGL_#4 object" should be displayed.	PASS
+23-06-2016 19:55:19	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#4 object	PASS
+23-06-2016 19:56:19	EditNonEdit_ValidateToggles	TXT_NumericInputCommaDelimted edit box should be visible and Disabled	PASS
+23-06-2016 19:56:23	EditNonEdit_ValidateToggles	"TGL_YesNoFireTheRule object" should be displayed.	PASS
+23-06-2016 19:56:26	EditNonEdit_ValidateToggles	"DWL_DropDown1 object" should be displayed.	PASS
+23-06-2016 19:56:30	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_YesNoFireTheRule object	PASS
+23-06-2016 19:56:34	EditNonEdit_ValidateToggles	Verify "DWL_DropDown1 object"is read only	PASS
+23-06-2016 19:57:37	EditNonEdit_ValidateToggles	"TXT_NameAlphaSpecialChar edit box" should be displayed.	PASS
+23-06-2016 19:58:41	EditNonEdit_ValidateToggles	"Testing" : value should be entered in "TXT_NameAlphaSpecialChar edit box" field.	PASS
+23-06-2016 19:58:44	EditNonEdit_ValidateToggles	"TGL_#37 object" should be displayed.	PASS
+23-06-2016 19:58:47	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#37 object	PASS
+23-06-2016 19:59:47	EditNonEdit_ValidateToggles	TXT_NameAlphaSpecialChar edit box should be visible and Disabled	PASS
+23-06-2016 20:00:51	EditNonEdit_ValidateToggles	"TXT_Currency edit box" should be displayed.	PASS
+23-06-2016 20:01:54	EditNonEdit_ValidateToggles	"$345.00" : value should be entered in "TXT_Currency edit box" field.	PASS
+23-06-2016 20:01:57	EditNonEdit_ValidateToggles	"TGL_#5 object" should be displayed.	PASS
+23-06-2016 20:02:00	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#5 object	PASS
+23-06-2016 20:03:01	EditNonEdit_ValidateToggles	TXT_Currency edit box should be visible and Disabled	PASS
+23-06-2016 20:04:04	EditNonEdit_ValidateToggles	"$345.00" : value should be entered in "TXT_CurrencyWholeNumber edit box" field.	PASS
+23-06-2016 20:04:07	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#6 object	PASS
+23-06-2016 20:05:08	EditNonEdit_ValidateToggles	TXT_CurrencyWholeNumber edit box should be visible and Disabled	PASS
+23-06-2016 20:06:11	EditNonEdit_ValidateToggles	"$345.00" : value should be entered in "TXT_Currecy_Formated_NEG edit box" field.	PASS
+23-06-2016 20:06:14	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#7 object	PASS
+23-06-2016 20:07:14	EditNonEdit_ValidateToggles	TXT_Currecy_Formated_NEG edit box should be visible and Disabled	PASS
+23-06-2016 20:08:18	EditNonEdit_ValidateToggles	"$345.00" : value should be entered in "TXT_Currecy_Truncate edit box" field.	PASS
+23-06-2016 20:08:21	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#8 object	PASS
+24-06-2016 10:58:26	EditNonEdit_ValidateToggles	TXT_Currecy_Truncate edit box should be visible and Disabled	PASS
+24-06-2016 10:58:59	EditNonEdit_ValidateToggles	"Testing" : value should be entered in "TXT_String edit box" field.	PASS
+24-06-2016 10:59:00	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#9 object	PASS
+24-06-2016 10:59:00	EditNonEdit_ValidateToggles	TXT_String edit box should be visible and Disabled	PASS
+24-06-2016 10:59:00	EditNonEdit_ValidateToggles	"Testing" : value should be entered in "TXT_String_alpha_Only edit box" field.	PASS
+24-06-2016 10:59:01	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#10 object	PASS
+24-06-2016 10:59:01	EditNonEdit_ValidateToggles	TXT_String_alpha_Only edit box should be visible and Disabled	PASS
+24-06-2016 10:59:01	EditNonEdit_ValidateToggles	"345" : value should be entered in "TXT_String_NumericOnly edit box" field.	PASS
+24-06-2016 10:59:01	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#11 object	PASS
+24-06-2016 10:59:01	EditNonEdit_ValidateToggles	TXT_String_NumericOnly edit box should be visible and Disabled	PASS
+24-06-2016 10:59:02	EditNonEdit_ValidateToggles	"6/24/2016" : value should be entered in "TXT_Date edit box" field.	PASS
+24-06-2016 10:59:02	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#12 object	PASS
+24-06-2016 10:59:02	EditNonEdit_ValidateToggles	TXT_Date edit box should be visible and Disabled	PASS
+24-06-2016 10:59:02	EditNonEdit_ValidateToggles	"06/24" : value should be entered in "TXT_DateMonthDayOnly edit box" field.	PASS
+24-06-2016 10:59:03	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#14 object	PASS
+24-06-2016 10:59:03	EditNonEdit_ValidateToggles	TXT_DateMonthDayOnly edit box should be visible and Disabled	PASS
+24-06-2016 10:59:03	EditNonEdit_ValidateToggles	"6/24/2016" : value should be entered in "TXT_BusinessDate edit box" field.	PASS
+24-06-2016 10:59:03	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#15 object	PASS
+24-06-2016 10:59:03	EditNonEdit_ValidateToggles	TXT_BusinessDate edit box should be visible and Disabled	PASS
+24-06-2016 10:59:03	EditNonEdit_ValidateToggles	"6/24/2016" : value should be entered in "TXT_BirthDate edit box" field.	PASS
+24-06-2016 10:59:04	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#35 object	PASS
+24-06-2016 10:59:04	EditNonEdit_ValidateToggles	TXT_BirthDate edit box should be visible and Disabled	PASS
+24-06-2016 10:59:04	EditNonEdit_ValidateToggles	"6/2016" : value should be entered in "TXT_MonthYearDate edit box" field.	PASS
+24-06-2016 10:59:05	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#36 object	PASS
+24-06-2016 10:59:05	EditNonEdit_ValidateToggles	TXT_MonthYearDate edit box should be visible and Disabled	PASS
+24-06-2016 10:59:05	EditNonEdit_ValidateToggles	"8885555555" : value should be entered in "TWL_PhoneNumber edit box" field.	PASS
+24-06-2016 10:59:06	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#17 object	PASS
+24-06-2016 10:59:06	EditNonEdit_ValidateToggles	TWL_PhoneNumber edit box should be visible and Disabled	PASS
+24-06-2016 10:59:06	EditNonEdit_ValidateToggles	"1010-1010" : value should be entered in "TWL_BLAccountNumber edit box" field.	PASS
+24-06-2016 10:59:07	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#22 object	PASS
+24-06-2016 10:59:07	EditNonEdit_ValidateToggles	TWL_BLAccountNumber edit box should be visible and Disabled	PASS
+24-06-2016 10:59:07	EditNonEdit_ValidateToggles	"chris@ifautomation.com" : value should be entered in "TWL_Email edit box" field.	PASS
+24-06-2016 10:59:08	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#23 object	PASS
+24-06-2016 10:59:08	EditNonEdit_ValidateToggles	TWL_Email edit box should be visible and Disabled	PASS
+24-06-2016 10:59:08	EditNonEdit_ValidateToggles	"111-11-1111" : value should be entered in "TWL_Social edit box" field.	PASS
+24-06-2016 10:59:09	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#26 object	PASS
+24-06-2016 10:59:09	EditNonEdit_ValidateToggles	TWL_Social edit box should be visible and Disabled	PASS
+24-06-2016 10:59:09	EditNonEdit_ValidateToggles	"111-11-1111" : value should be entered in "TWL_SocialwDashes edit box" field.	PASS
+24-06-2016 10:59:10	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#27 object	PASS
+24-06-2016 10:59:10	EditNonEdit_ValidateToggles	TWL_SocialwDashes edit box should be visible and Disabled	PASS
+24-06-2016 10:59:10	EditNonEdit_ValidateToggles	"11-1111111" : value should be entered in "TWL_TaxID edit box" field.	PASS
+24-06-2016 10:59:11	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#28 object	PASS
+24-06-2016 10:59:11	EditNonEdit_ValidateToggles	TWL_TaxID edit box should be visible and Disabled	PASS
+24-06-2016 10:59:12	EditNonEdit_ValidateToggles	"11-1111111" : value should be entered in "TWL_TaxIDwDashes edit box" field.	PASS
+24-06-2016 10:59:12	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#29 object	PASS
+24-06-2016 10:59:12	EditNonEdit_ValidateToggles	TWL_TaxIDwDashes edit box should be visible and Disabled	PASS
+24-06-2016 10:59:13	EditNonEdit_ValidateToggles	"32232-2223" : value should be entered in "TWL_Zip edit box" field.	PASS
+24-06-2016 10:59:14	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#30 object	PASS
+24-06-2016 10:59:14	EditNonEdit_ValidateToggles	TWL_Zip edit box should be visible and Disabled	PASS
+24-06-2016 10:59:14	EditNonEdit_ValidateToggles	"Testing" : value should be entered in "TWL_XML edit box" field.	PASS
+24-06-2016 10:59:15	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#33 object	PASS
+24-06-2016 10:59:15	EditNonEdit_ValidateToggles	TWL_XML edit box should be visible and Disabled	PASS
+24-06-2016 10:59:15	EditNonEdit_ValidateToggles	"Testing" : value should be entered in "TXT_AuditNote edit box" field.	PASS
+24-06-2016 10:59:16	EditNonEdit_ValidateToggles	Yes Toggle should be clicked under TGL_#34 object	PASS
+24-06-2016 10:59:16	EditNonEdit_ValidateToggles	TXT_AuditNote edit box should be visible and Disabled	PASS
+24-06-2016 10:59:16	EditNonEdit_ValidateToggles	"BTN_Next button" object Should be clicked.	PASS
+24-06-2016 10:59:17	EditNonEdit_ValidateToggles	TWL_Editable/Non-Editable object  should be loaded 	PASS
+24-06-2016 10:59:17	EditNonEdit_ValidateToggles	"TWL_Editable/Non-Editable object" should be displayed.	PASS
+24-06-2016 10:59:17	EditNonEdit_ValidateToggles	"BTN_Back button" object Should be clicked.	PASS
+24-06-2016 10:59:18	EditNonEdit_ValidateToggles	LBL_MakeQuestionsNonEditable object  should be loaded 	PASS
+24-06-2016 10:59:18	EditNonEdit_ValidateToggles	TXT_QANumeric edit box should be visible and Disabled	PASS
+24-06-2016 10:59:18	EditNonEdit_ValidateToggles	TXT_NumericInput2Decimal edit box should be visible and Disabled	PASS
+24-06-2016 10:59:18	EditNonEdit_ValidateToggles	TXT_NumericInputNonDecimal edit box should be visible and Disabled	PASS
+24-06-2016 10:59:18	EditNonEdit_ValidateToggles	TXT_NumericInputCommaDelimted edit box should be visible and Disabled	PASS
+24-06-2016 10:59:19	EditNonEdit_ValidateToggles	TWL_DropDown#1 object should be visible and Disabled	FAIL
+24-06-2016 10:59:19	EditNonEdit_ValidateToggles	TXT_NameAlphaSpecialChar edit box should be visible and Disabled	PASS
+24-06-2016 10:59:19	EditNonEdit_ValidateToggles	TXT_Currency edit box should be visible and Disabled	PASS
+24-06-2016 10:59:19	EditNonEdit_ValidateToggles	TXT_CurrencyWholeNumber edit box should be visible and Disabled	PASS
+24-06-2016 10:59:19	EditNonEdit_ValidateToggles	TXT_Currecy_Formated_NEG edit box should be visible and Disabled	PASS
+24-06-2016 10:59:19	EditNonEdit_ValidateToggles	TXT_Currecy_Truncate edit box should be visible and Disabled	PASS
+24-06-2016 10:59:19	EditNonEdit_ValidateToggles	TXT_String edit box should be visible and Disabled	PASS
+24-06-2016 10:59:19	EditNonEdit_ValidateToggles	TXT_String_alpha_Only edit box should be visible and Disabled	PASS
+24-06-2016 10:59:19	EditNonEdit_ValidateToggles	TXT_String_NumericOnly edit box should be visible and Disabled	PASS
+24-06-2016 10:59:19	EditNonEdit_ValidateToggles	TXT_Date edit box should be visible and Disabled	PASS
+24-06-2016 10:59:19	EditNonEdit_ValidateToggles	TXT_DateMonthDayOnly edit box should be visible and Disabled	PASS
+24-06-2016 10:59:20	EditNonEdit_ValidateToggles	TXT_BusinessDate edit box object should exist.	FAIL
+24-06-2016 10:59:20	EditNonEdit_ValidateToggles	TXT_BirthDate edit box object should exist.	FAIL
+24-06-2016 10:59:20	EditNonEdit_ValidateToggles	TXT_MonthYearDate edit box object should exist.	FAIL
+24-06-2016 10:59:20	EditNonEdit_ValidateToggles	TWL_PhoneNumber edit box object should exist.	FAIL
+24-06-2016 10:59:20	EditNonEdit_ValidateToggles	TWL_BLAccountNumber edit box object should exist.	FAIL
+24-06-2016 10:59:20	EditNonEdit_ValidateToggles	TWL_Email edit box object should exist.	FAIL
+24-06-2016 10:59:20	EditNonEdit_ValidateToggles	TWL_Social edit box object should exist.	FAIL
+24-06-2016 10:59:21	EditNonEdit_ValidateToggles	TWL_SocialwDashes edit box object should exist.	FAIL
+24-06-2016 10:59:21	EditNonEdit_ValidateToggles	TWL_TaxID edit box object should exist.	FAIL
+24-06-2016 10:59:21	EditNonEdit_ValidateToggles	TWL_TaxIDwDashes edit box object should exist.	FAIL
+24-06-2016 10:59:21	EditNonEdit_ValidateToggles	TWL_Zip edit box object should exist.	FAIL
+24-06-2016 10:59:21	EditNonEdit_ValidateToggles	TWL_XML edit box object should exist.	FAIL
+24-06-2016 10:59:21	EditNonEdit_ValidateToggles	TXT_AuditNote edit box object should exist.	FAIL
+24-06-2016 10:59:36	Logout	Logout from application	FAIL
+24-06-2016 10:59:45	Start Execution	Open the TC802_DateStringEval_RuleSetDate file	OPEN THE TC802_DATESTRINGEVAL_RULESETDATE TEST CASE FILE SUCCESSFULLY
+24-06-2016 10:59:46	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+24-06-2016 10:59:46	Start Execution	Associate the DateStringEval object repository to test		ASSOCIATE THE DATESTRINGEVAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+24-06-2016 10:59:46	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\DateStringEval.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DATESTRINGEVAL.XLS FILE SUCCESSFULLY
+24-06-2016 10:59:46	Start Execution	start execute of  TC802_DateStringEval_RuleSetDate	
+24-06-2016 10:59:46			Step Name			Expected		STATUS
+24-06-2016 10:59:54	Login	Open the browser and start Application	PASS
+24-06-2016 10:59:55	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+24-06-2016 10:59:55	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+24-06-2016 10:59:58	Login	"BTN_Log In button" object Should be clicked.	PASS
+24-06-2016 11:00:03	Login	"TAB _Home object" should be displayed.	PASS
+24-06-2016 11:00:04	NavigatetoDateStringEval	"TAB _Home object" should be displayed.	PASS
+24-06-2016 11:00:04	NavigatetoDateStringEval	"TAB_Tests object" should be displayed.	PASS
+24-06-2016 11:00:07	NavigatetoDateStringEval	"TAB_Tests object" object Should be clicked.	PASS
+24-06-2016 11:00:10	NavigatetoDateStringEval	"LNK_Date/String Evaluation object" should be displayed.	PASS
+24-06-2016 11:00:17	NavigatetoDateStringEval	"LNK_Date/String Evaluation object" object Should be clicked.	PASS
+24-06-2016 11:00:21	DateStringEval_Verify_RuleSetsDate	"LBL_DateNumeric object" should be displayed.	PASS
+24-06-2016 11:00:24	DateStringEval_Verify_RuleSetsDate	"LBL_Description object" should be displayed.	PASS
+24-06-2016 11:00:32	DateStringEval_Verify_RuleSetsDate	select the from "DWL_MakeSelection object" dropdown. by using index ::3	PASS
+24-06-2016 11:00:35	DateStringEval_Verify_RuleSetsDate	"DTL_Date1 object" should be displayed.	PASS
+24-06-2016 11:00:38	DateStringEval_Verify_RuleSetsDate	"Entry Web page" should be displayed.	PASS
+24-06-2016 11:00:41	DateStringEval_Verify_RuleSetsDate	"Entry Web page" should be displayed.	PASS
+24-06-2016 11:00:44	DateStringEval_Verify_RuleSetsDate	"TXT_NumericCompare edit box" should be displayed.	PASS
+24-06-2016 11:00:47	DateStringEval_Verify_RuleSetsDate	.1 : value should be displayed in "TXT_NumericCompare edit box" field.	PASS
+24-06-2016 11:00:51	DateStringEval_Verify_RuleSetsDate	09/24 : value should be displayed in "TXT_DateMonthDay edit box" field.	PASS
+24-06-2016 11:00:54	DateStringEval_Verify_RuleSetsDate	09/23/2015 : value should be displayed in "TXT_DateBizDate edit box" field.	PASS
+24-06-2016 11:00:57	DateStringEval_Verify_RuleSetsDate	09/01/2015 : value should be displayed in "TXT_Date1 edit box" field.	PASS
+24-06-2016 11:01:00	DateStringEval_Verify_RuleSetsDate	"Eval_Next button" should be displayed.	PASS
+24-06-2016 11:01:06	DateStringEval_Verify_RuleSetsDate	"Eval_Next button" object Should be clicked.	PASS
+24-06-2016 11:01:11	DateStringEval_Verify_RuleSetsDate	"MSG_NumericCompareFailed object" is not  displayed.	PASS
+24-06-2016 11:01:15	DateStringEval_Verify_RuleSetsDate	"MSG_DateCompareTestFailed object" is not  displayed.	PASS
+24-06-2016 11:01:18	DateStringEval_Verify_RuleSetsDate	Text: "09/01/2015"  should be displayed at DTL_QADateTest object	PASS
+24-06-2016 11:01:22	DateStringEval_Verify_RuleSetsDate	Text: "09/24"  should be displayed at DTL_MonthDay object	PASS
+24-06-2016 11:01:25	DateStringEval_Verify_RuleSetsDate	Text: "09/23/2015"  should be displayed at DTL_BizDate object	PASS
+24-06-2016 11:01:28	DateStringEval_Verify_RuleSetsDate	Text: "0.1"  should be displayed at TWL_DummyNumeric object	PASS
+24-06-2016 11:01:34	DateStringEval_Verify_RuleSetsDate	"BTN_Gear button" object Should be clicked.	PASS
+24-06-2016 11:01:37	DateStringEval_Verify_RuleSetsDate	"LNK_Debug object" should be displayed.	PASS
+24-06-2016 11:01:44	DateStringEval_Verify_RuleSetsDate	"LNK_Debug object" object Should be clicked.	PASS
+24-06-2016 11:03:50	DateStringEval_Verify_RuleSetsDate	"TBL_DebugQuestions table" should be displayed.	FAIL
+24-06-2016 11:04:51	DateStringEval_Verify_RuleSetsDate	"QA.DATE.TEST.DUMMY" Should be in 3 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is 6/24/2016	FAIL
+24-06-2016 11:05:51	DateStringEval_Verify_RuleSetsDate	"09/01/2015" Should be in 3 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:53	DateStringEval_Verify_RuleSetsDate	"QA.DATETEST1" Should be in 6 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:54	DateStringEval_Verify_RuleSetsDate	"09/01/2015" Should be in 6 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:54	DateStringEval_Verify_RuleSetsDate	"QA.NUMERIC.TEST.DUMMY" Should be in 9 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:54	DateStringEval_Verify_RuleSetsDate	"0.1" Should be in 9 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:54	DateStringEval_Verify_RuleSetsDate	"TEST.NUMERIC.COMPARE" Should be in 11 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:54	DateStringEval_Verify_RuleSetsDate	".1" Should be in 11 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:54	DateStringEval_Verify_RuleSetsDate	"QA.DATE.TEST.DUMMY2" Should be in 4 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is 6/28/2016	FAIL
+24-06-2016 11:05:54	DateStringEval_Verify_RuleSetsDate	"9/24" Should be in 4 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:55	DateStringEval_Verify_RuleSetsDate	"QA.DATETEST2" Should be in 7 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:55	DateStringEval_Verify_RuleSetsDate	"09/24" Should be in 7 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:55	DateStringEval_Verify_RuleSetsDate	"QA.DATE.TEST.DUMMY3" Should be in 5 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:55	DateStringEval_Verify_RuleSetsDate	"09/23/2015" Should be in 5 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:55	DateStringEval_Verify_RuleSetsDate	"QA.DATETEST3" Should be in 8 Row and 2 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:55	DateStringEval_Verify_RuleSetsDate	"09/23/2015" Should be in 8 Row and 3 Column under TBL_DebugQuestions table" but displaayed value is ERROR: THE SPECIFIED CELL DOES NOT EXIST.	FAIL
+24-06-2016 11:05:58	Logout	Logout from application	PASS
+24-06-2016 11:06:06	Start Execution	Open the TC803_DateStringEval_ManualEnterValue file	OPEN THE TC803_DATESTRINGEVAL_MANUALENTERVALUE TEST CASE FILE SUCCESSFULLY
+24-06-2016 11:06:07	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+24-06-2016 11:06:07	Start Execution	Associate the DateStringEval object repository to test		ASSOCIATE THE DATESTRINGEVAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+24-06-2016 11:06:07	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\DateStringEval.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DATESTRINGEVAL.XLS FILE SUCCESSFULLY
+24-06-2016 11:06:07	Start Execution	start execute of  TC803_DateStringEval_ManualEnterValue	
+24-06-2016 11:06:07			Step Name			Expected		STATUS
+24-06-2016 11:06:12	Login	Open the browser and start Application	PASS
+24-06-2016 11:06:15	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+24-06-2016 11:06:15	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+24-06-2016 11:06:18	Login	"BTN_Log In button" object Should be clicked.	PASS
+24-06-2016 11:06:23	Login	"TAB _Home object" should be displayed.	PASS
+24-06-2016 11:06:23	NavigatetoDateStringEval	"TAB _Home object" should be displayed.	PASS
+24-06-2016 11:06:23	NavigatetoDateStringEval	"TAB_Tests object" should be displayed.	PASS
+24-06-2016 11:06:27	NavigatetoDateStringEval	"TAB_Tests object" object Should be clicked.	PASS
+24-06-2016 11:06:30	NavigatetoDateStringEval	"LNK_Date/String Evaluation object" should be displayed.	PASS
+24-06-2016 11:06:37	NavigatetoDateStringEval	"LNK_Date/String Evaluation object" object Should be clicked.	PASS
+24-06-2016 11:06:41	DateStringEval_Verify_ManualEnterValues	"LBL_DateNumeric object" should be displayed.	PASS
+24-06-2016 11:06:44	DateStringEval_Verify_ManualEnterValues	"LBL_Description object" should be displayed.	PASS
+24-06-2016 11:06:48	DateStringEval_Verify_ManualEnterValues	"DTL_Date1 object" should be displayed.	PASS
+24-06-2016 11:06:51	DateStringEval_Verify_ManualEnterValues	"Entry Web page" should be displayed.	PASS
+24-06-2016 11:06:54	DateStringEval_Verify_ManualEnterValues	"Entry Web page" should be displayed.	PASS
+24-06-2016 11:06:57	DateStringEval_Verify_ManualEnterValues	"TXT_NumericCompare edit box" should be displayed.	PASS
+24-06-2016 11:07:00	DateStringEval_Verify_ManualEnterValues	".1" : value should be entered in "TXT_NumericCompare edit box" field.	PASS
+24-06-2016 11:07:03	DateStringEval_Verify_ManualEnterValues	"09/01/2015" : value should be entered in "TXT_Date1 edit box" field.	PASS
+24-06-2016 11:07:07	DateStringEval_Verify_ManualEnterValues	"09/24" : value should be entered in "TXT_DateMonthDay edit box" field.	PASS
+24-06-2016 11:07:10	DateStringEval_Verify_ManualEnterValues	"09/23/2015" : value should be entered in "TXT_DateBizDate edit box" field.	PASS
+24-06-2016 11:07:13	DateStringEval_Verify_ManualEnterValues	.1 : value should be displayed in "TXT_NumericCompare edit box" field.	PASS
+24-06-2016 11:07:16	DateStringEval_Verify_ManualEnterValues	09/24 : value should be displayed in "TXT_DateMonthDay edit box" field.	PASS
+24-06-2016 11:07:19	DateStringEval_Verify_ManualEnterValues	09/23/2015 : value should be displayed in "TXT_DateBizDate edit box" field.	PASS
+24-06-2016 11:07:22	DateStringEval_Verify_ManualEnterValues	09/01/2015 : value should be displayed in "TXT_Date1 edit box" field.	PASS
+24-06-2016 11:07:26	DateStringEval_Verify_ManualEnterValues	"Eval_Next button" should be displayed.	PASS
+24-06-2016 11:07:32	DateStringEval_Verify_ManualEnterValues	"Eval_Next button" object Should be clicked.	PASS
+24-06-2016 11:07:37	DateStringEval_Verify_ManualEnterValues	"MSG_NumericCompareFailed object" is not  displayed.	PASS
+24-06-2016 11:07:41	DateStringEval_Verify_ManualEnterValues	"MSG_DateCompareTestFailed object" is not  displayed.	PASS
+24-06-2016 11:07:44	DateStringEval_Verify_ManualEnterValues	Text: "09/01/2015"  should be displayed at DTL_QADateTest object	PASS
+24-06-2016 11:07:47	DateStringEval_Verify_ManualEnterValues	Text: "09/24"  should be displayed at DTL_MonthDay object	PASS
+24-06-2016 11:07:50	DateStringEval_Verify_ManualEnterValues	Text: "09/23/2015"  should be displayed at DTL_BizDate object	PASS
+24-06-2016 11:07:53	DateStringEval_Verify_ManualEnterValues	Text: "0.1"  should be displayed at TWL_DummyNumeric object	PASS
+24-06-2016 11:08:00	DateStringEval_Verify_ManualEnterValues	"BTN_Gear button" object Should be clicked.	PASS
+24-06-2016 11:08:03	DateStringEval_Verify_ManualEnterValues	"LNK_Debug object" should be displayed.	PASS
+24-06-2016 11:08:09	DateStringEval_Verify_ManualEnterValues	"LNK_Debug object" object Should be clicked.	PASS
+24-06-2016 11:09:09	DateStringEval_Verify_ManualEnterValues	"TBL_DebugQuestions table" should be displayed.	FAIL
+24-06-2016 11:09:10	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:10	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:10	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:10	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:10	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:10	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:10	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:11	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:11	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:11	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:11	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:11	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:11	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:11	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:11	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:12	DateStringEval_Verify_ManualEnterValues	TBL_DebugQuestions tableshould exist	FAIL
+24-06-2016 11:09:15	Logout	Logout from application	PASS
+24-06-2016 11:09:24	Start Execution	Open the TC804_AuditBubble_VerifyTableValues file	OPEN THE TC804_AUDITBUBBLE_VERIFYTABLEVALUES TEST CASE FILE SUCCESSFULLY
+24-06-2016 11:09:24	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+24-06-2016 11:09:25	Start Execution	Associate the AuditBubble object repository to test		ASSOCIATE THE AUDITBUBBLE OBJECT REPOSITORY TO TEST SUCCESSFULLY
+24-06-2016 11:09:25	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\AuditBubble.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\AUDITBUBBLE.XLS FILE SUCCESSFULLY
+24-06-2016 11:09:25	Start Execution	start execute of  TC804_AuditBubble_VerifyTableValues	
+24-06-2016 11:09:25			Step Name			Expected		STATUS
+24-06-2016 11:09:30	Login	Open the browser and start Application	PASS
+24-06-2016 11:09:33	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+24-06-2016 11:09:33	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+24-06-2016 11:09:37	Login	"BTN_Log In button" object Should be clicked.	PASS
+24-06-2016 11:09:41	Login	"TAB _Home object" should be displayed.	PASS
+24-06-2016 11:09:41	NavigateToAuditBubble	"TAB _Home object" should be displayed.	PASS
+24-06-2016 11:09:41	NavigateToAuditBubble	"TAB_Tests object" should be displayed.	PASS
+24-06-2016 11:09:44	NavigateToAuditBubble	"TAB_Tests object" object Should be clicked.	PASS
+24-06-2016 11:09:47	NavigateToAuditBubble	"LNK_AuditTestWorkflow object" should be displayed.	PASS
+24-06-2016 11:09:54	NavigateToAuditBubble	"LNK_AuditTestWorkflow object" object Should be clicked.	PASS
+24-06-2016 11:09:58	AuditBubble_VerifyAuditValues	"LBL_AuditBubbleTest object" should be displayed.	PASS
+24-06-2016 11:10:01	AuditBubble_VerifyAuditValues	"TXT_AuditBubble1 edit box" should be displayed.	PASS
+24-06-2016 11:10:04	AuditBubble_VerifyAuditValues	"TXT_AuditBubble2 edit box" should be displayed.	PASS
+24-06-2016 11:10:08	AuditBubble_VerifyAuditValues	"123" : value should be entered in "TXT_AuditBubble1 edit box" field.	PASS
+24-06-2016 11:10:11	AuditBubble_VerifyAuditValues	"123" : value should be entered in "TXT_AuditBubble2 edit box" field.	PASS
+24-06-2016 11:10:19	AuditBubble_VerifyAuditValues	Audit1_Next button  should be loaded 	PASS
+24-06-2016 11:10:25	AuditBubble_VerifyAuditValues	"Audit1_Next button" object Should be clicked.	PASS
+24-06-2016 11:10:35	AuditBubble_VerifyAuditValues	Audit1_Submit button  should be loaded 	PASS
+24-06-2016 11:10:41	AuditBubble_VerifyAuditValues	"Audit1_Submit button" object Should be clicked.	PASS
+24-06-2016 11:10:50	AuditBubble_VerifyAuditValues	LBL_QAAuditBubbleTest object  should be loaded 	PASS
+24-06-2016 11:10:53	AuditBubble_VerifyAuditValues	"LBL_QAAuditBubbleTest object" should be displayed.	PASS
+24-06-2016 11:10:56	AuditBubble_VerifyAuditValues	Text: "123"  should be displayed at TWL_QA_Audit1 object	PASS
+24-06-2016 11:11:00	AuditBubble_VerifyAuditValues	Text: "123"  should be displayed at TWL_QA_Audit2 object	PASS
+24-06-2016 11:11:01	Logout	Logout from application	PASS
+24-06-2016 11:11:09	Start Execution	Open the TC805_DraftMode_ValidateNavigationPanelErrorList file	OPEN THE TC805_DRAFTMODE_VALIDATENAVIGATIONPANELERRORLIST TEST CASE FILE SUCCESSFULLY
+24-06-2016 11:11:10	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+24-06-2016 11:11:10	Start Execution	Associate the DraftMode object repository to test		ASSOCIATE THE DRAFTMODE OBJECT REPOSITORY TO TEST SUCCESSFULLY
+24-06-2016 11:11:10	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\DraftMode.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DRAFTMODE.XLS FILE SUCCESSFULLY
+24-06-2016 11:11:10	Start Execution	start execute of  TC805_DraftMode_ValidateNavigationPanelErrorList	
+24-06-2016 11:11:10			Step Name			Expected		STATUS
+24-06-2016 11:11:15	Login	Open the browser and start Application	PASS
+24-06-2016 11:11:18	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+24-06-2016 11:11:19	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+24-06-2016 11:11:22	Login	"BTN_Log In button" object Should be clicked.	PASS
+24-06-2016 11:11:26	Login	"TAB _Home object" should be displayed.	PASS
+24-06-2016 11:11:26	NavigateToDraftMode	"TAB _Home object" should be displayed.	PASS
+24-06-2016 11:11:26	NavigateToDraftMode	"TAB_Tests object" should be displayed.	PASS
+24-06-2016 11:11:29	NavigateToDraftMode	"TAB_Tests object" object Should be clicked.	PASS
+24-06-2016 11:11:33	NavigateToDraftMode	"LNK_Draft Mode object" should be displayed.	PASS
+24-06-2016 11:11:39	NavigateToDraftMode	"LNK_Draft Mode object" object Should be clicked.	PASS
+24-06-2016 11:11:48	VerifyDraftValidationPanelErrorList	LBL_Header_DraftModeEntry object  should be loaded 	PASS
+24-06-2016 11:11:52	VerifyDraftValidationPanelErrorList	"LBL_Header_DraftModeEntry object" should be displayed.	PASS
+24-06-2016 11:12:00	VerifyDraftValidationPanelErrorList	BTN_SkipValidation button  should be loaded 	PASS
+24-06-2016 11:12:06	VerifyDraftValidationPanelErrorList	"BTN_SkipValidation button" object Should be clicked.	PASS
+24-06-2016 11:12:16	VerifyDraftValidationPanelErrorList	LBL_Answer * Required Checkbox object  should be loaded 	PASS
+24-06-2016 11:12:19	VerifyDraftValidationPanelErrorList	"LBL_Answer * Required Checkbox object" should be displayed.	PASS
+24-06-2016 11:12:27	VerifyDraftValidationPanelErrorList	TRKcircle_State_error object  should be loaded 	PASS
+24-06-2016 11:12:30	VerifyDraftValidationPanelErrorList	"TRKcircle_State_error object" should be displayed.	PASS
+24-06-2016 11:12:38	VerifyDraftValidationPanelErrorList	BTN_SkipValidation button  should be loaded 	PASS
+24-06-2016 11:12:45	VerifyDraftValidationPanelErrorList	"BTN_SkipValidation button" object Should be clicked.	PASS
+24-06-2016 11:12:54	VerifyDraftValidationPanelErrorList	LBL_This is an PreEvent infoMessage object  should be loaded 	PASS
+24-06-2016 11:12:57	VerifyDraftValidationPanelErrorList	"LBL_This is an PreEvent infoMessage object" should be displayed.	PASS
+24-06-2016 11:13:06	VerifyDraftValidationPanelErrorList	TRKcircle_AdditionalInfo object  should be loaded 	PASS
+24-06-2016 11:13:09	VerifyDraftValidationPanelErrorList	"TRKcircle_AdditionalInfo object" should be displayed.	PASS
+24-06-2016 11:13:15	VerifyDraftValidationPanelErrorList	"BTN_SkipValidation button" object Should be clicked.	PASS
+24-06-2016 11:13:24	VerifyDraftValidationPanelErrorList	LBL_DraftMode.AdditionalInfo2 object  should be loaded 	PASS
+24-06-2016 11:13:28	VerifyDraftValidationPanelErrorList	"LBL_DraftMode.AdditionalInfo2 object" should be displayed.	PASS
+24-06-2016 11:13:36	VerifyDraftValidationPanelErrorList	TRKCircle_AdditionalInfoError object  should be loaded 	PASS
+24-06-2016 11:13:39	VerifyDraftValidationPanelErrorList	"TRKCircle_AdditionalInfoError object" should be displayed.	PASS
+24-06-2016 11:13:45	VerifyDraftValidationPanelErrorList	"BTN_SkipValidation button" object Should be clicked.	PASS
+24-06-2016 11:13:55	VerifyDraftValidationPanelErrorList	LBL_IRARegistration object  should be loaded 	PASS
+24-06-2016 11:13:58	VerifyDraftValidationPanelErrorList	"LBL_IRARegistration object" should be displayed.	PASS
+24-06-2016 11:14:06	VerifyDraftValidationPanelErrorList	TRKcircle_IRARegistration object  should be loaded 	PASS
+24-06-2016 11:14:09	VerifyDraftValidationPanelErrorList	"TRKcircle_IRARegistration object" should be displayed.	PASS
+24-06-2016 11:14:15	VerifyDraftValidationPanelErrorList	"BTN_SkipValidation button" object Should be clicked.	PASS
+24-06-2016 11:14:25	VerifyDraftValidationPanelErrorList	LBL_Error Summary object  should be loaded 	PASS
+24-06-2016 11:14:28	VerifyDraftValidationPanelErrorList	"LBL_Error Summary object" should be displayed.	PASS
+24-06-2016 11:14:31	VerifyDraftValidationPanelErrorList	"TRKcircle_IRARegistrationError object" should be displayed.	PASS
+24-06-2016 11:14:39	VerifyDraftValidationPanelErrorList	LBL_Error Summary object  should be loaded 	PASS
+24-06-2016 11:14:42	VerifyDraftValidationPanelErrorList	"LBL_Error Summary object" should be displayed.	PASS
+24-06-2016 11:14:50	VerifyDraftValidationPanelErrorList	NAV_Entry_Error object  should be loaded 	PASS
+24-06-2016 11:14:54	VerifyDraftValidationPanelErrorList	"NAV_Entry_Error object" should be displayed.	PASS
+24-06-2016 11:15:00	VerifyDraftValidationPanelErrorList	"NAV_Entry_Error object" object Should be clicked.	PASS
+24-06-2016 11:15:09	VerifyDraftValidationPanelErrorList	DWL_SelectValue object  should be loaded 	PASS
+24-06-2016 11:15:17	VerifyDraftValidationPanelErrorList	select the from "DWL_SelectValue object" dropdown. by using index ::2	PASS
+24-06-2016 11:15:25	VerifyDraftValidationPanelErrorList	TXT_SelectADate edit box  should be loaded 	PASS
+24-06-2016 11:15:28	VerifyDraftValidationPanelErrorList	"TXT_SelectADate edit box" should be displayed.	PASS
+24-06-2016 11:15:31	VerifyDraftValidationPanelErrorList	"6/24/2016" : value should be entered in "TXT_SelectADate edit box" field.	PASS
+24-06-2016 11:15:39	VerifyDraftValidationPanelErrorList	RDL_SelectionRequired object  should be loaded 	PASS
+24-06-2016 11:15:43	VerifyDraftValidationPanelErrorList	select  small value Radio button for "RDL_SelectionRequired object"	PASS
+24-06-2016 11:15:51	VerifyDraftValidationPanelErrorList	NAV_RequiredQuestions object  should be loaded 	PASS
+24-06-2016 11:15:57	VerifyDraftValidationPanelErrorList	"NAV_RequiredQuestions object" object Should be clicked.	PASS
+24-06-2016 11:16:06	VerifyDraftValidationPanelErrorList	LBL_Answer * Required Checkbox object  should be loaded 	PASS
+24-06-2016 11:16:10	VerifyDraftValidationPanelErrorList	"LBL_Answer * Required Checkbox object" should be displayed.	PASS
+24-06-2016 11:16:18	VerifyDraftValidationPanelErrorList	TWL_RequiredCheckboxGroup object  should be loaded 	PASS
+24-06-2016 11:16:21	VerifyDraftValidationPanelErrorList	"TWL_RequiredCheckboxGroup object" should be displayed.	PASS
+24-06-2016 11:16:27	VerifyDraftValidationPanelErrorList	"ChkBox_Brian check box" object Should be clicked.	PASS
+24-06-2016 11:16:30	VerifyDraftValidationPanelErrorList	"TXT_RequiredString edit box" should be displayed.	PASS
+24-06-2016 11:16:34	VerifyDraftValidationPanelErrorList	"Testing" : value should be entered in "TXT_RequiredString edit box" field.	PASS
+24-06-2016 11:16:37	VerifyDraftValidationPanelErrorList	"TXT_EmailAddress edit box" should be displayed.	PASS
+24-06-2016 11:16:40	VerifyDraftValidationPanelErrorList	"sreedhar@ifs.com" : value should be entered in "TXT_EmailAddress edit box" field.	PASS
+24-06-2016 11:16:43	VerifyDraftValidationPanelErrorList	select  small value Radio button for "RDL_RequiredInterview object"	PASS
+24-06-2016 11:16:51	VerifyDraftValidationPanelErrorList	NAV_AdditionalInformation object  should be loaded 	PASS
+24-06-2016 11:16:58	VerifyDraftValidationPanelErrorList	"NAV_AdditionalInformation object" object Should be clicked.	PASS
+24-06-2016 11:17:07	VerifyDraftValidationPanelErrorList	LBL_This is an PreEvent infoMessage object  should be loaded 	PASS
+24-06-2016 11:17:10	VerifyDraftValidationPanelErrorList	"LBL_This is an PreEvent infoMessage object" should be displayed.	PASS
+24-06-2016 11:17:19	VerifyDraftValidationPanelErrorList	TRKCircle_EntrySectionValid object  should be loaded 	PASS
+24-06-2016 11:17:22	VerifyDraftValidationPanelErrorList	"TRKCircle_EntrySectionValid object" should be displayed.	PASS
+24-06-2016 11:17:30	VerifyDraftValidationPanelErrorList	TRKcircle_SubmitSectionValid object  should be loaded 	PASS
+24-06-2016 11:17:33	VerifyDraftValidationPanelErrorList	"TRKcircle_SubmitSectionValid object" should be displayed.	PASS
+24-06-2016 11:17:41	VerifyDraftValidationPanelErrorList	TRKCircle_AdditionalInfoError object  should be loaded 	PASS
+24-06-2016 11:17:44	VerifyDraftValidationPanelErrorList	"TRKCircle_AdditionalInfoError object" should be displayed.	PASS
+24-06-2016 11:17:53	VerifyDraftValidationPanelErrorList	TRKcircle_IRARegistrationError object  should be loaded 	PASS
+24-06-2016 11:17:56	VerifyDraftValidationPanelErrorList	"TRKcircle_IRARegistrationError object" should be displayed.	PASS
+24-06-2016 11:17:59	VerifyDraftValidationPanelErrorList	"Testing" : value should be entered in "TXT_PetsName edit box" field.	PASS
+24-06-2016 11:18:05	VerifyDraftValidationPanelErrorList	"NAV_AdditionalInformation2 object" object Should be clicked.	PASS
+24-06-2016 11:18:14	VerifyDraftValidationPanelErrorList	LBL_DraftMode.AdditionalInfo2 object  should be loaded 	PASS
+24-06-2016 11:18:18	VerifyDraftValidationPanelErrorList	"LBL_DraftMode.AdditionalInfo2 object" should be displayed.	PASS
+24-06-2016 11:19:21	VerifyDraftValidationPanelErrorList	"Testing" : value should be entered in "TXT_GoldFishName edit box" field.	PASS
+24-06-2016 11:20:24	VerifyDraftValidationPanelErrorList	"6/24/2016" : value should be entered in "TXT_DateBowlCleaned edit box" field.	PASS
+24-06-2016 11:20:32	VerifyDraftValidationPanelErrorList	NAV_IRA object  should be loaded 	PASS
+24-06-2016 11:20:39	VerifyDraftValidationPanelErrorList	"NAV_IRA object" object Should be clicked.	PASS
+24-06-2016 11:20:48	VerifyDraftValidationPanelErrorList	LBL_IRARegistration object  should be loaded 	PASS
+24-06-2016 11:20:51	VerifyDraftValidationPanelErrorList	"LBL_IRARegistration object" should be displayed.	PASS
+24-06-2016 11:20:54	VerifyDraftValidationPanelErrorList	"TRKCircle_AdditionalInfoValid object" should be displayed.	PASS
+24-06-2016 11:20:57	VerifyDraftValidationPanelErrorList	"TXT_AccountNumber edit box" should be displayed.	PASS
+24-06-2016 11:21:01	VerifyDraftValidationPanelErrorList	"1111-1111" : value should be entered in "TXT_AccountNumber edit box" field.	PASS
+24-06-2016 11:21:07	VerifyDraftValidationPanelErrorList	"BTN_Next button" object Should be clicked.	PASS
+24-06-2016 11:21:16	VerifyDraftValidationPanelErrorList	TRKcircle_IRARegistrationValid object  should be loaded 	PASS
+24-06-2016 11:21:19	VerifyDraftValidationPanelErrorList	"TRKcircle_IRARegistrationValid object" should be displayed.	PASS
+24-06-2016 11:21:19	VerifyDraftValidationPanelErrorList	 State should be displayed in "TRKcircle_Entry_Valid object" field. And the state is valid	PASS
+24-06-2016 11:21:19	VerifyDraftValidationPanelErrorList	 State should be displayed in "TRKcircle_AdditionalInfo_Valid object" field. And the state is valid	PASS
+24-06-2016 11:21:20	VerifyDraftValidationPanelErrorList	 State should be displayed in "TRKcircle_SubmitSection_Valid object" field. And the state is valid	PASS
+24-06-2016 11:21:21	Logout	Logout from application	PASS
+24-06-2016 11:21:29	Start Execution	Open the TC806_Documents_ValidateInvalidDocumentsUpload file	OPEN THE TC806_DOCUMENTS_VALIDATEINVALIDDOCUMENTSUPLOAD TEST CASE FILE SUCCESSFULLY
+24-06-2016 11:21:29	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+24-06-2016 11:21:30	Start Execution	Associate the Documents object repository to test		ASSOCIATE THE DOCUMENTS OBJECT REPOSITORY TO TEST SUCCESSFULLY
+24-06-2016 11:21:30	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\Documents.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\DOCUMENTS.XLS FILE SUCCESSFULLY
+24-06-2016 11:21:30	Start Execution	start execute of  TC806_Documents_ValidateInvalidDocumentsUpload	
+24-06-2016 11:21:30			Step Name			Expected		STATUS
+24-06-2016 11:21:35	Login	Open the browser and start Application	PASS
+24-06-2016 11:21:38	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+24-06-2016 11:21:38	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+24-06-2016 11:21:42	Login	"BTN_Log In button" object Should be clicked.	PASS
+24-06-2016 11:21:46	Login	"TAB _Home object" should be displayed.	PASS
+24-06-2016 11:21:49	NavigatetoDocument	"TAB_Tests object" object Should be clicked.	PASS
+24-06-2016 11:21:56	NavigatetoDocument	"LNK_Test Document Tab object" object Should be clicked.	PASS
+24-06-2016 11:22:10	NavigatetoDocument	TXT_TestingtheDescription edit box  should be loaded 	PASS
+24-06-2016 11:22:13	ValidateEntryPage	"LBL_DocumentWorkflowTesting object" should be displayed.	PASS
+24-06-2016 11:22:17	ValidateEntryPage	"TXT_TestingtheDescription edit box" should be displayed.	PASS
+24-06-2016 11:22:23	ValidateEntryPage	"BTN_NextQADoumentTestNext button" object Should be clicked.	PASS
+24-06-2016 11:22:28	ValidateEntryPage	"BTN_Submit button" should be displayed.	PASS
+24-06-2016 11:22:34	ValidateEntryPage	"BTN_Submit button" object Should be clicked.	PASS
+24-06-2016 11:22:43	ValidateEntryPage	"TBL_RequestDetails table" should be displayed.	PASS
+24-06-2016 11:22:46	ValidateEntryPage	242023Value should be verified under TBL_RequestDetails table	PASS
+24-06-2016 11:22:49	ValidateEntryPage	Approval,Document Pending Receipt Value should be verified under StatusTBL_RequestDetails table	PASS
+24-06-2016 11:22:53	ValidateEntryPage	Chris Jarrell Value should be verified under Created ByTBL_RequestDetails table	PASS
+24-06-2016 11:22:56	ValidateEntryPage	6/24/2016 Value should be verified under Created OnTBL_RequestDetails table	PASS
+24-06-2016 11:22:59	ValidateEntryPage	Due DateValue has displayed future Date 6/28/2016TBL_RequestDetails table	PASS
+24-06-2016 11:23:02	ValidateEntryPage	"TBL_WorkflowDetails table" should be displayed.	PASS
+24-06-2016 11:23:05	ValidateEntryPage	"IMG_DocumentTestEntry object" should be displayed.	PASS
+24-06-2016 11:23:09	ValidateEntryPage	"IMG_Approval object" should be displayed.	PASS
+24-06-2016 11:23:15	ValidateEntryPage	"TAB_Details link" object Should be clicked.	PASS
+24-06-2016 11:23:18	ValidateEntryPage	"LBL_DocumentTest object" should be displayed.	PASS
+24-06-2016 11:23:21	ValidateEntryPage	"TAB_Documents link" should be displayed.	PASS
+24-06-2016 11:23:27	ValidateEntryPage	"TAB_Documents link" object Should be clicked.	PASS
+24-06-2016 11:23:31	ValidateEntryPage	"LBL_Documents object" should be displayed.	PASS
+24-06-2016 11:23:34	ValidateEntryPage	"BTN_AddDocument button" should be displayed.	PASS
+24-06-2016 11:23:42	ValidateEntryPage	LBL_DocumentsDue object  should be loaded 	PASS
+24-06-2016 11:24:26	UploadInvalidDocumentsForWordTempate	TBL_Documents table  should be loaded 	PASS
+24-06-2016 11:24:26	UploadInvalidDocumentsForWordTempate	Word Tempate NO Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:24:34	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:24:44	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:24:47	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.bat" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:24:52	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:24:58	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:25:07	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:25:10	UploadInvalidDocumentsForWordTempate	"LBL_FileExtenstionNoAllowed object" should be displayed.	PASS
+24-06-2016 11:25:14	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".bat" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:25:14	UploadInvalidDocumentsForWordTempate	Word Tempate NO Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:25:22	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:25:31	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:25:35	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.xlsx" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:25:40	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:25:46	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:25:55	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:25:59	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".xlsx" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:25:59	UploadInvalidDocumentsForWordTempate	Word Tempate NO Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:26:07	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:26:16	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:26:19	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.xls" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:26:25	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:26:31	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:26:40	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:26:44	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".xls" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:26:44	UploadInvalidDocumentsForWordTempate	Word Tempate NO Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:26:52	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:27:01	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:27:04	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.png" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:27:09	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:27:16	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:27:25	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:27:29	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".png" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:27:29	UploadInvalidDocumentsForWordTempate	Word Tempate NO Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:27:37	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:27:46	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:27:49	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.jpg" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:27:54	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:28:01	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:28:10	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:28:13	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".jpg" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:28:14	UploadInvalidDocumentsForWordTempate	Word Tempate NO Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:28:22	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:28:31	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:28:34	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.zip" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:28:39	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:28:46	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:28:55	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:28:58	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".zip" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:28:59	UploadInvalidDocumentsForWordTempate	Word Tempate NO Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:29:07	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:29:16	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:29:19	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.pdf" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:29:24	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:29:31	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:29:40	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:29:43	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".pdf" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:29:44	UploadInvalidDocumentsForWordTempate	Word Tempate NO Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:29:52	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:30:01	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:30:04	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.csv" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:30:09	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:30:15	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:30:25	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:30:28	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".csv" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:30:28	UploadInvalidDocumentsForWordTempate	Word Template w Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:30:37	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:30:46	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:30:49	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.bat" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:30:54	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:31:00	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:31:10	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:31:13	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".bat" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:31:13	UploadInvalidDocumentsForWordTempate	Word Template w Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:31:22	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:31:31	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:31:34	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.xlsx" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:31:39	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:31:45	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:31:55	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:31:58	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".xlsx" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:31:58	UploadInvalidDocumentsForWordTempate	Word Template w Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:32:07	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:32:16	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:32:19	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.xls" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:32:24	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:32:30	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:32:40	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:32:43	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".xls" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:32:43	UploadInvalidDocumentsForWordTempate	Word Template w Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:32:51	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:33:01	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:33:04	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.png" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:33:09	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:33:15	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:33:24	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:33:28	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".png" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:33:28	UploadInvalidDocumentsForWordTempate	Word Template w Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:33:36	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:33:45	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:33:49	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.jpg" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:33:54	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:34:00	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:34:09	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:34:13	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".jpg" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:34:13	UploadInvalidDocumentsForWordTempate	Word Template w Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:34:21	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:34:30	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:34:34	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.zip" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:34:39	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:34:45	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:34:54	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:34:57	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".zip" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:34:58	UploadInvalidDocumentsForWordTempate	Word Template w Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:35:06	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:35:15	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:35:18	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.pdf" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:35:23	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:35:30	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:35:39	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:35:42	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".pdf" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:35:43	UploadInvalidDocumentsForWordTempate	Word Template w Review Cell data displayed and clicked on same row Attach Icon	PASS
+24-06-2016 11:35:51	UploadInvalidDocumentsForWordTempate	LBL_Documents object  should be loaded 	PASS
+24-06-2016 11:36:00	UploadInvalidDocumentsForWordTempate	"WFL_UploadFileAddDoc edit box" object Should be clicked.	PASS
+24-06-2016 11:36:03	UploadInvalidDocumentsForWordTempate	"C:\IFSAutomation\Branch_IFS_Documents_Final\Resources\Testing.csv" : value should be entered in "TXT_Filename edit box" field.	PASS
+24-06-2016 11:36:08	UploadInvalidDocumentsForWordTempate	"BTN_Open button" object should be clicked.	PASS
+24-06-2016 11:36:15	UploadInvalidDocumentsForWordTempate	"BTN_UploadDocument button" object Should be clicked.	PASS
+24-06-2016 11:36:24	UploadInvalidDocumentsForWordTempate	LBL_FileExtenstionNoAllowed object  should be loaded 	PASS
+24-06-2016 11:36:27	UploadInvalidDocumentsForWordTempate	Text: "Error adding document attachment. File extension ".csv" is not allowed."  should be displayed at LBL_FileExtenstionNoAllowed object	FAIL
+24-06-2016 11:36:28	Start Execution	Open the TC807_AuditBubble_AuditBubbleTesting file	OPEN THE TC807_AUDITBUBBLE_AUDITBUBBLETESTING TEST CASE FILE SUCCESSFULLY
+24-06-2016 11:36:28	Start Execution	Associate the General object repository to test		ASSOCIATE THE GENERAL OBJECT REPOSITORY TO TEST SUCCESSFULLY
+24-06-2016 11:36:28	Start Execution	Associate the AuditBubble object repository to test		ASSOCIATE THE AUDITBUBBLE OBJECT REPOSITORY TO TEST SUCCESSFULLY
+24-06-2016 11:36:29	Start Execution	Read the test data from C:\IFSAutomation\Branch_IFS_Documents_Final\Test Data\AuditBubble.xls File 	READ THE TEST DATA FROM C:\IFSAUTOMATION\BRANCH_IFS_DOCUMENTS_FINAL\TEST DATA\AUDITBUBBLE.XLS FILE SUCCESSFULLY
+24-06-2016 11:36:29	Start Execution	start execute of  TC807_AuditBubble_AuditBubbleTesting	
+24-06-2016 11:36:29			Step Name			Expected		STATUS
+24-06-2016 11:36:34	Login	Open the browser and start Application	PASS
+24-06-2016 11:36:38	Login	"chrisj" : value should be entered in "TXT_user_name edit box" field.	PASS
+24-06-2016 11:36:38	Login	"********" : value should be entered in "TXT_user_password edit box" field.	PASS
+24-06-2016 11:36:42	Login	"BTN_Log In button" object Should be clicked.	PASS
+24-06-2016 11:36:46	Login	"TAB _Home object" should be displayed.	PASS
+24-06-2016 11:36:46	NavigateToAuditBubble	"TAB _Home object" should be displayed.	PASS
+24-06-2016 11:36:46	NavigateToAuditBubble	"TAB_Tests object" should be displayed.	PASS
+24-06-2016 11:36:49	NavigateToAuditBubble	"TAB_Tests object" object Should be clicked.	PASS
+24-06-2016 11:36:52	NavigateToAuditBubble	"LNK_AuditTestWorkflow object" should be displayed.	PASS
+24-06-2016 11:36:59	NavigateToAuditBubble	"LNK_AuditTestWorkflow object" object Should be clicked.	PASS
+24-06-2016 11:37:03	AuditBubble_VerifyAuditValues	"LBL_AuditBubbleTest object" should be displayed.	PASS
+24-06-2016 11:37:06	AuditBubble_VerifyAuditValues	"TXT_AuditBubble1 edit box" should be displayed.	PASS
+24-06-2016 11:37:10	AuditBubble_VerifyAuditValues	"TXT_AuditBubble2 edit box" should be displayed.	PASS
+24-06-2016 11:37:13	AuditBubble_VerifyAuditValues	"123" : value should be entered in "TXT_AuditBubble1 edit box" field.	PASS
+24-06-2016 11:37:16	AuditBubble_VerifyAuditValues	"123" : value should be entered in "TXT_AuditBubble2 edit box" field.	PASS
+24-06-2016 11:37:24	AuditBubble_VerifyAuditValues	Audit1_Next button  should be loaded 	PASS
+24-06-2016 11:37:30	AuditBubble_VerifyAuditValues	"Audit1_Next button" object Should be clicked.	PASS
+24-06-2016 11:37:40	AuditBubble_VerifyAuditValues	Audit1_Submit button  should be loaded 	PASS
+24-06-2016 11:37:46	AuditBubble_VerifyAuditValues	"Audit1_Submit button" object Should be clicked.	PASS
+24-06-2016 11:37:55	AuditBubble_VerifyAuditValues	LBL_QAAuditBubbleTest object  should be loaded 	PASS
+24-06-2016 11:37:58	AuditBubble_VerifyAuditValues	"LBL_QAAuditBubbleTest object" should be displayed.	PASS
+24-06-2016 11:38:02	AuditBubble_VerifyAuditValues	Text: "123"  should be displayed at TWL_QA_Audit1 object	PASS
+24-06-2016 11:38:05	AuditBubble_VerifyAuditValues	Text: "123"  should be displayed at TWL_QA_Audit2 object	PASS
+24-06-2016 11:38:13	ValidateAuditBubble	BTN_Back button  should be loaded 	PASS
+24-06-2016 11:38:19	ValidateAuditBubble	"BTN_Back button" object Should be clicked.	PASS
+24-06-2016 11:38:29	ValidateAuditBubble	DTL_SetQuestionValues1 object  should be loaded 	PASS
+24-06-2016 11:38:36	ValidateAuditBubble	12345 should be selected from dropdown.	PASS
+24-06-2016 11:38:43	ValidateAuditBubble	12345 should be selected from dropdown.	PASS
+24-06-2016 11:38:47	ValidateAuditBubble	12345 : value should be displayed in "TXT_AuditBubble1 edit box" field.	PASS
+24-06-2016 11:38:50	ValidateAuditBubble	12345 : value should be displayed in "TXT_AuditBubble2 edit box" field.	PASS
+24-06-2016 11:38:56	ValidateAuditBubble	"Audit1_Submit button" object Should be clicked.	PASS
+24-06-2016 11:39:05	ValidateAuditBubble	LBL_QAAuditBubbleTest object  should be loaded 	PASS
+24-06-2016 11:39:09	ValidateAuditBubble	Text: "12345"  should be displayed at TWL_QA_Audit1 object	PASS
+24-06-2016 11:39:12	ValidateAuditBubble	Text: "12345"  should be displayed at TWL_QA_Audit2 object	PASS
+24-06-2016 11:39:15	ValidateAuditBubble	Text: "12345"  should be displayed at DTL_SetQuestionValues1 object	PASS
+24-06-2016 11:39:18	ValidateAuditBubble	Text: "12345"  should be displayed at DTL_SetQuestionValues2 object	PASS
+24-06-2016 11:39:24	ValidateAuditBubble	"BBL_Audit1 object" object Should be clicked.	PASS
+24-06-2016 11:39:34	ValidateAuditBubble	"BBL_Audit2 object" object Should be clicked.	PASS
+24-06-2016 11:39:43	ValidateAuditBubble	"BTN_Back button" object Should be clicked.	PASS
+24-06-2016 11:39:53	ValidateAuditBubble	DTL_SetQuestionValues1 object  should be loaded 	PASS
+24-06-2016 11:40:00	ValidateAuditBubble	1234 should be selected from dropdown.	PASS
+24-06-2016 11:40:07	ValidateAuditBubble	1234 should be selected from dropdown.	PASS
+24-06-2016 11:40:11	ValidateAuditBubble	1234 : value should be displayed in "TXT_AuditBubble1 edit box" field.	PASS
+24-06-2016 11:40:14	ValidateAuditBubble	1234 : value should be displayed in "TXT_AuditBubble2 edit box" field.	PASS
+24-06-2016 11:40:20	ValidateAuditBubble	"Audit1_Submit button" object Should be clicked.	PASS
+24-06-2016 11:40:29	ValidateAuditBubble	LBL_QAAuditBubbleTest object  should be loaded 	PASS
+24-06-2016 11:40:33	ValidateAuditBubble	Text: "1234"  should be displayed at TWL_QA_Audit1 object	PASS
+24-06-2016 11:40:36	ValidateAuditBubble	Text: "1234"  should be displayed at TWL_QA_Audit2 object	PASS
+24-06-2016 11:40:39	ValidateAuditBubble	Text: "1234"  should be displayed at DTL_SetQuestionValues1 object	PASS
+24-06-2016 11:40:42	ValidateAuditBubble	Text: "1234"  should be displayed at DTL_SetQuestionValues2 object	PASS
+24-06-2016 11:40:48	ValidateAuditBubble	"BBL_Audit1 object" object Should be clicked.	PASS
+24-06-2016 11:41:01	ValidateAuditBubble	"BBL_Audit2 object" object Should be clicked.	PASS
+24-06-2016 11:41:14	ValidateAuditBubble	"LNK_Audit link" object Should be clicked.	PASS
+24-06-2016 11:41:22	ValidateAuditBubble	LBL_AuditHistory object  should be loaded 	PASS
+24-06-2016 11:41:25	ValidateAuditBubble	"LBL_AuditHistory object" should be displayed.	PASS
+24-06-2016 11:41:31	ValidateAuditBubble	"BTN_ContextMenu button" object Should be clicked.	PASS
+24-06-2016 11:41:38	ValidateAuditBubble	"CB_View All object" object Should be clicked.	PASS
+24-06-2016 11:41:46	ValidateAuditBubble	TBL_Audit table  should be loaded 	PASS
+24-06-2016 11:41:46	ValidateAuditBubble	Able to expand data in table	PASS
+24-06-2016 11:41:49	ValidateAuditBubble	QA.Audit.TestOne Column text and values details follow as 12345 , 1234	PASS
+24-06-2016 11:41:52	ValidateAuditBubble	QA.Audit.TestTwo Column text and values details follow as 12345 , 1234	PASS
+24-06-2016 11:41:56	ValidateAuditBubble	QA.DropDown.SetValue1 Column text and values details follow as 12345 , 1234	PASS
+24-06-2016 11:41:59	ValidateAuditBubble	QA.DropDown.SetValue2 Column text and values details follow as 12345 , 1234	PASS
+24-06-2016 11:42:02	ValidateAuditBubble	QA.Audit.TestOne Column text and values details follow as 123 , 12345	PASS
+24-06-2016 11:42:05	ValidateAuditBubble	QA.Audit.TestTwo Column text and values details follow as 123 , 12345	PASS
+24-06-2016 11:42:08	ValidateAuditBubble	QA.DropDown.SetValue1 Column text and values details follow as Select a value , 12345	PASS
+24-06-2016 11:42:11	ValidateAuditBubble	QA.DropDown.SetValue2 Column text and values details follow as Select a value , 12345	PASS
+24-06-2016 11:42:13	Logout	Logout from application	PASS

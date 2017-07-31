@@ -1,0 +1,8 @@
+16:28:32 - Trying to find 'QTPro.exe' process in the Task Manager.
+16:28:32 - Trying to find 'QTAutomationAgent.exe' process in the Task Manager.
+16:28:32 - Trying to find 'EXCEL.EXE' process in the Task Manager.
+16:28:32 - Trying to find 'wscript.exe' process in the Task Manager.
+11:48:45 - Trying to find 'QTPro.exe' process in the Task Manager.
+11:48:45 - Trying to find 'QTAutomationAgent.exe' process in the Task Manager.
+11:48:45 - Trying to find 'EXCEL.EXE' process in the Task Manager.
+11:48:45 - Trying to find 'wscript.exe' process in the Task Manager.
